@@ -1,5 +1,6 @@
 import { mapPriceQuery } from './validation/priceValidation';
 import { productPg } from '../dto/product-pg.dto';
+import { InvalidDataError } from './errors/invalidDataError';
 
 type pgSortCriteria = 'ASC' | 'DESC';
 
@@ -15,17 +16,42 @@ export type pgProductQuery = {
   sortBy?: [keyof productPg | '', pgSortCriteria | ''];
 };
 
+const validateTotalRating = (totalRating: string): number => {
+  if(!totalRating) {
+    return 0
+  }
+  if (isNaN(+totalRating)) {
+    throw new InvalidDataError(400, 'invalid data input');
+  }
+  return +totalRating;
+};
+
+const validateSortingFilter = (sortingFilter: string): ['' | keyof productPg, '' | pgSortCriteria] => {
+  if (!sortingFilter) {
+    return ['', ''];
+  }
+  
+  const filter = sortingFilter.split(':')[0];
+  if (!['displayName', 'createdAt', 'price', 'totalRating'].includes(filter)) {
+    throw new InvalidDataError(400, 'invalid data input');
+  }
+
+  const value = sortingFilter.split(':')[1].toUpperCase();
+
+  if (!['ASC', 'DESC'].includes(value)) {
+    throw new InvalidDataError(400, 'invalid data input');
+  }
+
+  return [filter as keyof productPg, value as pgSortCriteria];
+};
 
 export default function (query): pgProductQuery {
   return {
     query: {
       displayName: query.displayName || '',
       price: mapPriceQuery(query.price),
-      totalRating: +query.minRating || 0,
+      totalRating: validateTotalRating(query.totalRating),
     },
-    sortBy: [
-      `${query.sortBy ? query.sortBy.split(':')[0] as keyof productPg: ''}`,
-      `${query.sortBy ? (query.sortBy.split(':')[1].toUpperCase() as pgSortCriteria) : ''}`,
-    ],
+    sortBy: validateSortingFilter(query.sortBy),
   };
 }
