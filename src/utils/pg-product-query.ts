@@ -30,7 +30,7 @@ const validateSortingFilter = (sortingFilter: string): ['' | keyof productPg, ''
   if (!sortingFilter) {
     return ['', ''];
   }
-  
+
   const filter = sortingFilter.split(':')[0];
   if (!['displayName', 'createdAt', 'price', 'totalRating'].includes(filter)) {
     throw new InvalidDataError(400, 'invalid data input');
