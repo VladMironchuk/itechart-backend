@@ -16,7 +16,6 @@ router.get('/', async (req, res): Promise<void> => {
     if (process.env.DB === 'pg') {
       mappedQuery = mapQueryPg(req.query);
     }
-    console.log(mappedQuery);
     const productRepository = new ProductRepository();
     const products = await productRepository.getProductsByQuery(mappedQuery);
     if(!products.length) {
