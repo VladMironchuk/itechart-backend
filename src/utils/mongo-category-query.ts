@@ -15,7 +15,7 @@ export default async function (reqQuery, id): Promise<categoryMongo> {
   if (reqQuery['includeProducts'] === 'true') {
     const products = await productsRepo.getProducts(
       { categories: category as Category[] & Category },
-      'displayName totalRating price', false
+      'displayName totalRating price', true
     );
     if (reqQuery['includeTop3Products'] === 'top') {
       products

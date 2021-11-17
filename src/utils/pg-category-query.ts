@@ -11,7 +11,7 @@ export default async function (reqQuery, id): Promise<Category> {
   qb = qb.where(`category.id = :id`).setParameter('id', id);
 
   if (reqQuery['includeTop3Products']) {
-    qb = qb.orderBy('product.totalRating', 'DESC');
+    qb = qb.orderBy('product.totalRating', 'DESC').limit(3);
   }
 
   return await qb.getOne();

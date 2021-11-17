@@ -3007,3 +3007,59 @@
 2021-11-15 23:42:12 info: Server is running on http://localhost:3000
 2021-11-15 23:42:35 error: invalid data input
 2021-11-15 23:42:39 error: invalid data input
+2021-11-16 20:01:41 info: Server is running on http://localhost:3000
+2021-11-16 20:02:19 error: No data found
+2021-11-16 20:02:24 error: No data found
+2021-11-16 20:02:43 error: invalid data input
+2021-11-16 20:02:46 error: No data found
+2021-11-16 20:06:16 info: Server is running on http://localhost:3000
+2021-11-16 20:06:24 error: invalid data input
+2021-11-16 20:06:35 error: invalid data input
+2021-11-16 20:07:59 error: invalid data input
+2021-11-16 20:08:02 error: invalid data input
+2021-11-16 20:08:10 error: No data found
+2021-11-16 20:10:35 error: invalid data input
+2021-11-16 20:10:43 error: No data found
+2021-11-16 20:11:36 error: invalid data input
+2021-11-16 20:13:24 info: Server is running on http://localhost:3000
+2021-11-16 20:23:23 info: Server is running on http://localhost:3000
+2021-11-17 09:31:27 info: Server is running on http://localhost:3000
+2021-11-17 09:32:12 info: Server is running on http://localhost:3000
+2021-11-17 09:32:42 info: Server is running on http://localhost:3000
+2021-11-17 09:55:28 info: Server is running on http://localhost:3000
+2021-11-17 09:56:14 info: Server is running on http://localhost:3000
+2021-11-17 09:57:03 info: Server is running on http://localhost:3000
+2021-11-17 09:58:43 info: Server is running on http://localhost:3000
+2021-11-17 09:59:13 info: Server is running on http://localhost:3000
+2021-11-17 10:00:07 error: Error: ⨯ Unable to compile TypeScript:
+[96msrc/middlewares/products-query.ts[0m:[93m12[0m:[93m7[0m - [91merror[0m[90m TS2339: [0mProperty 'valid' does not exist on type 'Request<ParamsDictionary, any, any, ParsedQs, Record<string, any>>'.
+
+[7m12[0m   req.valid = mapQuery(req.query)
+[7m  [0m [91m      ~~~~~[0m
+
+    at Object.<anonymous> (E:\info\js_selflearn\itechart\itechart-backend\src\middlewares\products-query.ts:1:7)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Module._compile (E:\info\js_selflearn\itechart\itechart-backend\node_modules\source-map-support\source-map-support.js:568:25)
+    at Module.m._compile (C:\Users\VLAD\AppData\Local\Temp\ts-node-dev-hook-12241779538990061.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at require.extensions..jsx.require.extensions..js (C:\Users\VLAD\AppData\Local\Temp\ts-node-dev-hook-12241779538990061.js:114:20)
+    at require.extensions.<computed> (C:\Users\VLAD\AppData\Local\Temp\ts-node-dev-hook-12241779538990061.js:71:20)
+    at Object.nodeDevHook [as .ts] (E:\info\js_selflearn\itechart\itechart-backend\node_modules\ts-node-dev\lib\hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+2021-11-17 10:03:58 info: Server is running on http://localhost:3000
+2021-11-17 10:05:37 info: Server is running on http://localhost:3000
+2021-11-17 10:06:16 info: Server is running on http://localhost:3000
+2021-11-17 10:20:59 info: Server is running on http://localhost:3000
+2021-11-17 10:26:02 info: Server is running on http://localhost:3000
+2021-11-17 10:26:39 info: Server is running on http://localhost:3000
+2021-11-17 10:27:09 info: Server is running on http://localhost:3000
+2021-11-17 10:27:22 info: Server is running on http://localhost:3000
+2021-11-17 10:28:10 info: Server is running on http://localhost:3000
+2021-11-17 10:33:50 info: Server is running on http://localhost:3000
+2021-11-17 10:34:26 info: Server is running on http://localhost:3000
+2021-11-17 10:34:39 info: Server is running on http://localhost:3000
+2021-11-17 10:34:53 error: No data found
+2021-11-17 10:35:14 error: No data found
+2021-11-17 10:37:21 info: Server is running on http://localhost:3000
+2021-11-17 10:43:52 info: Server is running on http://localhost:3000

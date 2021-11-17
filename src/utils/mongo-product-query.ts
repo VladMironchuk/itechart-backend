@@ -35,11 +35,16 @@ const mapRatingQuery = (ratingQuery = '') => {
   };
 };
 
+//asc === default
 const mapSortQuery = (sortQuery: string) => {
   if (!sortQuery) return;
 
   const filter = sortQuery.split(':')[0];
   if(!PRODUCT_FIELDS.includes(filter)) {
+    throw new InvalidDataError(400, 'invalid data input');
+  }
+
+  if(!sortQuery.includes(':')){
     throw new InvalidDataError(400, 'invalid data input');
   }
 

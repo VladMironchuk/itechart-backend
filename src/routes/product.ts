@@ -1,29 +1,18 @@
-import { Router } from 'express';
-import { logger } from '../logger/logger';
+import { NextFunction, Request, Response, Router } from 'express';
 import { ProductRepository } from '../repository/product/ProductRepository';
-import mapQuery from '../utils/mongo-product-query';
-import mapQueryPg from '../utils/pg-product-query';
 import { InvalidDataError } from '../utils/errors/invalidDataError';
+import validateQuery from '../middlewares/products-query'
 
 export const router = Router();
-
-router.get('/', async (req, res): Promise<void> => {
+router.get('/',validateQuery, async (req: Request, res: Response, next: NextFunction): Promise<void> => {
   try {
-    let mappedQuery;
-    if (process.env.DB === 'mongo') {
-      mappedQuery = mapQuery(req.query);
-    }
-    if (process.env.DB === 'pg') {
-      mappedQuery = mapQueryPg(req.query);
-    }
     const productRepository = new ProductRepository();
-    const products = await productRepository.getProductsByQuery(mappedQuery);
+    const products = await productRepository.getProductsByQuery(req['validProductQuery']);
     if(!products.length) {
       throw new InvalidDataError(404, "No data found")
     }
     res.send(products);
   } catch (e: any) {
-    res.status(e.errorStatus).send(e.message)
-    logger.error(e.message);
+    next(e)
   }
 });

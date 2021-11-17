@@ -1,23 +1,21 @@
-import { Router } from 'express';
-import { logger } from '../logger/logger';
+import { Router, Request, Response, NextFunction } from 'express';
 import { CategoryRepository } from '../repository/category/CategoryRepository';
 import mapCategoryQueryMongo from '../utils/mongo-category-query'
 import mapCategoryQueryPg from '../utils/pg-category-query'
 
 export const router = Router();
 
-router.get('/', async (req, res): Promise<void> => {
+router.get('/', async (req: Request, res: Response, next: NextFunction): Promise<void> => {
   try {
     const categoryRepo = new CategoryRepository()
     const categories = await categoryRepo.getCategories()
     res.send(categories)
   } catch (e: unknown) {
-    res.status(403);
-    logger.error(e);
+    next(e)
   }
 });
 
-router.get('/:id', async (req, res): Promise<void> => {
+router.get('/:id', async (req: Request, res: Response, next: NextFunction): Promise<void> => {
   try {
     let category
     if(process.env.DB === 'mongo') {
@@ -28,7 +26,6 @@ router.get('/:id', async (req, res): Promise<void> => {
     }
     res.send(category)
   } catch (e: unknown) {
-    res.status(403);
-    logger.error(e);
+    next(e)
   }
 });

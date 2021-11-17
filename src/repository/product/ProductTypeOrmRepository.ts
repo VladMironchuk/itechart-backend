@@ -17,7 +17,9 @@ export class ProductTypeOrmRepository implements IProductRepository<Product, str
   }
 
   async getProductsByQuery(query: pgProductQuery) {
-    let qb = this.repository.createQueryBuilder('product').leftJoinAndSelect('product.categories', 'category');
+    let qb = this.repository.createQueryBuilder('product')
+      .leftJoinAndSelect('product.categories', 'category');
+
     qb = qb
       .where('product.price > :gt')
       .andWhere('product.totalRating > :minRating')
@@ -25,17 +27,21 @@ export class ProductTypeOrmRepository implements IProductRepository<Product, str
         gt: query.query.price.$gt,
         minRating: query.query.totalRating,
       });
+
     if(query.query.price.$lt) {
     qb = qb.andWhere('product.price < :lt')
       .setParameter('lt', query.query.price.$lt)
     }
+
     if (query.query.displayName) {
       qb = qb.andWhere('product.displayName like :name')
       .setParameter('name', `%${query.query.displayName}%`);
     }
+
     if (query.sortBy[1]) {
       qb.orderBy(`product.${query.sortBy[0]}`, `${query.sortBy[1]}`);
     }
+
     return await qb.getMany();
   }
 
