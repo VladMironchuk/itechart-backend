@@ -2597,3 +2597,40 @@
 2021-11-17 10:35:14 error: No data found
 2021-11-17 10:37:21 info: Server is running on http://localhost:3000
 2021-11-17 10:43:52 info: Server is running on http://localhost:3000
+2021-11-17 10:44:28 info: Server is running on http://localhost:3000
+2021-11-17 16:33:22 info: Server is running on http://localhost:3000
+2021-11-17 16:45:20 info: Server is running on http://localhost:3000
+2021-11-17 16:46:02 error: TypeError: app.use() requires a middleware function
+    at Function.use (E:\info\js_selflearn\itechart\itechart-backend\node_modules\express\lib\application.js:210:11)
+    at Object.<anonymous> (E:\info\js_selflearn\itechart\itechart-backend\src\index.ts:19:5)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Module._compile (E:\info\js_selflearn\itechart\itechart-backend\node_modules\source-map-support\source-map-support.js:568:25)
+    at Module.m._compile (C:\Users\VLAD\AppData\Local\Temp\ts-node-dev-hook-3204744555720809.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at require.extensions..jsx.require.extensions..js (C:\Users\VLAD\AppData\Local\Temp\ts-node-dev-hook-3204744555720809.js:114:20)
+    at require.extensions.<computed> (C:\Users\VLAD\AppData\Local\Temp\ts-node-dev-hook-3204744555720809.js:71:20)
+    at Object.nodeDevHook [as .ts] (E:\info\js_selflearn\itechart\itechart-backend\node_modules\ts-node-dev\lib\hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+2021-11-17 16:46:47 info: Server is running on http://localhost:3000
+2021-11-17 16:48:54 info: Server is running on http://localhost:3000
+2021-11-17 16:49:35 info: Server is running on http://localhost:3000
+2021-11-17 16:49:47 info: Server is running on http://localhost:3000
+2021-11-17 16:50:23 info: Server is running on http://localhost:3000
+2021-11-17 16:50:29 info: Server is running on http://localhost:3000
+2021-11-17 16:50:56 info: Server is running on http://localhost:3000
+2021-11-17 16:52:01 info: Server is running on http://localhost:3000
+2021-11-17 16:52:32 info: Server is running on http://localhost:3000
+2021-11-17 16:53:21 info: Server is running on http://localhost:3000
+2021-11-17 16:54:18 info: Server is running on http://localhost:3000
+2021-11-17 16:55:26 info: Server is running on http://localhost:3000
+2021-11-17 17:00:36 info: Server is running on http://localhost:3000
+2021-11-17 17:00:40 info: Server is running on http://localhost:3000
+2021-11-17 17:02:08 info: Server is running on http://localhost:3000
+2021-11-17 17:02:28 info: Server is running on http://localhost:3000
+2021-11-17 17:02:44 info: Server is running on http://localhost:3000
+2021-11-17 17:02:56 info: Server is running on http://localhost:3000
+2021-11-17 19:19:26 info: Server is running on http://localhost:3000
+2021-11-17 19:27:36 info: Server is running on http://localhost:3000
+2021-11-17 19:38:50 info: Server is running on http://localhost:3000
+2021-11-17 19:51:36 info: Server is running on http://localhost:3000
+2021-11-17 19:53:49 info: Server is running on http://localhost:3000

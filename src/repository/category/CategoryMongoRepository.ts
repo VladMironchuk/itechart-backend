@@ -1,4 +1,4 @@
-import MongoCategory, { Category } from '../../models/category';
+import MongoCategory from '../../models/category';
 import { categoryMongo } from '../../dto/category-mongo.dto';
 
 const DEFAULT_MONGO_KEYS = 'id displayName createdAt'
