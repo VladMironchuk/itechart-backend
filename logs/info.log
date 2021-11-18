@@ -2634,3 +2634,92 @@
 2021-11-17 19:38:50 info: Server is running on http://localhost:3000
 2021-11-17 19:51:36 info: Server is running on http://localhost:3000
 2021-11-17 19:53:49 info: Server is running on http://localhost:3000
+2021-11-17 20:02:55 info: Server is running on http://localhost:3000
+2021-11-18 17:06:58 info: Server is running on http://localhost:3000
+2021-11-18 17:07:23 info: Server is running on http://localhost:3000
+2021-11-18 17:11:05 info: Server is running on http://localhost:3000
+2021-11-18 17:13:24 info: Server is running on http://localhost:3000
+2021-11-18 17:15:35 error: Error: ⨯ Unable to compile TypeScript:
+[96msrc/middlewares/error-handler.ts[0m:[93m5[0m:[93m7[0m - [91merror[0m[90m TS2349: [0mThis expression is not callable.
+  Type 'Number' has no call signatures.
+
+[7m5[0m   res.status(err.errorStatus).send(err.message);
+[7m [0m [91m      ~~~~~~[0m
+
+    at Object.<anonymous> (E:\info\js_selflearn\itechart\itechart-backend\src\middlewares\error-handler.ts:1:7)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Module._compile (E:\info\js_selflearn\itechart\itechart-backend\node_modules\source-map-support\source-map-support.js:568:25)
+    at Module.m._compile (C:\Users\VLAD\AppData\Local\Temp\ts-node-dev-hook-19092631971526752.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at require.extensions..jsx.require.extensions..js (C:\Users\VLAD\AppData\Local\Temp\ts-node-dev-hook-19092631971526752.js:114:20)
+    at require.extensions.<computed> (C:\Users\VLAD\AppData\Local\Temp\ts-node-dev-hook-19092631971526752.js:71:20)
+    at Object.nodeDevHook [as .ts] (E:\info\js_selflearn\itechart\itechart-backend\node_modules\ts-node-dev\lib\hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+2021-11-18 17:16:41 error: Error: ⨯ Unable to compile TypeScript:
+[96msrc/middlewares/error-handler.ts[0m:[93m5[0m:[93m7[0m - [91merror[0m[90m TS2349: [0mThis expression is not callable.
+  Type 'Number' has no call signatures.
+
+[7m5[0m   res.status(err.errorStatus).send(err.message);
+[7m [0m [91m      ~~~~~~[0m
+
+    at Object.<anonymous> (E:\info\js_selflearn\itechart\itechart-backend\src\middlewares\error-handler.ts:1:7)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Module._compile (E:\info\js_selflearn\itechart\itechart-backend\node_modules\source-map-support\source-map-support.js:568:25)
+    at Module.m._compile (C:\Users\VLAD\AppData\Local\Temp\ts-node-dev-hook-19092631971526752.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at require.extensions..jsx.require.extensions..js (C:\Users\VLAD\AppData\Local\Temp\ts-node-dev-hook-19092631971526752.js:114:20)
+    at require.extensions.<computed> (C:\Users\VLAD\AppData\Local\Temp\ts-node-dev-hook-19092631971526752.js:71:20)
+    at Object.nodeDevHook [as .ts] (E:\info\js_selflearn\itechart\itechart-backend\node_modules\ts-node-dev\lib\hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+2021-11-18 17:17:22 error: Error: ⨯ Unable to compile TypeScript:
+[96msrc/middlewares/error-handler.ts[0m:[93m5[0m:[93m7[0m - [91merror[0m[90m TS2349: [0mThis expression is not callable.
+  Type 'Number' has no call signatures.
+
+[7m5[0m   res.status(err.errorStatus).send(err.message);
+[7m [0m [91m      ~~~~~~[0m
+
+    at Object.<anonymous> (E:\info\js_selflearn\itechart\itechart-backend\src\middlewares\error-handler.ts:1:7)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Module._compile (E:\info\js_selflearn\itechart\itechart-backend\node_modules\source-map-support\source-map-support.js:568:25)
+    at Module.m._compile (C:\Users\VLAD\AppData\Local\Temp\ts-node-dev-hook-19092631971526752.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at require.extensions..jsx.require.extensions..js (C:\Users\VLAD\AppData\Local\Temp\ts-node-dev-hook-19092631971526752.js:114:20)
+    at require.extensions.<computed> (C:\Users\VLAD\AppData\Local\Temp\ts-node-dev-hook-19092631971526752.js:71:20)
+    at Object.nodeDevHook [as .ts] (E:\info\js_selflearn\itechart\itechart-backend\node_modules\ts-node-dev\lib\hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+2021-11-18 17:18:52 info: Server is running on http://localhost:3000
+2021-11-18 17:19:18 info: Server is running on http://localhost:3000
+2021-11-18 17:21:28 info: Server is running on http://localhost:3000
+2021-11-18 17:27:50 error: Error: Illegal arguments: undefined, number
+    at _async (E:\info\js_selflearn\itechart\itechart-backend\node_modules\bcryptjs\dist\bcrypt.js:214:46)
+    at E:\info\js_selflearn\itechart\itechart-backend\node_modules\bcryptjs\dist\bcrypt.js:223:17
+    at new Promise (<anonymous>)
+    at Object.bcrypt.hash (E:\info\js_selflearn\itechart\itechart-backend\node_modules\bcryptjs\dist\bcrypt.js:222:20)
+    at E:\info\js_selflearn\itechart\itechart-backend\src\routes\register.ts:20:35
+    at Generator.next (<anonymous>)
+    at fulfilled (E:\info\js_selflearn\itechart\itechart-backend\src\routes\register.ts:24:58)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+2021-11-18 17:44:10 info: Server is running on http://localhost:3000
+2021-11-18 17:46:10 info: Server is running on http://localhost:3000
+2021-11-18 17:47:40 info: Server is running on http://localhost:3000
+2021-11-18 17:49:32 info: Server is running on http://localhost:3000
+2021-11-18 17:49:45 info: Server is running on http://localhost:3000
+2021-11-18 17:50:24 info: Server is running on http://localhost:3000
+2021-11-18 17:53:46 info: Server is running on http://localhost:3000
+2021-11-18 21:28:51 info: Server is running on http://localhost:3000
+2021-11-18 21:53:02 info: Server is running on http://localhost:3000
+2021-11-18 22:01:16 info: Server is running on http://localhost:3000
+2021-11-18 22:01:58 info: Server is running on http://localhost:3000
+2021-11-18 22:02:30 info: Server is running on http://localhost:3000
+2021-11-18 22:03:13 info: Server is running on http://localhost:3000
+2021-11-18 22:03:58 info: Server is running on http://localhost:3000
+2021-11-18 22:05:39 info: Server is running on http://localhost:3000
+2021-11-18 22:05:58 info: Server is running on http://localhost:3000
+2021-11-18 22:06:31 info: Server is running on http://localhost:3000
+2021-11-18 22:06:57 info: Server is running on http://localhost:3000
+2021-11-18 22:08:13 info: Server is running on http://localhost:3000
+2021-11-18 22:12:02 info: Server is running on http://localhost:3000
+2021-11-18 22:13:05 error: User exists

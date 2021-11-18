@@ -8,18 +8,18 @@ export const mapPriceQuery = (priceQuery: string) => {
   }
 
   if(!priceQuery.includes(':')){
-    throw new InvalidDataError(400, 'invalid data input');
+    throw new InvalidDataError("wrong format(must be min:max)");
   }
 
   const priceFilters = priceQuery.split(':').map((filter) => +filter);
   priceFilters.forEach((filter) => {
     if (isNaN(filter)) {
-      throw new InvalidDataError(400, 'invalid data input');
+      throw new InvalidDataError("filters must be numbers");
     }
   });
 
   if((priceFilters[1] <= priceFilters[0]) && priceFilters[1]) {
-    throw new InvalidDataError(400, 'invalid data input');
+    throw new InvalidDataError("min must be lower than max");
   }
 
   return priceFilters[1] === 0

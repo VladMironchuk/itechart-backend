@@ -2,8 +2,8 @@ export class InvalidDataError extends Error {
 
   private errorStatus: number
 
-  constructor(status, message = status.message) {
+  constructor(message = "Invalid data input") {
     super(message);
-    this.errorStatus = status
+    this.errorStatus = 400
   }
 }

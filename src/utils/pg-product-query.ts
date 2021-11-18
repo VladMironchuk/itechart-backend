@@ -21,7 +21,7 @@ const validateTotalRating = (totalRating: string): number => {
     return 0
   }
   if (isNaN(+totalRating)) {
-    throw new InvalidDataError(400, 'invalid data input');
+    throw new InvalidDataError("rating must be a number");
   }
   return +totalRating;
 };
@@ -31,15 +31,19 @@ const validateSortingFilter = (sortingFilter: string): ['' | keyof productPg, ''
     return ['', ''];
   }
 
+  if(!sortingFilter.includes(':')){
+    throw new InvalidDataError("invalid format(must be filter:asc|desc)");
+  }
+
   const filter = sortingFilter.split(':')[0];
   if (!['displayName', 'createdAt', 'price', 'totalRating'].includes(filter)) {
-    throw new InvalidDataError(400, 'invalid data input');
+    throw new InvalidDataError("wrong filter");
   }
 
   const value = sortingFilter.split(':')[1].toUpperCase();
 
   if (!['ASC', 'DESC'].includes(value)) {
-    throw new InvalidDataError(400, 'invalid data input');
+    throw new InvalidDataError("wrong comparator");
   }
 
   return [filter as keyof productPg, value as pgSortCriteria];

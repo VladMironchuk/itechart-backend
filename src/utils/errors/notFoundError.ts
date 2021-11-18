@@ -2,8 +2,8 @@ export class NotFoundError extends Error {
 
   private errorStatus: number
 
-  constructor(status, message = status.message) {
+  constructor(message = "Data not found") {
     super(message);
-    this.errorStatus = status
+    this.errorStatus = 404
   }
 }
