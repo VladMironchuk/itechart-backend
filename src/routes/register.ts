@@ -1,31 +1,21 @@
 import { Request, Response, Router } from 'express';
-import * as bcrypt from 'bcryptjs';
-import User from '../models/user';
-import { InvalidDataError } from '../utils/errors/invalidDataError';
+import { UserRepository } from '../repository/user/UserRepository';
 
-export const router = Router();
+const router = Router();
 
 router.get('/', async (req: Request, res: Response, _) => {
-  res.send(await User.find());
+  res.send('hello');
 });
 
 router.post('/', async (req: Request, res: Response, next) => {
   try {
     const { password, username } = req.body;
-    const candidate = await User.findOne({ username });
-
-    if (candidate) {
-      throw new InvalidDataError('User exists');
-    }
-
-    const hashedPassword = await bcrypt.hash(password, 10);
-    const user = new User({
-      username,
-      password: hashedPassword,
-    });
-    await user.save();
+    const userRepository = new UserRepository()
+    await userRepository.register(username, password)
     res.status(201).send({ message: 'User was created' });
   } catch (e) {
     next(e);
   }
 });
+
+export default router

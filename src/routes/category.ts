@@ -3,7 +3,7 @@ import { CategoryRepository } from '../repository/category/CategoryRepository';
 import mapCategoryQueryMongo from '../utils/mongo-category-query'
 import mapCategoryQueryPg from '../utils/pg-category-query'
 
-export const router = Router();
+const router = Router();
 
 router.get('/', async (req: Request, res: Response, next: NextFunction): Promise<void> => {
   try {
@@ -29,3 +29,5 @@ router.get('/:id', async (req: Request, res: Response, next: NextFunction): Prom
     next(e)
   }
 });
+
+export default router

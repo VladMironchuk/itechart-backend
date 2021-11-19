@@ -1,9 +1,11 @@
 import 'reflect-metadata';
 import express, { Application } from 'express';
 import { ConnectionController } from './connection/connection';
-import { router as productRouter } from './routes/product';
-import { router as categoryRouter } from './routes/category';
-import { router as registerRouter } from './routes/register';
+import productRouter from './routes/product';
+import categoryRouter  from './routes/category';
+import registerRouter from './routes/register';
+import authRouter from './routes/authenticate'
+import profileRouter from './routes/profile'
 import { errorLogger, logger, reqLogger } from './logger/logger';
 import { serverConfig } from './config/server-config';
 import errorHandler from './middlewares/error-handler'
@@ -17,6 +19,8 @@ app.use(reqLogger);
 app.use('/products', productRouter);
 app.use('/categories', categoryRouter);
 app.use('/register', registerRouter)
+app.use('/authenticate', authRouter)
+app.use('/profile', profileRouter)
 
 app.use(errorHandler)
 app.use(errorLogger)

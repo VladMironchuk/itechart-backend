@@ -2723,3 +2723,141 @@
 2021-11-18 22:08:13 info: Server is running on http://localhost:3000
 2021-11-18 22:12:02 info: Server is running on http://localhost:3000
 2021-11-18 22:13:05 error: User exists
+2021-11-18 22:14:48 error: MongoNetworkError: connection 1 to 18.157.118.32:27017 closed
+    at Connection.handleIssue (E:\info\js_selflearn\itechart\itechart-backend\node_modules\mongoose\node_modules\mongodb\src\cmap\connection.ts:308:15)
+    at TLSSocket.<anonymous> (E:\info\js_selflearn\itechart\itechart-backend\node_modules\mongoose\node_modules\mongodb\src\cmap\connection.ts:232:35)
+    at TLSSocket.emit (node:events:394:28)
+    at node:net:672:12
+    at TCP.done (node:_tls_wrap:580:7)
+2021-11-18 22:20:33 info: Server is running on http://localhost:3000
+2021-11-18 22:22:41 error: MongoNetworkError: connect ETIMEDOUT 18.157.118.32:27017
+    at connectionFailureError (E:\info\js_selflearn\itechart\itechart-backend\node_modules\mongoose\node_modules\mongodb\src\cmap\connect.ts:390:14)
+    at TLSSocket.<anonymous> (E:\info\js_selflearn\itechart\itechart-backend\node_modules\mongoose\node_modules\mongodb\src\cmap\connect.ts:358:16)
+    at Object.onceWrapper (node:events:514:26)
+    at TLSSocket.emit (node:events:394:28)
+    at emitErrorNT (node:internal/streams/destroy:157:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:122:3)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+2021-11-18 22:23:07 info: Server is running on http://localhost:3000
+2021-11-18 22:24:00 info: Server is running on http://localhost:3000
+2021-11-18 22:25:29 info: Server is running on http://localhost:3000
+2021-11-18 22:31:31 info: Server is running on http://localhost:3000
+2021-11-18 22:41:44 info: Server is running on http://localhost:3000
+2021-11-18 22:44:19 info: Server is running on http://localhost:3000
+2021-11-18 22:44:34 info: Server is running on http://localhost:3000
+2021-11-18 22:45:11 info: Server is running on http://localhost:3000
+2021-11-18 22:46:40 info: Server is running on http://localhost:3000
+2021-11-18 22:47:39 info: Server is running on http://localhost:3000
+2021-11-18 22:48:03 info: Server is running on http://localhost:3000
+2021-11-18 22:48:13 info: Server is running on http://localhost:3000
+2021-11-18 22:48:46 info: Server is running on http://localhost:3000
+2021-11-18 22:54:17 info: Server is running on http://localhost:3000
+2021-11-18 22:55:57 info: Server is running on http://localhost:3000
+2021-11-18 22:56:40 info: Server is running on http://localhost:3000
+2021-11-18 22:56:49 error: ReferenceError: localStorage is not defined
+    at E:\info\js_selflearn\itechart\itechart-backend\src\routes\authenticate.ts:33:3
+    at Generator.next (<anonymous>)
+    at fulfilled (E:\info\js_selflearn\itechart\itechart-backend\src\routes\authenticate.ts:24:58)
+2021-11-18 23:02:51 info: Server is running on http://localhost:3000
+2021-11-18 23:04:18 info: Server is running on http://localhost:3000
+2021-11-18 23:08:06 info: Server is running on http://localhost:3000
+2021-11-18 23:08:30 info: Server is running on http://localhost:3000
+2021-11-18 23:15:18 info: Server is running on http://localhost:3000
+2021-11-18 23:17:30 info: Server is running on http://localhost:3000
+2021-11-18 23:18:52 info: Server is running on http://localhost:3000
+2021-11-18 23:20:44 info: Server is running on http://localhost:3000
+2021-11-18 23:22:06 info: Server is running on http://localhost:3000
+2021-11-18 23:22:12 error: TypeError: Cannot read property 'token' of undefined
+    at E:\info\js_selflearn\itechart\itechart-backend\src\routes\profile.ts:12:28
+    at Generator.next (<anonymous>)
+    at E:\info\js_selflearn\itechart\itechart-backend\src\routes\profile.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (E:\info\js_selflearn\itechart\itechart-backend\src\routes\profile.ts:4:12)
+    at E:\info\js_selflearn\itechart\itechart-backend\src\routes\profile.ts:11:75
+    at Layer.handle [as handle_request] (E:\info\js_selflearn\itechart\itechart-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\info\js_selflearn\itechart\itechart-backend\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (E:\info\js_selflearn\itechart\itechart-backend\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (E:\info\js_selflearn\itechart\itechart-backend\node_modules\express\lib\router\layer.js:95:5)
+2021-11-18 23:22:35 info: Server is running on http://localhost:3000
+2021-11-18 23:22:43 error: TypeError: Cannot read property 'token' of undefined
+    at E:\info\js_selflearn\itechart\itechart-backend\src\routes\profile.ts:12:27
+    at Generator.next (<anonymous>)
+    at E:\info\js_selflearn\itechart\itechart-backend\src\routes\profile.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (E:\info\js_selflearn\itechart\itechart-backend\src\routes\profile.ts:4:12)
+    at E:\info\js_selflearn\itechart\itechart-backend\src\routes\profile.ts:11:75
+    at Layer.handle [as handle_request] (E:\info\js_selflearn\itechart\itechart-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\info\js_selflearn\itechart\itechart-backend\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (E:\info\js_selflearn\itechart\itechart-backend\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (E:\info\js_selflearn\itechart\itechart-backend\node_modules\express\lib\router\layer.js:95:5)
+2021-11-18 23:23:06 info: Server is running on http://localhost:3000
+2021-11-18 23:23:18 info: Server is running on http://localhost:3000
+2021-11-18 23:23:24 info: Server is running on http://localhost:3000
+2021-11-18 23:24:12 info: Server is running on http://localhost:3000
+2021-11-18 23:25:15 error: MongoNetworkTimeoutError: connection timed out
+    at connectionFailureError (E:\info\js_selflearn\itechart\itechart-backend\node_modules\mongoose\node_modules\mongodb\src\cmap\connect.ts:392:14)
+    at TLSSocket.<anonymous> (E:\info\js_selflearn\itechart\itechart-backend\node_modules\mongoose\node_modules\mongodb\src\cmap\connect.ts:358:16)
+    at Object.onceWrapper (node:events:513:28)
+    at TLSSocket.emit (node:events:394:28)
+    at TLSSocket.Socket._onTimeout (node:net:486:8)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+2021-11-18 23:25:29 info: Server is running on http://localhost:3000
+2021-11-18 23:26:44 info: Server is running on http://localhost:3000
+2021-11-18 23:29:40 info: Server is running on http://localhost:3000
+2021-11-18 23:29:46 info: Server is running on http://localhost:3000
+2021-11-18 23:33:14 info: Server is running on http://localhost:3000
+2021-11-18 23:33:18 info: Server is running on http://localhost:3000
+2021-11-18 23:34:30 info: Server is running on http://localhost:3000
+2021-11-18 23:35:06 info: Server is running on http://localhost:3000
+2021-11-18 23:35:14 info: Server is running on http://localhost:3000
+2021-11-18 23:35:49 info: Server is running on http://localhost:3000
+2021-11-18 23:39:06 info: Server is running on http://localhost:3000
+2021-11-18 23:40:31 info: Server is running on http://localhost:3000
+2021-11-18 23:41:03 info: Server is running on http://localhost:3000
+2021-11-18 23:41:39 info: Server is running on http://localhost:3000
+2021-11-18 23:42:19 error: invalid password
+2021-11-18 23:42:51 info: Server is running on http://localhost:3000
+2021-11-18 23:42:54 error: invalid password
+2021-11-18 23:44:49 info: Server is running on http://localhost:3000
+2021-11-18 23:46:05 error: Unauthorized
+2021-11-18 23:47:13 error: Unauthorized
+2021-11-18 23:48:21 info: Server is running on http://localhost:3000
+2021-11-18 23:48:40 info: Server is running on http://localhost:3000
+2021-11-19 10:26:42 info: Server is running on http://localhost:3000
+2021-11-19 21:20:05 info: Server is running on http://localhost:3000
+2021-11-19 21:26:58 error: User exists
+2021-11-19 21:45:48 info: Server is running on http://localhost:3000
+2021-11-19 21:46:47 info: Server is running on http://localhost:3000
+2021-11-19 22:09:55 error: TypeORMError: Entity metadata for Product#user was not found. Check if you specified a correct entity object and if it's connected in the connection options.
+    at new TypeORMError (E:\info\js_selflearn\itechart\itechart-backend\src\error\TypeORMError.ts:7:9)
+    at E:\info\js_selflearn\itechart\itechart-backend\src\metadata-builder\EntityMetadataBuilder.ts:681:23
+    at Array.forEach (<anonymous>)
+    at EntityMetadataBuilder.computeInverseProperties (E:\info\js_selflearn\itechart\itechart-backend\src\metadata-builder\EntityMetadataBuilder.ts:676:34)
+    at E:\info\js_selflearn\itechart\itechart-backend\src\metadata-builder\EntityMetadataBuilder.ts:119:56
+    at Array.forEach (<anonymous>)
+    at EntityMetadataBuilder.build (E:\info\js_selflearn\itechart\itechart-backend\src\metadata-builder\EntityMetadataBuilder.ts:119:25)
+    at ConnectionMetadataBuilder.buildEntityMetadatas (E:\info\js_selflearn\itechart\itechart-backend\src\connection\ConnectionMetadataBuilder.ts:65:111)
+    at Connection.buildMetadatas (E:\info\js_selflearn\itechart\itechart-backend\src\connection\Connection.ts:510:59)
+    at Connection.<anonymous> (E:\info\js_selflearn\itechart\itechart-backend\src\connection\Connection.ts:186:18)
+2021-11-19 22:10:53 info: Server is running on http://localhost:3000
+2021-11-19 22:19:28 info: Server is running on http://localhost:3000
+2021-11-19 22:21:24 info: Server is running on http://localhost:3000
+2021-11-19 22:23:18 info: Server is running on http://localhost:3000
+2021-11-19 22:25:53 info: Server is running on http://localhost:3000
+2021-11-19 22:26:29 info: Server is running on http://localhost:3000
+2021-11-19 22:26:42 info: Server is running on http://localhost:3000
+2021-11-19 22:26:44 error: User exists
+2021-11-19 22:27:22 info: Server is running on http://localhost:3000
+2021-11-19 22:27:24 error: User exists
+2021-11-19 22:27:35 info: Server is running on http://localhost:3000
+2021-11-19 22:27:52 info: Server is running on http://localhost:3000
+2021-11-19 22:28:02 info: Server is running on http://localhost:3000
+2021-11-19 22:29:22 info: Server is running on http://localhost:3000
+2021-11-19 22:30:49 info: Server is running on http://localhost:3000
+2021-11-19 22:32:08 info: Server is running on http://localhost:3000
+2021-11-19 22:33:11 info: Server is running on http://localhost:3000
+2021-11-19 22:34:25 info: Server is running on http://localhost:3000
+2021-11-19 22:40:53 info: Server is running on http://localhost:3000
+2021-11-19 22:42:26 info: Server is running on http://localhost:3000
+2021-11-19 22:44:06 info: Server is running on http://localhost:3000

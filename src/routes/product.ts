@@ -3,7 +3,8 @@ import { ProductRepository } from '../repository/product/ProductRepository';
 import validateQuery from '../middlewares/products-query'
 import { NotFoundError } from '../utils/errors/notFoundError';
 
-export const router = Router();
+const router = Router();
+
 router.get('/',validateQuery, async (req: Request, res: Response, next: NextFunction): Promise<void> => {
   try {
     const productRepository = new ProductRepository();
@@ -16,3 +17,5 @@ router.get('/',validateQuery, async (req: Request, res: Response, next: NextFunc
     next(e)
   }
 });
+
+export default router
