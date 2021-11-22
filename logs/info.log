@@ -2861,3 +2861,539 @@
 2021-11-19 22:40:53 info: Server is running on http://localhost:3000
 2021-11-19 22:42:26 info: Server is running on http://localhost:3000
 2021-11-19 22:44:06 info: Server is running on http://localhost:3000
+2021-11-22 09:39:48 error: TypeError: passport.use is not a function
+    at Object.<anonymous> (E:\info\js_selflearn\itechart\itechart-backend\src\utils\passport\passport.ts:7:10)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Module._compile (E:\info\js_selflearn\itechart\itechart-backend\node_modules\source-map-support\source-map-support.js:568:25)
+    at Module.m._compile (C:\Users\VLAD\AppData\Local\Temp\ts-node-dev-hook-11504485931281816.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at require.extensions..jsx.require.extensions..js (C:\Users\VLAD\AppData\Local\Temp\ts-node-dev-hook-11504485931281816.js:114:20)
+    at require.extensions.<computed> (C:\Users\VLAD\AppData\Local\Temp\ts-node-dev-hook-11504485931281816.js:71:20)
+    at Object.nodeDevHook [as .ts] (E:\info\js_selflearn\itechart\itechart-backend\node_modules\ts-node-dev\lib\hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+2021-11-22 09:40:40 error: TypeError: Cannot read property 'fromAuthHeaderAsBearerToken' of undefined
+    at Object.<anonymous> (E:\info\js_selflearn\itechart\itechart-backend\src\utils\passport\passport.ts:35:32)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Module._compile (E:\info\js_selflearn\itechart\itechart-backend\node_modules\source-map-support\source-map-support.js:568:25)
+    at Module.m._compile (C:\Users\VLAD\AppData\Local\Temp\ts-node-dev-hook-6209365442664014.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at require.extensions..jsx.require.extensions..js (C:\Users\VLAD\AppData\Local\Temp\ts-node-dev-hook-6209365442664014.js:114:20)
+    at require.extensions.<computed> (C:\Users\VLAD\AppData\Local\Temp\ts-node-dev-hook-6209365442664014.js:71:20)
+    at Object.nodeDevHook [as .ts] (E:\info\js_selflearn\itechart\itechart-backend\node_modules\ts-node-dev\lib\hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+2021-11-22 09:42:17 error: TypeError: Cannot read property 'fromAuthHeaderAsBearerToken' of undefined
+    at Object.<anonymous> (E:\info\js_selflearn\itechart\itechart-backend\src\utils\passport\passport.ts:35:44)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Module._compile (E:\info\js_selflearn\itechart\itechart-backend\node_modules\source-map-support\source-map-support.js:568:25)
+    at Module.m._compile (C:\Users\VLAD\AppData\Local\Temp\ts-node-dev-hook-6209365442664014.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at require.extensions..jsx.require.extensions..js (C:\Users\VLAD\AppData\Local\Temp\ts-node-dev-hook-6209365442664014.js:114:20)
+    at require.extensions.<computed> (C:\Users\VLAD\AppData\Local\Temp\ts-node-dev-hook-6209365442664014.js:71:20)
+    at Object.nodeDevHook [as .ts] (E:\info\js_selflearn\itechart\itechart-backend\node_modules\ts-node-dev\lib\hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+2021-11-22 09:42:54 error: TypeError: Cannot read property 'fromAuthHeaderAsBearerToken' of undefined
+    at Object.<anonymous> (E:\info\js_selflearn\itechart\itechart-backend\src\utils\passport\passport.ts:35:44)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Module._compile (E:\info\js_selflearn\itechart\itechart-backend\node_modules\source-map-support\source-map-support.js:568:25)
+    at Module.m._compile (C:\Users\VLAD\AppData\Local\Temp\ts-node-dev-hook-6209365442664014.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at require.extensions..jsx.require.extensions..js (C:\Users\VLAD\AppData\Local\Temp\ts-node-dev-hook-6209365442664014.js:114:20)
+    at require.extensions.<computed> (C:\Users\VLAD\AppData\Local\Temp\ts-node-dev-hook-6209365442664014.js:71:20)
+    at Object.nodeDevHook [as .ts] (E:\info\js_selflearn\itechart\itechart-backend\node_modules\ts-node-dev\lib\hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+2021-11-22 09:47:08 error: TypeError: Cannot read property 'fromAuthHeaderAsBearerToken' of undefined
+    at Object.<anonymous> (E:\info\js_selflearn\itechart\itechart-backend\src\utils\passport\passport.ts:35:44)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Module._compile (E:\info\js_selflearn\itechart\itechart-backend\node_modules\source-map-support\source-map-support.js:568:25)
+    at Module.m._compile (C:\Users\VLAD\AppData\Local\Temp\ts-node-dev-hook-7345955461730185.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at require.extensions..jsx.require.extensions..js (C:\Users\VLAD\AppData\Local\Temp\ts-node-dev-hook-7345955461730185.js:114:20)
+    at require.extensions.<computed> (C:\Users\VLAD\AppData\Local\Temp\ts-node-dev-hook-7345955461730185.js:71:20)
+    at Object.nodeDevHook [as .ts] (E:\info\js_selflearn\itechart\itechart-backend\node_modules\ts-node-dev\lib\hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+2021-11-22 09:47:37 info: Server is running on http://localhost:3000
+2021-11-22 09:50:32 info: Server is running on http://localhost:3000
+2021-11-22 09:51:25 error: TypeError: passport.authenticate is not a function
+    at E:\info\js_selflearn\itechart\itechart-backend\src\routes\authenticate.ts:25:12
+    at Generator.next (<anonymous>)
+    at E:\info\js_selflearn\itechart\itechart-backend\src\routes\authenticate.ts:27:71
+    at new Promise (<anonymous>)
+    at __awaiter (E:\info\js_selflearn\itechart\itechart-backend\src\routes\authenticate.ts:23:12)
+    at E:\info\js_selflearn\itechart\itechart-backend\src\routes\authenticate.ts:16:76
+    at Layer.handle [as handle_request] (E:\info\js_selflearn\itechart\itechart-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\info\js_selflearn\itechart\itechart-backend\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (E:\info\js_selflearn\itechart\itechart-backend\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (E:\info\js_selflearn\itechart\itechart-backend\node_modules\express\lib\router\layer.js:95:5)
+2021-11-22 09:51:45 info: Server is running on http://localhost:3000
+2021-11-22 09:54:23 info: Server is running on http://localhost:3000
+2021-11-22 09:55:45 info: Server is running on http://localhost:3000
+2021-11-22 09:56:28 error: Invalid password
+2021-11-22 09:57:57 info: Server is running on http://localhost:3000
+2021-11-22 09:59:02 error: Error: Cannot find module './passport'
+Require stack:
+- E:\info\js_selflearn\itechart\itechart-backend\src\index.ts
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)
+    at Function.Module._load (node:internal/modules/cjs/loader:778:27)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at require (node:internal/modules/cjs/helpers:94:18)
+    at Object.<anonymous> (E:\info\js_selflearn\itechart\itechart-backend\src\index.ts:12:1)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Module._compile (E:\info\js_selflearn\itechart\itechart-backend\node_modules\source-map-support\source-map-support.js:568:25)
+    at Module.m._compile (C:\Users\VLAD\AppData\Local\Temp\ts-node-dev-hook-7345955461730185.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at require.extensions..jsx.require.extensions..js (C:\Users\VLAD\AppData\Local\Temp\ts-node-dev-hook-7345955461730185.js:114:20)
+2021-11-22 10:03:48 error: Error: Cannot find module './passport'
+Require stack:
+- E:\info\js_selflearn\itechart\itechart-backend\src\index.ts
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)
+    at Function.Module._load (node:internal/modules/cjs/loader:778:27)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at require (node:internal/modules/cjs/helpers:94:18)
+    at Object.<anonymous> (E:\info\js_selflearn\itechart\itechart-backend\src\index.ts:12:1)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Module._compile (E:\info\js_selflearn\itechart\itechart-backend\node_modules\source-map-support\source-map-support.js:568:25)
+    at Module.m._compile (C:\Users\VLAD\AppData\Local\Temp\ts-node-dev-hook-7345955461730185.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at require.extensions..jsx.require.extensions..js (C:\Users\VLAD\AppData\Local\Temp\ts-node-dev-hook-7345955461730185.js:114:20)
+2021-11-22 10:08:35 error: Error: Cannot find module './passport'
+Require stack:
+- E:\info\js_selflearn\itechart\itechart-backend\src\index.ts
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)
+    at Function.Module._load (node:internal/modules/cjs/loader:778:27)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at require (node:internal/modules/cjs/helpers:94:18)
+    at Object.<anonymous> (E:\info\js_selflearn\itechart\itechart-backend\src\index.ts:12:1)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Module._compile (E:\info\js_selflearn\itechart\itechart-backend\node_modules\source-map-support\source-map-support.js:568:25)
+    at Module.m._compile (C:\Users\VLAD\AppData\Local\Temp\ts-node-dev-hook-7345955461730185.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at require.extensions..jsx.require.extensions..js (C:\Users\VLAD\AppData\Local\Temp\ts-node-dev-hook-7345955461730185.js:114:20)
+2021-11-22 10:11:49 error: Error: ENOENT: no such file or directory, open 'E:\info\js_selflearn\itechart\itechart-backend\config\userdata.json'
+    at Object.openSync (node:fs:582:3)
+    at Object.writeFileSync (node:fs:2143:35)
+    at E:\info\js_selflearn\itechart\itechart-backend\node_modules\handy-storage\lib\index.js:57:12
+    at HandyStorage.connect (E:\info\js_selflearn\itechart\itechart-backend\node_modules\handy-storage\lib\index.js:59:8)
+    at Object.<anonymous> (E:\info\js_selflearn\itechart\itechart-backend\src\middlewares\user-auth.ts:7:9)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Module._compile (E:\info\js_selflearn\itechart\itechart-backend\node_modules\source-map-support\source-map-support.js:568:25)
+    at Module.m._compile (C:\Users\VLAD\AppData\Local\Temp\ts-node-dev-hook-7345955461730185.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at require.extensions..jsx.require.extensions..js (C:\Users\VLAD\AppData\Local\Temp\ts-node-dev-hook-7345955461730185.js:114:20)
+2021-11-22 10:12:09 info: Server is running on http://localhost:3000
+2021-11-22 10:13:44 info: Server is running on http://localhost:3000
+2021-11-22 10:13:54 error: Unauthorized
+2021-11-22 10:14:22 info: Server is running on http://localhost:3000
+2021-11-22 10:16:03 info: Server is running on http://localhost:3000
+2021-11-22 10:16:27 info: Server is running on http://localhost:3000
+2021-11-22 10:17:53 error: Unauthorized
+2021-11-22 10:18:33 info: Server is running on http://localhost:3000
+2021-11-22 10:18:49 info: Server is running on http://localhost:3000
+2021-11-22 10:20:43 info: Server is running on http://localhost:3000
+2021-11-22 10:34:21 info: Server is running on http://localhost:3000
+2021-11-22 11:03:18 error: Error: Cannot find module './passport'
+Require stack:
+- E:\info\js_selflearn\itechart\itechart-backend\src\index.ts
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)
+    at Function.Module._load (node:internal/modules/cjs/loader:778:27)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at require (node:internal/modules/cjs/helpers:94:18)
+    at Object.<anonymous> (E:\info\js_selflearn\itechart\itechart-backend\src\index.ts:14:1)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Module._compile (E:\info\js_selflearn\itechart\itechart-backend\node_modules\source-map-support\source-map-support.js:568:25)
+    at Module.m._compile (C:\Users\VLAD\AppData\Local\Temp\ts-node-dev-hook-16023168105561858.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at require.extensions..jsx.require.extensions..js (C:\Users\VLAD\AppData\Local\Temp\ts-node-dev-hook-16023168105561858.js:114:20)
+2021-11-22 11:03:41 info: Server is running on http://localhost:3000
+2021-11-22 11:05:12 info: Server is running on http://localhost:3000
+2021-11-22 11:05:42 info: Server is running on http://localhost:3000
+2021-11-22 11:07:24 info: Server is running on http://localhost:3000
+2021-11-22 11:20:32 info: Server is running on http://localhost:3000
+2021-11-22 11:21:07 info: Server is running on http://localhost:3000
+2021-11-22 11:22:02 info: Server is running on http://localhost:3000
+2021-11-22 11:22:08 info: Server is running on http://localhost:3000
+2021-11-22 11:23:18 info: Server is running on http://localhost:3000
+2021-11-22 11:23:49 info: Server is running on http://localhost:3000
+2021-11-22 11:24:07 info: Server is running on http://localhost:3000
+2021-11-22 11:26:50 info: Server is running on http://localhost:3000
+2021-11-22 11:34:49 info: Server is running on http://localhost:3000
+2021-11-22 11:34:53 error: Invalid password
+2021-11-22 11:35:03 error: Unauthorized
+2021-11-22 11:35:08 error: Unauthorized
+2021-11-22 11:35:09 error: Unauthorized
+2021-11-22 11:35:17 error: Unauthorized
+2021-11-22 11:35:18 error: Unauthorized
+2021-11-22 11:35:19 error: Unauthorized
+2021-11-22 11:35:55 info: Server is running on http://localhost:3000
+2021-11-22 12:32:23 info: Server is running on http://localhost:3000
+2021-11-22 12:32:35 error: Wrong password
+2021-11-22 12:33:19 info: Server is running on http://localhost:3000
+2021-11-22 12:34:07 info: Server is running on http://localhost:3000
+2021-11-22 12:35:04 error: User exists
+2021-11-22 12:35:58 info: Server is running on http://localhost:3000
+2021-11-22 12:36:31 info: Server is running on http://localhost:3000
+2021-11-22 12:36:50 info: Server is running on http://localhost:3000
+2021-11-22 12:38:14 info: Server is running on http://localhost:3000
+2021-11-22 12:38:23 info: Server is running on http://localhost:3000
+2021-11-22 12:38:34 info: Server is running on http://localhost:3000
+2021-11-22 12:39:12 info: Server is running on http://localhost:3000
+2021-11-22 12:39:22 info: Server is running on http://localhost:3000
+2021-11-22 12:39:32 info: Server is running on http://localhost:3000
+2021-11-22 12:39:48 error: Wrong password
+2021-11-22 13:11:34 info: Server is running on http://localhost:3000
+2021-11-22 13:11:45 error: TypeError: next is not a function
+    at attempt (E:\info\js_selflearn\itechart\itechart-backend\node_modules\passport\lib\middleware\authenticate.js:184:34)
+    at authenticate (E:\info\js_selflearn\itechart\itechart-backend\node_modules\passport\lib\middleware\authenticate.js:361:7)
+    at E:\info\js_selflearn\itechart\itechart-backend\src\routes\authenticate.ts:47:5
+    at Generator.next (<anonymous>)
+    at E:\info\js_selflearn\itechart\itechart-backend\src\routes\authenticate.ts:27:71
+    at new Promise (<anonymous>)
+    at __awaiter (E:\info\js_selflearn\itechart\itechart-backend\src\routes\authenticate.ts:23:12)
+    at E:\info\js_selflearn\itechart\itechart-backend\src\routes\authenticate.ts:19:76
+    at Layer.handle [as handle_request] (E:\info\js_selflearn\itechart\itechart-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\info\js_selflearn\itechart\itechart-backend\node_modules\express\lib\router\route.js:137:13)
+2021-11-22 13:14:12 info: Server is running on http://localhost:3000
+2021-11-22 13:15:01 info: Server is running on http://localhost:3000
+2021-11-22 13:18:20 info: Server is running on http://localhost:3000
+2021-11-22 13:18:43 info: Server is running on http://localhost:3000
+2021-11-22 13:18:58 info: Server is running on http://localhost:3000
+2021-11-22 13:19:24 info: Server is running on http://localhost:3000
+2021-11-22 13:20:19 info: Server is running on http://localhost:3000
+2021-11-22 13:20:45 info: Server is running on http://localhost:3000
+2021-11-22 13:21:49 info: Server is running on http://localhost:3000
+2021-11-22 13:22:28 info: Server is running on http://localhost:3000
+2021-11-22 13:27:54 info: Server is running on http://localhost:3000
+2021-11-22 13:28:20 error: TypeError: Router.use() requires a middleware function but got a Object
+    at Function.use (E:\info\js_selflearn\itechart\itechart-backend\node_modules\express\lib\router\index.js:458:13)
+    at Function.<anonymous> (E:\info\js_selflearn\itechart\itechart-backend\node_modules\express\lib\application.js:220:21)
+    at Array.forEach (<anonymous>)
+    at Function.use (E:\info\js_selflearn\itechart\itechart-backend\node_modules\express\lib\application.js:217:7)
+    at Object.<anonymous> (E:\info\js_selflearn\itechart\itechart-backend\src\index.ts:27:5)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Module._compile (E:\info\js_selflearn\itechart\itechart-backend\node_modules\source-map-support\source-map-support.js:568:25)
+    at Module.m._compile (C:\Users\VLAD\AppData\Local\Temp\ts-node-dev-hook-8018651265163865.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at require.extensions..jsx.require.extensions..js (C:\Users\VLAD\AppData\Local\Temp\ts-node-dev-hook-8018651265163865.js:114:20)
+2021-11-22 13:28:28 info: Server is running on http://localhost:3000
+2021-11-22 13:29:20 info: Server is running on http://localhost:3000
+2021-11-22 13:31:02 info: Server is running on http://localhost:3000
+2021-11-22 13:33:18 info: Server is running on http://localhost:3000
+2021-11-22 13:34:24 info: Server is running on http://localhost:3000
+2021-11-22 13:35:33 info: Server is running on http://localhost:3000
+2021-11-22 13:35:50 info: Server is running on http://localhost:3000
+2021-11-22 13:36:04 info: Server is running on http://localhost:3000
+2021-11-22 13:37:51 info: Server is running on http://localhost:3000
+2021-11-22 13:38:14 info: Server is running on http://localhost:3000
+2021-11-22 13:38:46 info: Server is running on http://localhost:3000
+2021-11-22 13:39:24 info: Server is running on http://localhost:3000
+2021-11-22 13:39:48 info: Server is running on http://localhost:3000
+2021-11-22 13:41:04 info: Server is running on http://localhost:3000
+2021-11-22 13:41:12 error: TypeError: Cannot destructure property 'message' of 'undefined' as it is undefined.
+    at E:\info\js_selflearn\itechart\itechart-backend\src\routes\authenticate.ts:20:48
+    at Strategy.strategy.error (E:\info\js_selflearn\itechart\itechart-backend\node_modules\passport\lib\middleware\authenticate.js:352:18)
+    at verified (E:\info\js_selflearn\itechart\itechart-backend\node_modules\passport-local\lib\strategy.js:81:28)
+    at Strategy.<anonymous> (E:\info\js_selflearn\itechart\itechart-backend\src\utils\passport\passport.ts:35:9)
+    at Generator.next (<anonymous>)
+    at fulfilled (E:\info\js_selflearn\itechart\itechart-backend\src\utils\passport\passport.ts:24:58)
+2021-11-22 13:43:19 info: Server is running on http://localhost:3000
+2021-11-22 13:44:11 info: Server is running on http://localhost:3000
+2021-11-22 13:44:33 info: Server is running on http://localhost:3000
+2021-11-22 13:44:49 info: Server is running on http://localhost:3000
+2021-11-22 13:45:10 info: Server is running on http://localhost:3000
+2021-11-22 13:50:55 info: Server is running on http://localhost:3000
+2021-11-22 13:51:23 info: Server is running on http://localhost:3000
+2021-11-22 13:51:43 info: Server is running on http://localhost:3000
+2021-11-22 13:51:52 info: Server is running on http://localhost:3000
+2021-11-22 13:57:14 info: Server is running on http://localhost:3000
+2021-11-22 13:59:16 info: Server is running on http://localhost:3000
+2021-11-22 13:59:51 info: Server is running on http://localhost:3000
+2021-11-22 14:00:07 info: Server is running on http://localhost:3000
+2021-11-22 14:00:30 info: Server is running on http://localhost:3000
+2021-11-22 14:03:30 info: Server is running on http://localhost:3000
+2021-11-22 14:05:45 error: TypeError: passport.authenticate is not a function
+    at Object.<anonymous> (E:\info\js_selflearn\itechart\itechart-backend\src\index.ts:27:30)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Module._compile (E:\info\js_selflearn\itechart\itechart-backend\node_modules\source-map-support\source-map-support.js:568:25)
+    at Module.m._compile (C:\Users\VLAD\AppData\Local\Temp\ts-node-dev-hook-6297565818464794.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at require.extensions..jsx.require.extensions..js (C:\Users\VLAD\AppData\Local\Temp\ts-node-dev-hook-6297565818464794.js:114:20)
+    at require.extensions.<computed> (C:\Users\VLAD\AppData\Local\Temp\ts-node-dev-hook-6297565818464794.js:71:20)
+    at Object.nodeDevHook [as .ts] (E:\info\js_selflearn\itechart\itechart-backend\node_modules\ts-node-dev\lib\hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+2021-11-22 14:06:00 error: TypeError: passport.authenticate is not a function
+    at Object.<anonymous> (E:\info\js_selflearn\itechart\itechart-backend\src\index.ts:27:30)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Module._compile (E:\info\js_selflearn\itechart\itechart-backend\node_modules\source-map-support\source-map-support.js:568:25)
+    at Module.m._compile (C:\Users\VLAD\AppData\Local\Temp\ts-node-dev-hook-32006418200074216.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at require.extensions..jsx.require.extensions..js (C:\Users\VLAD\AppData\Local\Temp\ts-node-dev-hook-32006418200074216.js:114:20)
+    at require.extensions.<computed> (C:\Users\VLAD\AppData\Local\Temp\ts-node-dev-hook-32006418200074216.js:71:20)
+    at Object.nodeDevHook [as .ts] (E:\info\js_selflearn\itechart\itechart-backend\node_modules\ts-node-dev\lib\hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+2021-11-22 14:06:10 info: Server is running on http://localhost:3000
+2021-11-22 14:12:06 info: Server is running on http://localhost:3000
+2021-11-22 14:13:12 info: Server is running on http://localhost:3000
+2021-11-22 14:17:04 info: Server is running on http://localhost:3000
+2021-11-22 14:17:34 info: Server is running on http://localhost:3000
+2021-11-22 14:18:09 info: Server is running on http://localhost:3000
+2021-11-22 14:19:02 info: Server is running on http://localhost:3000
+2021-11-22 14:23:05 info: Server is running on http://localhost:3000
+2021-11-22 14:24:04 info: Server is running on http://localhost:3000
+2021-11-22 14:27:04 info: Server is running on http://localhost:3000
+2021-11-22 14:28:55 info: Server is running on http://localhost:3000
+2021-11-22 14:30:45 info: Server is running on http://localhost:3000
+2021-11-22 14:33:11 info: Server is running on http://localhost:3000
+2021-11-22 14:44:27 info: Server is running on http://localhost:3000
+2021-11-22 14:45:31 info: Server is running on http://localhost:3000
+2021-11-22 14:45:43 info: Server is running on http://localhost:3000
+2021-11-22 14:46:05 info: Server is running on http://localhost:3000
+2021-11-22 14:47:59 info: Server is running on http://localhost:3000
+2021-11-22 14:48:35 info: Server is running on http://localhost:3000
+2021-11-22 14:48:46 info: Server is running on http://localhost:3000
+2021-11-22 14:49:08 info: Server is running on http://localhost:3000
+2021-11-22 14:49:45 info: Server is running on http://localhost:3000
+2021-11-22 14:50:02 info: Server is running on http://localhost:3000
+2021-11-22 14:50:17 info: Server is running on http://localhost:3000
+2021-11-22 14:50:37 info: Server is running on http://localhost:3000
+2021-11-22 14:50:57 info: Server is running on http://localhost:3000
+2021-11-22 14:54:39 info: Server is running on http://localhost:3000
+2021-11-22 14:54:48 info: Server is running on http://localhost:3000
+2021-11-22 14:56:10 info: Server is running on http://localhost:3000
+2021-11-22 14:56:19 error: TypeError: Cannot destructure property 'message' of 'undefined' as it is undefined.
+    at E:\info\js_selflearn\itechart\itechart-backend\src\routes\authenticate.ts:20:66
+    at Strategy.strategy.error (E:\info\js_selflearn\itechart\itechart-backend\node_modules\passport\lib\middleware\authenticate.js:352:18)
+    at verified (E:\info\js_selflearn\itechart\itechart-backend\node_modules\passport-local\lib\strategy.js:81:28)
+    at Strategy.<anonymous> (E:\info\js_selflearn\itechart\itechart-backend\src\utils\passport\passport.ts:34:9)
+    at Generator.next (<anonymous>)
+    at fulfilled (E:\info\js_selflearn\itechart\itechart-backend\src\utils\passport\passport.ts:24:58)
+2021-11-22 14:57:18 info: Server is running on http://localhost:3000
+2021-11-22 14:57:20 error: TypeError: Cannot destructure property 'message' of 'undefined' as it is undefined.
+    at E:\info\js_selflearn\itechart\itechart-backend\src\routes\authenticate.ts:20:66
+    at Strategy.strategy.error (E:\info\js_selflearn\itechart\itechart-backend\node_modules\passport\lib\middleware\authenticate.js:352:18)
+    at verified (E:\info\js_selflearn\itechart\itechart-backend\node_modules\passport-local\lib\strategy.js:81:28)
+    at Strategy.<anonymous> (E:\info\js_selflearn\itechart\itechart-backend\src\utils\passport\passport.ts:35:9)
+    at Generator.next (<anonymous>)
+    at fulfilled (E:\info\js_selflearn\itechart\itechart-backend\src\utils\passport\passport.ts:24:58)
+2021-11-22 14:57:41 info: Server is running on http://localhost:3000
+2021-11-22 14:57:47 error: TypeError: Cannot destructure property 'message' of 'undefined' as it is undefined.
+    at E:\info\js_selflearn\itechart\itechart-backend\src\routes\authenticate.ts:20:66
+    at Strategy.strategy.error (E:\info\js_selflearn\itechart\itechart-backend\node_modules\passport\lib\middleware\authenticate.js:352:18)
+    at verified (E:\info\js_selflearn\itechart\itechart-backend\node_modules\passport-local\lib\strategy.js:81:28)
+    at Strategy.<anonymous> (E:\info\js_selflearn\itechart\itechart-backend\src\utils\passport\passport.ts:35:9)
+    at Generator.next (<anonymous>)
+    at fulfilled (E:\info\js_selflearn\itechart\itechart-backend\src\utils\passport\passport.ts:24:58)
+2021-11-22 14:58:25 info: Server is running on http://localhost:3000
+2021-11-22 14:58:27 error: TypeError: Cannot read property 'message' of undefined
+    at E:\info\js_selflearn\itechart\itechart-backend\src\routes\authenticate.ts:25:23
+    at Strategy.strategy.error (E:\info\js_selflearn\itechart\itechart-backend\node_modules\passport\lib\middleware\authenticate.js:352:18)
+    at verified (E:\info\js_selflearn\itechart\itechart-backend\node_modules\passport-local\lib\strategy.js:81:28)
+    at Strategy.<anonymous> (E:\info\js_selflearn\itechart\itechart-backend\src\utils\passport\passport.ts:35:9)
+    at Generator.next (<anonymous>)
+    at fulfilled (E:\info\js_selflearn\itechart\itechart-backend\src\utils\passport\passport.ts:24:58)
+2021-11-22 14:58:39 info: Server is running on http://localhost:3000
+2021-11-22 14:58:44 error: TypeError: Cannot read property 'message' of undefined
+    at E:\info\js_selflearn\itechart\itechart-backend\src\routes\authenticate.ts:25:23
+    at Strategy.strategy.error (E:\info\js_selflearn\itechart\itechart-backend\node_modules\passport\lib\middleware\authenticate.js:352:18)
+    at verified (E:\info\js_selflearn\itechart\itechart-backend\node_modules\passport-local\lib\strategy.js:81:28)
+    at Strategy.<anonymous> (E:\info\js_selflearn\itechart\itechart-backend\src\utils\passport\passport.ts:34:9)
+    at Generator.next (<anonymous>)
+    at fulfilled (E:\info\js_selflearn\itechart\itechart-backend\src\utils\passport\passport.ts:24:58)
+2021-11-22 14:59:25 info: Server is running on http://localhost:3000
+2021-11-22 14:59:37 info: Server is running on http://localhost:3000
+2021-11-22 18:19:31 info: Server is running on http://localhost:3000
+2021-11-22 18:23:13 info: Server is running on http://localhost:3000
+2021-11-22 18:24:15 info: Server is running on http://localhost:3000
+2021-11-22 18:24:38 info: Server is running on http://localhost:3000
+2021-11-22 18:24:58 info: Server is running on http://localhost:3000
+2021-11-22 18:25:02 info: Server is running on http://localhost:3000
+2021-11-22 18:25:30 info: Server is running on http://localhost:3000
+2021-11-22 18:36:21 info: Server is running on http://localhost:3000
+2021-11-22 18:36:35 info: Server is running on http://localhost:3000
+2021-11-22 18:38:48 info: Server is running on http://localhost:3000
+2021-11-22 18:40:02 info: Server is running on http://localhost:3000
+2021-11-22 18:41:32 info: Server is running on http://localhost:3000
+2021-11-22 18:42:35 info: Server is running on http://localhost:3000
+2021-11-22 18:42:59 info: Server is running on http://localhost:3000
+2021-11-22 18:43:16 info: Server is running on http://localhost:3000
+2021-11-22 18:45:11 error: Error: ⨯ Unable to compile TypeScript:
+[96msrc/utils/passport/passport.ts[0m:[93m57[0m:[93m5[0m - [91merror[0m[90m TS1005: [0m'finally' expected.
+
+[7m57[0m     }
+[7m  [0m [91m    ~[0m
+
+    at Object.<anonymous> (E:\info\js_selflearn\itechart\itechart-backend\src\utils\passport\passport.ts:1:7)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Module._compile (E:\info\js_selflearn\itechart\itechart-backend\node_modules\source-map-support\source-map-support.js:568:25)
+    at Module.m._compile (C:\Users\VLAD\AppData\Local\Temp\ts-node-dev-hook-5881038218869765.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at require.extensions..jsx.require.extensions..js (C:\Users\VLAD\AppData\Local\Temp\ts-node-dev-hook-5881038218869765.js:114:20)
+    at require.extensions.<computed> (C:\Users\VLAD\AppData\Local\Temp\ts-node-dev-hook-5881038218869765.js:71:20)
+    at Object.nodeDevHook [as .ts] (E:\info\js_selflearn\itechart\itechart-backend\node_modules\ts-node-dev\lib\hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+2021-11-22 18:47:04 info: Server is running on http://localhost:3000
+2021-11-22 18:47:34 info: Server is running on http://localhost:3000
+2021-11-22 18:49:18 info: Server is running on http://localhost:3000
+2021-11-22 18:50:02 info: Server is running on http://localhost:3000
+2021-11-22 18:50:31 info: Server is running on http://localhost:3000
+2021-11-22 18:51:49 info: Server is running on http://localhost:3000
+2021-11-22 18:52:01 info: Server is running on http://localhost:3000
+2021-11-22 18:52:15 info: Server is running on http://localhost:3000
+2021-11-22 18:53:36 info: Server is running on http://localhost:3000
+2021-11-22 18:54:08 info: Server is running on http://localhost:3000
+2021-11-22 18:54:39 info: Server is running on http://localhost:3000
+2021-11-22 18:54:45 info: Server is running on http://localhost:3000
+2021-11-22 18:54:58 info: Server is running on http://localhost:3000
+2021-11-22 18:55:40 info: Server is running on http://localhost:3000
+2021-11-22 18:55:57 info: Server is running on http://localhost:3000
+2021-11-22 18:58:16 info: Server is running on http://localhost:3000
+2021-11-22 18:58:29 info: Server is running on http://localhost:3000
+2021-11-22 18:59:24 info: Server is running on http://localhost:3000
+2021-11-22 19:00:29 info: Server is running on http://localhost:3000
+2021-11-22 19:06:22 info: Server is running on http://localhost:3000
+2021-11-22 19:06:30 info: Server is running on http://localhost:3000
+2021-11-22 19:08:12 info: Server is running on http://localhost:3000
+2021-11-22 19:08:15 info: Server is running on http://localhost:3000
+2021-11-22 19:08:30 info: Server is running on http://localhost:3000
+2021-11-22 19:08:53 info: Server is running on http://localhost:3000
+2021-11-22 19:09:15 info: Server is running on http://localhost:3000
+2021-11-22 19:09:24 info: Server is running on http://localhost:3000
+2021-11-22 19:09:47 info: Server is running on http://localhost:3000
+2021-11-22 19:10:06 info: Server is running on http://localhost:3000
+2021-11-22 19:11:27 info: Server is running on http://localhost:3000
+2021-11-22 19:13:10 info: Server is running on http://localhost:3000
+2021-11-22 19:13:49 info: Server is running on http://localhost:3000
+2021-11-22 19:14:28 info: Server is running on http://localhost:3000
+2021-11-22 19:15:02 info: Server is running on http://localhost:3000
+2021-11-22 19:15:11 info: Server is running on http://localhost:3000
+2021-11-22 19:16:31 info: Server is running on http://localhost:3000
+2021-11-22 19:18:30 info: Server is running on http://localhost:3000
+2021-11-22 19:19:31 info: Server is running on http://localhost:3000
+2021-11-22 19:19:57 info: Server is running on http://localhost:3000
+2021-11-22 19:24:44 info: Server is running on http://localhost:3000
+2021-11-22 19:27:09 info: Server is running on http://localhost:3000
+2021-11-22 19:29:18 info: Server is running on http://localhost:3000
+2021-11-22 19:29:21 error: Error: Cannot set headers after they are sent to the client
+    at new NodeError (node:internal/errors:371:5)
+    at ServerResponse.setHeader (node:_http_outgoing:573:11)
+    at ServerResponse.header (E:\info\js_selflearn\itechart\itechart-backend\node_modules\express\lib\response.js:771:10)
+    at ServerResponse.send (E:\info\js_selflearn\itechart\itechart-backend\node_modules\express\lib\response.js:170:12)
+    at ServerResponse.json (E:\info\js_selflearn\itechart\itechart-backend\node_modules\express\lib\response.js:267:15)
+    at E:\info\js_selflearn\itechart\itechart-backend\src\middlewares\user-auth.ts:7:30
+    at JwtStrategy.strategy.error (E:\info\js_selflearn\itechart\itechart-backend\node_modules\passport\lib\middleware\authenticate.js:352:18)
+    at verified (E:\info\js_selflearn\itechart\itechart-backend\node_modules\passport-jwt\lib\strategy.js:111:41)
+    at JwtStrategy.<anonymous> (E:\info\js_selflearn\itechart\itechart-backend\src\utils\passport\passport.ts:52:16)
+    at Generator.next (<anonymous>)
+2021-11-22 19:30:09 info: Server is running on http://localhost:3000
+2021-11-22 19:31:17 info: Server is running on http://localhost:3000
+2021-11-22 19:31:20 info: Server is running on http://localhost:3000
+2021-11-22 19:32:02 info: Server is running on http://localhost:3000
+2021-11-22 19:32:30 info: Server is running on http://localhost:3000
+2021-11-22 19:32:37 info: Server is running on http://localhost:3000
+2021-11-22 19:33:22 info: Server is running on http://localhost:3000
+2021-11-22 19:33:30 info: Server is running on http://localhost:3000
+2021-11-22 19:34:41 info: Server is running on http://localhost:3000
+2021-11-22 19:35:36 info: Server is running on http://localhost:3000
+2021-11-22 19:36:06 info: Server is running on http://localhost:3000
+2021-11-22 19:36:42 info: Server is running on http://localhost:3000
+2021-11-22 19:37:07 info: Server is running on http://localhost:3000
+2021-11-22 19:37:29 info: Server is running on http://localhost:3000
+2021-11-22 19:38:59 info: Server is running on http://localhost:3000
+2021-11-22 19:39:44 info: Server is running on http://localhost:3000
+2021-11-22 19:42:31 info: Server is running on http://localhost:3000
+2021-11-22 19:42:48 info: Server is running on http://localhost:3000
+2021-11-22 19:43:36 error: Wrong password
+2021-11-22 19:43:43 error: Wrong password
+2021-11-22 19:43:55 error: Wrong password
+2021-11-22 19:43:58 error: Wrong password
+2021-11-22 19:44:16 info: Server is running on http://localhost:3000
+2021-11-22 19:44:24 error: Wrong password
+2021-11-22 19:45:51 error: Wrong password
+2021-11-22 19:45:53 error: Wrong password
+2021-11-22 19:45:55 error: Wrong password
+2021-11-22 19:45:57 error: Wrong password
+2021-11-22 19:46:00 error: Wrong password
+2021-11-22 19:46:38 info: Server is running on http://localhost:3000
+2021-11-22 19:46:42 error: Wrong password
+2021-11-22 19:47:00 info: Server is running on http://localhost:3000
+2021-11-22 19:49:42 error: Wrong password
+2021-11-22 19:50:21 info: Server is running on http://localhost:3000
+2021-11-22 19:50:35 info: Server is running on http://localhost:3000
+2021-11-22 19:50:55 info: Server is running on http://localhost:3000
+2021-11-22 19:50:57 error: Wrong password
+2021-11-22 19:52:01 info: Server is running on http://localhost:3000
+2021-11-22 19:52:45 error: Wrong password
+2021-11-22 19:55:20 info: Server is running on http://localhost:3000
+2021-11-22 19:55:22 error: Wrong password
+2021-11-22 19:55:57 info: Server is running on http://localhost:3000
+2021-11-22 19:58:07 info: Server is running on http://localhost:3000
+2021-11-22 19:58:10 error: Wrong password
+2021-11-22 19:58:23 info: Server is running on http://localhost:3000
+2021-11-22 19:58:29 info: Server is running on http://localhost:3000
+2021-11-22 19:58:38 error: Wrong password
+2021-11-22 19:59:07 error: Error: ⨯ Unable to compile TypeScript:
+[96msrc/utils/passport/passport.ts[0m:[93m49[0m:[93m52[0m - [91merror[0m[90m TS2345: [0mArgument of type '{ _id: any; }' is not assignable to parameter of type 'userInfoDto'.
+  Object literal may only specify known properties, and '_id' does not exist in type 'userInfoDto'.
+
+[7m49[0m         const user = await userRepository.getUser({_id: jwtPayload.userId})
+[7m  [0m [91m                                                   ~~~~~~~~~~~~~~~~~~~~~~[0m
+
+    at Object.<anonymous> (E:\info\js_selflearn\itechart\itechart-backend\src\utils\passport\passport.ts:1:7)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Module._compile (E:\info\js_selflearn\itechart\itechart-backend\node_modules\source-map-support\source-map-support.js:568:25)
+    at Module.m._compile (C:\Users\VLAD\AppData\Local\Temp\ts-node-dev-hook-7443662234647725.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at require.extensions..jsx.require.extensions..js (C:\Users\VLAD\AppData\Local\Temp\ts-node-dev-hook-7443662234647725.js:114:20)
+    at require.extensions.<computed> (C:\Users\VLAD\AppData\Local\Temp\ts-node-dev-hook-7443662234647725.js:71:20)
+    at Object.nodeDevHook [as .ts] (E:\info\js_selflearn\itechart\itechart-backend\node_modules\ts-node-dev\lib\hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+2021-11-22 19:59:51 info: Server is running on http://localhost:3000
+2021-11-22 19:59:53 error: Wrong password
+2021-11-22 20:00:15 info: Server is running on http://localhost:3000
+2021-11-22 20:00:39 info: Server is running on http://localhost:3000
+2021-11-22 20:00:46 error: Wrong password
+2021-11-22 20:01:14 info: Server is running on http://localhost:3000
+2021-11-22 20:01:38 info: Server is running on http://localhost:3000
+2021-11-22 20:01:41 error: Wrong password
+2021-11-22 20:02:11 info: Server is running on http://localhost:3000
+2021-11-22 20:02:22 error: Wrong password
+2021-11-22 20:02:41 info: Server is running on http://localhost:3000
+2021-11-22 20:02:51 info: Server is running on http://localhost:3000
+2021-11-22 20:02:53 error: Wrong password
+2021-11-22 20:03:03 info: Server is running on http://localhost:3000
+2021-11-22 20:03:31 info: Server is running on http://localhost:3000
+2021-11-22 20:04:49 info: Server is running on http://localhost:3000
+2021-11-22 20:06:08 info: Server is running on http://localhost:3000
+2021-11-22 20:06:20 info: Server is running on http://localhost:3000
+2021-11-22 20:06:40 info: Server is running on http://localhost:3000
+2021-11-22 20:07:24 info: Server is running on http://localhost:3000
+2021-11-22 20:07:44 info: Server is running on http://localhost:3000
+2021-11-22 20:08:02 info: Server is running on http://localhost:3000
+2021-11-22 20:08:10 info: Server is running on http://localhost:3000
+2021-11-22 20:08:58 info: Server is running on http://localhost:3000
+2021-11-22 20:09:29 info: Server is running on http://localhost:3000
+2021-11-22 20:09:30 error: Wrong password
+2021-11-22 20:09:52 error: Wrong password
+2021-11-22 20:10:09 error: Wrong password
+2021-11-22 20:11:27 info: Server is running on http://localhost:3000
+2021-11-22 20:12:29 info: Server is running on http://localhost:3000
+2021-11-22 20:13:09 info: Server is running on http://localhost:3000
+2021-11-22 20:13:38 error: Wrong password
+2021-11-22 20:14:31 info: Server is running on http://localhost:3000
+2021-11-22 20:15:05 info: Server is running on http://localhost:3000
+2021-11-22 20:15:25 info: Server is running on http://localhost:3000
+2021-11-22 20:16:10 info: Server is running on http://localhost:3000
+2021-11-22 20:16:25 info: Server is running on http://localhost:3000
+2021-11-22 20:18:25 info: Server is running on http://localhost:3000
+2021-11-22 20:18:31 info: Server is running on http://localhost:3000
+2021-11-22 20:21:00 info: Server is running on http://localhost:3000
+2021-11-22 20:22:22 info: Server is running on http://localhost:3000
+2021-11-22 20:34:11 info: Server is running on http://localhost:3000
+2021-11-22 20:39:31 info: Server is running on http://localhost:3000

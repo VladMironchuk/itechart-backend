@@ -1,11 +1,10 @@
 import { userInfoDto } from '../../dto/user-info.dto';
 
 export interface IUserRepository {
-  register(username: string, password: string): Promise<void>
 
-  authenticate(username: string, password: string): Promise<any>
+  createUser(username: string, password: string): Promise<void>
 
-  changeUserProfile(dto: userInfoDto): Promise<void>
+  updateUser(entity: userInfoDto, dto: userInfoDto): Promise<void>
 
-  changePassword(odlPassword: string, newPassword: string): Promise<void>
+  getUser(entity: userInfoDto): any
 }

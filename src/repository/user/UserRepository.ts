@@ -16,19 +16,16 @@ export class UserRepository {
     }
   }
 
-  async register(username: string, password: string) {
-    await this.entity.register(username, password)
+  async createUser(username: string, password: string) {
+    await this.entity.createUser(username, password)
   }
 
-  authenticate(username: string, password: string) {
-    return this.entity.authenticate(username, password)
+  async updateUser(entity: userInfoDto,dto: userInfoDto) {
+    await this.entity.updateUser(entity, dto)
   }
 
-  async changeUserProfile(dto: userInfoDto) {
-    await this.entity.changeUserProfile(dto)
+  async getUser(dto: userInfoDto){
+    return await this.entity.getUser(dto)
   }
 
-  async changePassword(odlPassword: string, newPassword: string) {
-    await this.entity.changePassword(odlPassword, newPassword)
-  }
 }
