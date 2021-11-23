@@ -5,10 +5,6 @@ import * as bcrypt from 'bcryptjs'
 
 const router = Router();
 
-router.get('/', async (req: Request, res: Response, _) => {
-  res.send('hello');
-});
-
 router.post('/', async (req: Request, res: Response, next) => {
   try {
     const { username, password } = req.body;

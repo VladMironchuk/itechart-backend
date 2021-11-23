@@ -3910,3 +3910,31 @@ Require stack:
 2021-11-23 11:45:05 info: Server is running on http://localhost:3000
 2021-11-23 11:46:24 info: Server is running on http://localhost:3000
 2021-11-23 11:46:52 info: Server is running on http://localhost:3000
+2021-11-23 11:52:11 info: Server is running on http://localhost:3000
+2021-11-23 11:52:52 info: Server is running on http://localhost:3000
+2021-11-23 20:03:22 error: Error: ENOENT: no such file or directory, open 'E:\info\js_selflearn\itechart\itechart-backend\doc\api.yaml'
+    at Object.openSync (node:fs:582:3)
+    at Object.readFileSync (node:fs:450:35)
+    at Function.Utils.getStringFromFile (E:\info\js_selflearn\itechart\itechart-backend\node_modules\yamljs\lib\Utils.js:284:19)
+    at Function.Yaml.parseFile (E:\info\js_selflearn\itechart\itechart-backend\node_modules\yamljs\lib\Yaml.js:46:21)
+    at Function.Yaml.load (E:\info\js_selflearn\itechart\itechart-backend\node_modules\yamljs\lib\Yaml.js:78:17)
+    at Object.<anonymous> (E:\info\js_selflearn\itechart\itechart-backend\src\index.ts:22:30)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Module._compile (E:\info\js_selflearn\itechart\itechart-backend\node_modules\source-map-support\source-map-support.js:568:25)
+    at Module.m._compile (C:\Users\VLAD\AppData\Local\Temp\ts-node-dev-hook-20241752307689986.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+2021-11-23 20:04:06 info: Server is running on http://localhost:3000
+2021-11-23 20:18:56 info: Server is running on http://localhost:3000
+2021-11-23 20:34:34 info: Server is running on http://localhost:3000
+2021-11-23 20:36:07 info: Server is running on http://localhost:3000
+2021-11-23 20:38:46 info: Server is running on http://localhost:3000
+2021-11-23 20:39:45 info: Server is running on http://localhost:3000
+2021-11-23 20:40:46 info: Server is running on http://localhost:3000
+2021-11-23 20:41:51 info: Server is running on http://localhost:3000
+2021-11-23 20:44:10 info: Server is running on http://localhost:3000
+2021-11-23 20:44:45 info: Server is running on http://localhost:3000
+2021-11-23 21:11:22 info: Server is running on http://localhost:3000
+2021-11-23 21:27:06 info: Server is running on http://localhost:3000
+2021-11-23 21:33:48 info: Server is running on http://localhost:3000
+2021-11-23 21:35:38 info: Server is running on http://localhost:3000
+2021-11-23 21:35:59 info: Server is running on http://localhost:3000

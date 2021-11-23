@@ -8,8 +8,7 @@ const router = Router();
 router.put('/', async (req: Request, res: Response, next: NextFunction) => {
   try {
     const userRepository = new UserRepository();
-    const id = req['userId'];
-    await userRepository.updateUser({ id }, { ...req.body });
+    await userRepository.updateUser({ id: req['userId'] }, { ...req.body });
     res.send('User was updated');
   } catch (e) {
     next(e);

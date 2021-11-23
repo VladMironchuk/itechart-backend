@@ -1,0 +1,321 @@
+openapi: 3.0.0
+info:
+  title: Game Store
+  description: Simple online game store which allows you to rate and order some games
+  version: 1.0.0
+
+servers:
+  - url: localhost:3000/
+
+components:
+  schemas:
+    Category:
+      type: object
+      properties:
+        id:
+          type: string
+        displayName:
+          type: string
+        products:
+          type: array
+          items:
+            $ref: '#/components/schemas/Product'
+    Product:
+      type: object
+      properties:
+        id:
+          type: string
+        displayName:
+          type: string
+        totalRating:
+          type: number
+        price:
+          type: number
+        categories:
+          type: array
+          items:
+            $ref: '#/components/schemas/Category'
+    User:
+      properties:
+        id:
+          type: string
+        username:
+          type: string
+        password:
+          type: number
+        firstName:
+          type: string
+        lastName:
+          type: string
+        products:
+            type: array
+            items:
+              $ref: '#/components/schemas/Product'
+
+  responses:
+    UnauthorizedError:
+      description: Access token is missing or invalid
+    InvalidDataError:
+      description: Invalid data passed
+    NotFoundError:
+      description: No data found
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+
+security:
+  - bearerAuth: []
+
+paths:
+  /products:
+    get:
+      tags:
+        - Products
+      summary: Get products
+      description: Gets products according to user passed filters (e.g. “/products?price=:30”)
+      responses:
+        200:
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Product"
+        400:
+          $ref: '#/components/responses/InvalidDataError'
+        404:
+          $ref: '#/components/responses/NotFoundError'
+  /categories:
+    get:
+      tags:
+        - Categories
+      summary: Get all categories
+      description: Returns all categories
+      responses:
+        200:
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Category"
+        400:
+          $ref: '#/components/responses/InvalidDataError'
+        404:
+          $ref: '#/components/responses/NotFoundError'
+  /categories/{categoryId}:
+    parameters:
+      - name: categoryId
+        in: path
+        required: true
+        schema:
+          type: string
+    get:
+      tags:
+        - Categories
+      summary: Get category by id with user passed filter
+      description: Gets category by ID (e.g. “/category/123?includeProducts=true”)
+      responses:
+        200:
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Category"
+        400:
+          $ref: '#/components/responses/InvalidDataError'
+        404:
+          $ref: '#/components/responses/NotFoundError'
+  /register:
+    post:
+      tags:
+        - Register
+      security:
+        []
+      summary: Register
+      description: Register users if they are not registered yet
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              title: example
+              properties:
+                username:
+                  type: string
+                  description: Username
+                password:
+                  type: string
+                  description: Password
+              required:
+                - username
+                - password
+      responses:
+        201:
+          description: Successful registration.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        400:
+          $ref: '#/components/responses/InvalidDataError'
+  /authenticate:
+    post:
+      tags:
+        - Login
+      security:
+        [ ]
+      summary: Login
+      description: Logins a user and returns a JWT-token and refresh token.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              title: example
+              properties:
+                login:
+                  type: string
+                  description: Username
+                password:
+                  type: string
+                  description: Password
+              required:
+                - user
+                - login
+      responses:
+        200:
+          description: Successful login.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  token:
+                    type: string
+                    description: JWT Token
+                  refreshToken:
+                    type: string
+                    description: Refresh Token
+        400:
+          $ref: '#/components/responses/InvalidDataError'
+  /profile:
+    put:
+      tags:
+        - Profile
+      security:
+        [ ]
+      summary: Change user info
+      description: Changes user info if he is authorized (by passing JWT-Token)
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              title: example
+              properties:
+                firstName:
+                  type: string
+                  description: User's first name.
+                lastName:
+                  type: string
+                  description: User's last name.
+      responses:
+        200:
+          description: Successful change.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    description: User info was changed
+        403:
+          $ref: '#/components/responses/UnauthorizedError'
+  /profile/password:
+    post:
+      tags:
+        - Profile
+      security:
+        [ ]
+      summary: Change user password
+      description: Changes user password if he is authorized (by passing JWT-Token) and current password is valid
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              title: example
+              properties:
+                oldPassword:
+                  type: string
+                  description: User's current password.
+                newPassword:
+                  type: string
+                  description: User's new password.
+      responses:
+        200:
+          description: Successful change.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    description: User password was changed
+        403:
+          $ref: '#/components/responses/UnauthorizedError'
+        401:
+          $ref: '#/components/responses/InvalidDataError'
+  /token:
+    post:
+      tags:
+        - Token
+      security:
+        [ ]
+      summary: Get new JWT-Token
+      description: Gets new JWT-Token by passing refresh token.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              title: example
+              properties:
+                refreshToken:
+                  type: string
+                  description: User's refresh token.
+      responses:
+        200:
+          description: Successful get.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  token:
+                    type: string
+                    description: New JWT-token.
+        403:
+          $ref: '#/components/responses/UnauthorizedError'
+        401:
+          $ref: '#/components/responses/InvalidDataError'
+
+
+
+
+

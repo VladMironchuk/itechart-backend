@@ -33,11 +33,14 @@
     "query-params-mongo": "^1.1.2",
     "rand-token": "^1.0.1",
     "reflect-metadata": "^0.1.13",
+    "swagger-jsdoc": "^6.1.0",
+    "swagger-ui-express": "^4.1.6",
     "ts-loader": "^9.2.6",
     "ts-node": "^10.4.0",
     "typeorm": "^0.2.38",
     "webpack-node-externals": "^3.0.0",
-    "winston": "^3.3.3"
+    "winston": "^3.3.3",
+    "yamljs": "^0.3.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.15.7",
