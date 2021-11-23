@@ -3397,3 +3397,50 @@ Require stack:
 2021-11-22 20:22:22 info: Server is running on http://localhost:3000
 2021-11-22 20:34:11 info: Server is running on http://localhost:3000
 2021-11-22 20:39:31 info: Server is running on http://localhost:3000
+2021-11-22 20:42:22 info: Server is running on http://localhost:3000
+2021-11-23 10:26:36 info: Server is running on http://localhost:3000
+2021-11-23 10:42:52 info: Server is running on http://localhost:3000
+2021-11-23 10:44:09 info: Server is running on http://localhost:3000
+2021-11-23 10:47:06 info: Server is running on http://localhost:3000
+2021-11-23 10:48:51 info: Server is running on http://localhost:3000
+2021-11-23 10:49:04 info: Server is running on http://localhost:3000
+2021-11-23 10:49:26 info: Server is running on http://localhost:3000
+2021-11-23 10:49:47 info: Server is running on http://localhost:3000
+2021-11-23 10:50:40 info: Server is running on http://localhost:3000
+2021-11-23 10:51:55 info: Server is running on http://localhost:3000
+2021-11-23 10:52:02 info: Server is running on http://localhost:3000
+2021-11-23 10:52:08 info: Server is running on http://localhost:3000
+2021-11-23 11:28:05 error: MongoNetworkError: connect ETIMEDOUT 18.157.118.32:27017
+    at connectionFailureError (E:\info\js_selflearn\itechart\itechart-backend\node_modules\mongoose\node_modules\mongodb\src\cmap\connect.ts:390:14)
+    at TLSSocket.<anonymous> (E:\info\js_selflearn\itechart\itechart-backend\node_modules\mongoose\node_modules\mongodb\src\cmap\connect.ts:358:16)
+    at Object.onceWrapper (node:events:514:26)
+    at TLSSocket.emit (node:events:394:28)
+    at emitErrorNT (node:internal/streams/destroy:157:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:122:3)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+2021-11-23 11:28:22 info: Server is running on http://localhost:3000
+2021-11-23 11:36:11 info: Server is running on http://localhost:3000
+2021-11-23 11:37:04 info: Server is running on http://localhost:3000
+2021-11-23 11:38:09 info: Server is running on http://localhost:3000
+2021-11-23 11:38:50 info: Server is running on http://localhost:3000
+2021-11-23 11:39:20 info: Server is running on http://localhost:3000
+2021-11-23 11:39:42 info: Server is running on http://localhost:3000
+2021-11-23 11:39:49 info: Server is running on http://localhost:3000
+2021-11-23 11:40:00 info: Server is running on http://localhost:3000
+2021-11-23 11:40:16 info: Server is running on http://localhost:3000
+2021-11-23 11:40:27 info: Server is running on http://localhost:3000
+2021-11-23 11:40:39 info: Server is running on http://localhost:3000
+2021-11-23 11:42:26 info: Server is running on http://localhost:3000
+2021-11-23 11:43:07 info: Server is running on http://localhost:3000
+2021-11-23 11:44:37 error: Error: Cannot set headers after they are sent to the client
+    at new NodeError (node:internal/errors:371:5)
+    at ServerResponse.setHeader (node:_http_outgoing:573:11)
+    at ServerResponse.header (E:\info\js_selflearn\itechart\itechart-backend\node_modules\express\lib\response.js:771:10)
+    at ServerResponse.send (E:\info\js_selflearn\itechart\itechart-backend\node_modules\express\lib\response.js:170:12)
+    at E:\info\js_selflearn\itechart\itechart-backend\src\routes\token.ts:20:19
+    at Generator.next (<anonymous>)
+    at fulfilled (E:\info\js_selflearn\itechart\itechart-backend\src\routes\token.ts:24:58)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+2021-11-23 11:45:05 info: Server is running on http://localhost:3000
+2021-11-23 11:46:24 info: Server is running on http://localhost:3000
+2021-11-23 11:46:52 info: Server is running on http://localhost:3000

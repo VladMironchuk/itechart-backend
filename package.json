@@ -31,6 +31,7 @@
     "pg": "^8.7.1",
     "prettier": "^2.4.1",
     "query-params-mongo": "^1.1.2",
+    "rand-token": "^1.0.1",
     "reflect-metadata": "^0.1.13",
     "ts-loader": "^9.2.6",
     "ts-node": "^10.4.0",

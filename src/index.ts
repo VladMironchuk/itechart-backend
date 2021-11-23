@@ -6,6 +6,7 @@ import categoryRouter from './routes/category';
 import registerRouter from './routes/register';
 import authRouter from './routes/authenticate';
 import profileRouter from './routes/profile';
+import tokenRouter from './routes/token';
 import { errorLogger, logger, reqLogger } from './logger/logger';
 import { serverConfig } from './config/server-config';
 import errorHandler from './middlewares/error-handler';
@@ -23,6 +24,7 @@ app.use('/categories', categoryRouter);
 app.use('/register', registerRouter);
 app.use('/authenticate', authRouter);
 app.use('/profile', authHandler, profileRouter);
+app.use('/token', authHandler, tokenRouter);
 app.use(errorHandler);
 app.use(errorLogger);
 

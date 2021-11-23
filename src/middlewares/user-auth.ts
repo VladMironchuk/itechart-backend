@@ -8,7 +8,6 @@ export default function(req: Request, res: Response, next: NextFunction) {
         message: "Unauthorized"
       });
     }
-
     req['userId'] = user.id
     next()
   })(req, res)
