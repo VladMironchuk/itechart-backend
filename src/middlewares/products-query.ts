@@ -1,6 +1,6 @@
 import { NextFunction, Request } from 'express';
-import mapQuery from '../utils/mongo-product-query';
-import mapQueryPg from '../utils/pg-product-query';
+import mapQuery from '../utils/queries/mongo-product-query';
+import mapQueryPg from '../utils/queries/pg-product-query';
 
 export default async function(req: Request, _, next: NextFunction){
   if (process.env.DB === 'mongo') {

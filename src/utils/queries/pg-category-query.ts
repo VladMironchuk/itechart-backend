@@ -1,5 +1,5 @@
-import { ConnectionController } from '../connection/connection';
-import { Category } from '../entity/category';
+import { ConnectionController } from '../../connection/connection';
+import { Category } from '../../entity/category';
 
 export default async function (reqQuery, id): Promise<Category> {
   let qb = ConnectionController.getConnection().getRepository(Category).createQueryBuilder('category');

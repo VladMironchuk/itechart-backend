@@ -11,18 +11,20 @@ import { errorLogger, logger, reqLogger } from './logger/logger';
 import { serverConfig } from './config/server-config';
 import errorHandler from './middlewares/error-handler';
 import authHandler from './middlewares/user-auth';
-import swaggerUI from 'swagger-ui-express'
-import YAML from 'yamljs'
+import swaggerUI from 'swagger-ui-express';
+import YAML from 'yamljs';
 import * as path from 'path';
+import cors from 'cors';
 require('./utils/passport/passport');
 
 const port = process.env.PORT ?? serverConfig.PORT;
 const app: Application = express();
 
-const swaggerDocument = YAML.load(path.join(__dirname, '../doc/api.yaml'))
+const swaggerDocument = YAML.load(path.join(__dirname, '../doc/api.yaml'));
 
+app.use(cors());
 app.use(express.json());
-app.use('/doc', swaggerUI.serve, swaggerUI.setup(swaggerDocument))
+app.use('/doc', swaggerUI.serve, swaggerUI.setup(swaggerDocument));
 app.use(reqLogger);
 
 app.use('/products', productRouter);

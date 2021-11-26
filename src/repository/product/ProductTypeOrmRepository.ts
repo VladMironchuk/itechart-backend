@@ -3,7 +3,7 @@ import { Product } from '../../entity/product';
 import { IProductRepository } from './IProductRepository';
 import { productPg } from '../../dto/product-pg.dto';
 import { ConnectionController } from '../../connection/connection';
-import { pgProductQuery } from '../../utils/pg-product-query';
+import { pgProductQuery } from '../../utils/queries/pg-product-query';
 
 export class ProductTypeOrmRepository implements IProductRepository<Product, string, productPg> {
   private repository: Repository<Product>;
@@ -22,7 +22,7 @@ export class ProductTypeOrmRepository implements IProductRepository<Product, str
 
     qb = qb
       .where('product.price > :gt')
-      .andWhere('product.totalRating > :minRating')
+      .andWhere('product.totalRating >= :minRating')
       .setParameters({
         gt: query.query.price.$gt,
         minRating: query.query.totalRating,

@@ -1,5 +1,4 @@
-import { prop, getModelForClass, Ref } from '@typegoose/typegoose';
-import { Product } from './product';
+import { prop, getModelForClass } from '@typegoose/typegoose';
 
 export class User {
   @prop({ required: true, type: () => String })
@@ -13,9 +12,6 @@ export class User {
 
   @prop({ type: () => String })
   public lastName: string;
-
-  @prop({ ref: () => Product })
-  public products: Ref<Product>[];
 }
 
 export default getModelForClass(User, {

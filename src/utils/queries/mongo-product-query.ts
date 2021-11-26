@@ -1,5 +1,5 @@
-import { InvalidDataError } from './errors/invalidDataError';
-import { mapPriceQuery } from './validation/priceValidation';
+import { InvalidDataError } from '../errors/invalidDataError';
+import { mapPriceQuery } from '../validation/priceValidation';
 
 type sortCriteria = 'asc' | 'desc' | 'ascending' | 'descending' | 1 | -1;
 
