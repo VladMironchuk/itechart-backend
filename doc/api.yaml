@@ -5,7 +5,7 @@ info:
   version: 1.0.0
 
 servers:
-  - url: localhost:3000/
+  - url: /
 
 components:
   schemas:
@@ -73,6 +73,8 @@ paths:
     get:
       tags:
         - Products
+      security:
+        [ ]
       summary: Get products
       description: Gets products according to user passed filters (e.g. “/products?price=:30”)
       responses:
@@ -92,6 +94,8 @@ paths:
     get:
       tags:
         - Categories
+      security:
+        []
       summary: Get all categories
       description: Returns all categories
       responses:
@@ -117,6 +121,8 @@ paths:
     get:
       tags:
         - Categories
+      security:
+        [ ]
       summary: Get category by id with user passed filter
       description: Gets category by ID (e.g. “/category/123?includeProducts=true”)
       responses:
@@ -176,22 +182,15 @@ paths:
       summary: Login
       description: Logins a user and returns a JWT-token and refresh token.
       requestBody:
-        required: true
         content:
           application/json:
             schema:
               type: object
-              title: example
               properties:
                 login:
                   type: string
-                  description: Username
                 password:
                   type: string
-                  description: Password
-              required:
-                - user
-                - login
       responses:
         200:
           description: Successful login.
@@ -200,20 +199,18 @@ paths:
               schema:
                 type: object
                 properties:
+                  userId:
+                    type: string
                   token:
                     type: string
-                    description: JWT Token
                   refreshToken:
                     type: string
-                    description: Refresh Token
         400:
           $ref: '#/components/responses/InvalidDataError'
   /profile:
     put:
       tags:
         - Profile
-      security:
-        [ ]
       summary: Change user info
       description: Changes user info if he is authorized (by passing JWT-Token)
       requestBody:
@@ -247,8 +244,6 @@ paths:
     post:
       tags:
         - Profile
-      security:
-        [ ]
       summary: Change user password
       description: Changes user password if he is authorized (by passing JWT-Token) and current password is valid
       requestBody:
@@ -284,8 +279,6 @@ paths:
     post:
       tags:
         - Token
-      security:
-        [ ]
       summary: Get new JWT-Token
       description: Gets new JWT-Token by passing refresh token.
       requestBody:
