@@ -2,13 +2,15 @@ import { ProductTypeOrmRepository } from './ProductTypeOrmRepository';
 import { ProductMongoRepository } from './ProductMongoRepository';
 import { productPg } from '../../dto/product-pg.dto';
 import { productMongo } from '../../dto/product-mongo.dto';
-import { mappedQueryMongo } from '../../utils/mongo-product-query';
-import { pgProductQuery } from '../../utils/pg-product-query';
+import { mappedQueryMongo } from '../../utils/queries/mongo-product-query';
+import { pgProductQuery } from '../../utils/queries/pg-product-query';
+import { Product } from '../../entity/product';
+import {Product as ProductMongo } from '../../models/product'
 
-export class ProductRepository {
-  private readonly entity?: ProductTypeOrmRepository | ProductMongoRepository;
+export class ProductRepository{
+  private static entity?: ProductTypeOrmRepository | ProductMongoRepository;
 
-  constructor() {
+  static init() {
     switch (process.env.DB) {
       case 'pg':
         this.entity = new ProductTypeOrmRepository();
@@ -19,47 +21,47 @@ export class ProductRepository {
     }
   }
 
-  async getProducts(
+  static async getProducts(
     entity: productPg & productMongo = {},
     keys?: string,
     populate?: boolean,
     skip?: number,
     limit?: number
-  ) {
+  ): Promise<productPg[] | ProductMongo[] | productMongo[]> {
     return this.entity.getProducts(entity, keys, populate, skip, limit);
   }
 
-  async getProductsByQuery(
+  static async getProductsByQuery(
     entity: mappedQueryMongo & pgProductQuery,
     keys?: string,
     populate?: boolean,
     skip?: number,
     limit?: number
-  ) {
-    return this.entity.getProductsByQuery(entity, keys);
+  ): Promise<Product[] | ProductMongo[]>  {
+    return this.entity.getProductsByQuery(entity, keys, populate, skip, limit);
   }
 
-  async getProductById(id: string, keys?: string) {
+  static async getProductById(id: string, keys?: string): Promise<Product | ProductMongo | productMongo>  {
     return this.entity.getProductById(id, keys);
   }
 
-  async getProduct(entity: productPg & productMongo, keys?: string) {
+  static async getProduct(entity: productPg & productMongo, keys?: string): Promise<Product | ProductMongo>  {
     return this.entity.getProduct(entity, keys);
   }
 
-  async createProduct(entity: productPg & productMongo) {
+  static async createProduct(entity: productPg & productMongo) {
     return this.entity.createProduct(entity);
   }
 
-  async updateProduct(entity: productPg & productMongo, dto: productPg & productMongo) {
+  static async updateProduct(entity: productPg & productMongo, dto: productPg & productMongo) {
     return this.entity.updateProduct(entity, dto);
   }
 
-  async updateProductCategories(entity: productPg & productMongo, dto: productPg & productMongo) {
+  static async updateProductCategories(entity: productPg & productMongo, dto: productPg & productMongo) {
     return this.entity.updateProductCategories(entity, dto);
   }
 
-  async deleteProduct(entity: productPg & productMongo) {
+  static async deleteProduct(entity: productPg & productMongo) {
     return this.entity.deleteProduct(entity);
   }
 }

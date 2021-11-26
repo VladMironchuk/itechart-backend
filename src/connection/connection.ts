@@ -1,6 +1,9 @@
 import { ormConfig } from '../config/orm-config';
 import { Connection, createConnection } from 'typeorm';
 import { mongoose } from '@typegoose/typegoose';
+import { ProductRepository } from '../repository/product/ProductRepository';
+import { CategoryRepository } from '../repository/category/CategoryRepository';
+import { UserRepository } from '../repository/user/UserRepository';
 const exec = mongoose.Query.prototype.exec
 
 mongoose.Query.prototype.exec = async function() {
@@ -22,6 +25,9 @@ export class ConnectionController {
         await mongoose.connect(process.env.DB_CONN_STRING);
         break;
     }
+    ProductRepository.init()
+    CategoryRepository.init()
+    UserRepository.init()
   }
 
   static getConnection() {

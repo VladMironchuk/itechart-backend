@@ -5,47 +5,47 @@ import { categoryPg } from '../../dto/category-pg.dto';
 
 export class CategoryRepository {
 
-  private readonly entity?: CategoryTypeOrmRepository | CategoryMongoRepository;
+  private static entity?: CategoryTypeOrmRepository | CategoryMongoRepository;
 
-  constructor() {
+  static init() {
     switch (process.env.DB) {
       case 'pg':
-        this.entity = new CategoryTypeOrmRepository();
+        CategoryRepository.entity = new CategoryTypeOrmRepository();
         break;
       case 'mongo':
-        this.entity = new CategoryMongoRepository();
+        CategoryRepository.entity = new CategoryMongoRepository();
         break;
     }
   }
 
-  async getCategories(entity: categoryMongo | categoryPg = {}, keys?: string, limit?: number, skip?: number) {
+  static async getCategories(entity: categoryMongo | categoryPg = {}, keys?: string) {
     return this.entity.getCategories(entity, keys);
   }
 
-  async getCategoryById(id: string, keys?: string) {
-    return this.entity.getCategoryById(id);
+  static async getCategoryById(id: string, keys?: string) {
+    return this.entity.getCategoryById(id, keys);
   }
 
-  async getCategory(dto: categoryMongo | categoryPg, keys?: string) {
-    return this.entity.getCategory(dto);
+  static async getCategory(dto: categoryMongo | categoryPg, keys?: string) {
+    return this.entity.getCategory(dto, keys);
   }
 
-  async createCategory(query: categoryMongo | categoryPg) {
+  static async createCategory(query: categoryMongo | categoryPg) {
     return this.entity.createCategory(query);
   }
 
-  async updateCategory(query: categoryMongo | categoryPg, dto: categoryMongo | categoryPg) {
+  static async updateCategory(query: categoryMongo | categoryPg, dto: categoryMongo | categoryPg) {
     return this.entity.updateCategory(query, dto);
   }
 
-  async updateCategoryProducts(query: categoryPg, dto: categoryPg) {
+  static async updateCategoryProducts(query: categoryPg, dto: categoryPg) {
     switch (process.env.DB) {
       case 'pg':
         return this.entity.updateCategoryProducts(query, dto)
     }
   }
 
-  async deleteCategory(query: categoryMongo | categoryPg) {
+  static async deleteCategory(query: categoryMongo | categoryPg) {
     return this.entity.deleteCategory(query);
   }
 }
