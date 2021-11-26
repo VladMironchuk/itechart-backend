@@ -9,15 +9,14 @@ router.post('/', async (req: Request, res: Response, next) => {
   try {
     const { username, password } = req.body;
 
-    const userRepository = new UserRepository();
-    const candidate = await userRepository.getUser({ username });
+    const candidate = await UserRepository.getUser({ username });
 
     if (candidate) {
       throw new InvalidDataError('User exists');
     }
 
     const hashedPassword = await bcrypt.hash(password, 10)
-    await userRepository.createUser(username, hashedPassword);
+    await UserRepository.createUser(username, hashedPassword);
 
     res.status(201).send({ message: 'User was created' });
   } catch (e) {

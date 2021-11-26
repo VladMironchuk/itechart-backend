@@ -1,14 +1,13 @@
 import { Router, Request, Response, NextFunction } from 'express';
 import { CategoryRepository } from '../repository/category/CategoryRepository';
-import mapCategoryQueryMongo from '../utils/mongo-category-query'
-import mapCategoryQueryPg from '../utils/pg-category-query'
+import mapCategoryQueryMongo from '../utils/queries/mongo-category-query'
+import mapCategoryQueryPg from '../utils/queries/pg-category-query'
 
 const router = Router();
 
 router.get('/', async (req: Request, res: Response, next: NextFunction): Promise<void> => {
   try {
-    const categoryRepo = new CategoryRepository()
-    const categories = await categoryRepo.getCategories()
+    const categories = await CategoryRepository.getCategories()
     res.send(categories)
   } catch (e: unknown) {
     next(e)
