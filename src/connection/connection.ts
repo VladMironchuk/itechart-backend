@@ -4,14 +4,21 @@ import { mongoose } from '@typegoose/typegoose';
 import { ProductRepository } from '../repository/product/ProductRepository';
 import { CategoryRepository } from '../repository/category/CategoryRepository';
 import { UserRepository } from '../repository/user/UserRepository';
-const exec = mongoose.Query.prototype.exec
+import { logger } from '../logger/logger';
+const exec = mongoose.Query.prototype.exec;
 
-mongoose.Query.prototype.exec = async function() {
-  if(process.env.NODE_ENV === 'dev') {
-    // console.log(arguments)
+mongoose.Query.prototype.exec = async function () {
+  if (process.env.NODE_ENV === 'dev') {
+    mongoose.set('debug', async (collectionName, method, query, doc, options) => {
+      logger.debug(
+        `${collectionName}.${method}\n query: ${JSON.stringify(query)}\n doc: ${JSON.stringify(
+          doc
+        )}\n options: ${JSON.stringify(options)}`
+      );
+    });
   }
-  return exec.apply(this, arguments)
-}
+  return exec.apply(this, arguments);
+};
 
 export class ConnectionController {
   private static connection: Connection;
@@ -23,14 +30,15 @@ export class ConnectionController {
         break;
       case 'mongo':
         await mongoose.connect(process.env.DB_CONN_STRING);
+
         break;
     }
-    ProductRepository.init()
-    CategoryRepository.init()
-    UserRepository.init()
+    ProductRepository.init();
+    CategoryRepository.init();
+    UserRepository.init();
   }
 
   static getConnection() {
-    return ConnectionController.connection
+    return ConnectionController.connection;
   }
 }
