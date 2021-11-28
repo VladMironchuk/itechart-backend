@@ -10,11 +10,11 @@ export type mappedQueryMongo = {
   query: {
     displayName?: string | RegExp;
     price?: {
-      $gt?: number;
-      $lt?: number;
+      $gte?: number;
+      $lte?: number;
     };
     totalRating?: {
-      $gt?: number;
+      $gte?: number;
     };
   };
   sortBy?: {
@@ -31,7 +31,7 @@ const mapRatingQuery = (ratingQuery = '') => {
   }
 
   return {
-    $gt: +ratingQuery,
+    $gte: +ratingQuery,
   };
 };
 

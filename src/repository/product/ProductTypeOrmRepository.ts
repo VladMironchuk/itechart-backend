@@ -21,16 +21,16 @@ export class ProductTypeOrmRepository implements IProductRepository<Product, str
       .leftJoinAndSelect('product.categories', 'category');
 
     qb = qb
-      .where('product.price > :gt')
+      .where('product.price >= :gt')
       .andWhere('product.totalRating >= :minRating')
       .setParameters({
-        gt: query.query.price.$gt,
+        gt: query.query.price.$gte,
         minRating: query.query.totalRating,
       });
 
-    if(query.query.price.$lt) {
-    qb = qb.andWhere('product.price < :lt')
-      .setParameter('lt', query.query.price.$lt)
+    if(query.query.price.$lte) {
+    qb = qb.andWhere('product.price <= :lt')
+      .setParameter('lt', query.query.price.$lte)
     }
 
     if (query.query.displayName) {

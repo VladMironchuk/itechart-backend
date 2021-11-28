@@ -8,8 +8,8 @@ export type pgProductQuery = {
   query: {
     displayName?: string;
     price?: {
-      $gt: number;
-      $lt?: number;
+      $gte: number;
+      $lte?: number;
     };
     totalRating?: number;
   };

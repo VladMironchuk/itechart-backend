@@ -3,7 +3,7 @@ import { InvalidDataError } from '../errors/invalidDataError';
 export const mapPriceQuery = (priceQuery: string) => {
   if (!priceQuery) {
    return {
-     $gt: 0
+     $gte: 0
    }
   }
 
@@ -24,10 +24,10 @@ export const mapPriceQuery = (priceQuery: string) => {
 
   return priceFilters[1] === 0
     ? {
-      $gt: priceFilters[0],
+      $gte: priceFilters[0],
     }
     : {
-      $gt: priceFilters[0],
-      $lt: priceFilters[1],
+      $gte: priceFilters[0],
+      $lte: priceFilters[1],
     };
 };
