@@ -5,6 +5,7 @@ import { ProductRepository } from '../repository/product/ProductRepository';
 import { CategoryRepository } from '../repository/category/CategoryRepository';
 import { UserRepository } from '../repository/user/UserRepository';
 import { logger } from '../logger/logger';
+import { OrderListRepository } from '../repository/order-list/OrderListRepository';
 const exec = mongoose.Query.prototype.exec;
 
 mongoose.Query.prototype.exec = async function () {
@@ -36,6 +37,7 @@ export class ConnectionController {
     ProductRepository.init();
     CategoryRepository.init();
     UserRepository.init();
+    OrderListRepository.init();
   }
 
   static getConnection() {
