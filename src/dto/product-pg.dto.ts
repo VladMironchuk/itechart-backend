@@ -6,5 +6,4 @@ export type productPg = {
   totalRating?: number;
   price?: number;
   categories?: Category[]
-  createdAt?: Date;
 };

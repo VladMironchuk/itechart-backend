@@ -1,9 +1,8 @@
 import { productMongo } from '../dto/product-mongo.dto';
 import { ProductRepository } from '../repository/product/ProductRepository';
-import { Product } from '../models/product';
 
 export const updateProductRatingMongo = async (
-  product: productMongo | Product,
+  product: productMongo,
   userId: string,
   rating: number,
   comment: string
@@ -26,7 +25,7 @@ export const updateProductRatingMongo = async (
     product.ratings.length
   ).toPrecision(2);
 
-  await ProductRepository.updateProduct(
+  await ProductRepository.update(
     { displayName: product.displayName },
     {
       totalRating,

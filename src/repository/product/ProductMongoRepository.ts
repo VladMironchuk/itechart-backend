@@ -7,7 +7,7 @@ import { IProductRepository } from './IProductRepository';
 const MONGO_DEFAULT_KEYS = '_id displayName totalRating ratings price createdAt';
 
 export class ProductMongoRepository implements IProductRepository<Product, string, productMongo>{
-  async getProducts(
+  async getAll(
     query: productMongo,
     keys: string = MONGO_DEFAULT_KEYS,
     populate: boolean = true,
@@ -24,7 +24,7 @@ export class ProductMongoRepository implements IProductRepository<Product, strin
           .limit(limit);
   }
 
-  async getProductsByQuery(
+  async getByQuery(
     query: mappedQueryMongo,
     keys: string = MONGO_DEFAULT_KEYS,
     populate: boolean = true,
@@ -43,27 +43,27 @@ export class ProductMongoRepository implements IProductRepository<Product, strin
           .limit(limit);
   }
 
-  async getProductById(id: string, keys: string = MONGO_DEFAULT_KEYS): Promise<Product> {
-    return MongoProduct.findOne({ id }, keys).populate('categories', 'id displayName');
+  async getById(id: string, keys: string = MONGO_DEFAULT_KEYS): Promise<productMongo> {
+    return MongoProduct.findOne({ _id: id }, keys).populate('categories', 'id displayName');
   }
 
-  async getProduct(query: productMongo, keys: string = MONGO_DEFAULT_KEYS): Promise<Product> {
+  async getOne(query: productMongo, keys: string = MONGO_DEFAULT_KEYS): Promise<Product> {
     return MongoProduct.findOne({ ...query }, keys).populate('categories', 'id displayName');
   }
 
-  async updateProduct(query: productMongo, dto: productMongo) {
+  async update(query: productMongo, dto: productMongo) {
     const product = await MongoProduct.findOne({ ...query });
     await product.updateOne({ ...(dto as typeof MongoProduct) });
   }
 
-  async createProduct(dto: productMongo) {
+  async create(dto: productMongo) {
     const product = new MongoProduct({ ...dto });
     await product.save();
   }
 
-  updateProductCategories(query: productMongo, dto: productMongo) {}
+  updateCategories(query: productMongo, dto: productMongo) {}
 
-  async deleteProduct(query: productMongo) {
+  async delete(query: productMongo) {
     await MongoProduct.remove({ ...query });
   }
 }

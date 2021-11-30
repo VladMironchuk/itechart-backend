@@ -18,34 +18,34 @@ export class CategoryRepository {
     }
   }
 
-  static async getCategories(entity: categoryMongo | categoryPg = {}, keys?: string) {
-    return this.entity.getCategories(entity, keys);
+  static async getAll(entity: categoryMongo | categoryPg = {}, keys?: string) {
+    return this.entity.getAll(entity, keys);
   }
 
-  static async getCategoryById(id: string, keys?: string) {
-    return this.entity.getCategoryById(id, keys);
+  static async getById(id: string, keys?: string) {
+    return this.entity.getById(id, keys);
   }
 
-  static async getCategory(dto: categoryMongo | categoryPg, keys?: string) {
-    return this.entity.getCategory(dto, keys);
+  static async getOne(dto: categoryMongo | categoryPg, keys?: string) {
+    return this.entity.getOne(dto, keys);
   }
 
-  static async createCategory(query: categoryMongo | categoryPg) {
-    return this.entity.createCategory(query);
+  static async create(query: categoryMongo | categoryPg) {
+    return this.entity.create(query);
   }
 
-  static async updateCategory(query: categoryMongo | categoryPg, dto: categoryMongo | categoryPg) {
-    return this.entity.updateCategory(query, dto);
+  static async update(query: categoryMongo | categoryPg, dto: categoryMongo | categoryPg) {
+    return this.entity.update(query, dto);
   }
 
-  static async updateCategoryProducts(query: categoryPg, dto: categoryPg) {
+  static async updateProducts(query: categoryPg, dto: categoryPg) {
     switch (process.env.DB) {
       case 'pg':
-        return this.entity.updateCategoryProducts(query, dto)
+        return this.entity.updateProducts(query, dto)
     }
   }
 
-  static async deleteCategory(query: categoryMongo | categoryPg) {
-    return this.entity.deleteCategory(query);
+  static async delete(query: categoryMongo | categoryPg) {
+    return this.entity.delete(query);
   }
 }

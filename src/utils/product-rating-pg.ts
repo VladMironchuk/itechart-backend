@@ -19,10 +19,7 @@ export const updateProductRatingPg = async (
     await userRatingRepo.addUserRating(userId, rating, comment);
   }
 
-  const totalRating = +((product.totalRating * users.length + rating) / (users.length + 1)).toPrecision(2)
+  const totalRating = +((product.totalRating * users.length + rating) / (users.length + 1)).toPrecision(2);
 
-  await ProductRepository.updateProduct(
-    { displayName: product.displayName },
-    { totalRating }
-  );
+  await ProductRepository.update({ displayName: product.displayName }, { totalRating });
 };

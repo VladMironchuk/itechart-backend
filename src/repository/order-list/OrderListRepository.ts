@@ -16,11 +16,11 @@ export class OrderListRepository {
     }
   }
 
-  static async getList(userId: string) {
-    return await this.entity.getList(userId)
+  static async getAll(userId: string) {
+    return await this.entity.getAll(userId)
   }
 
-  static async updateList(userId: string, products: any[]) {
-    await this.entity.updateList(userId, products)
+  static async update(userId: string, products: any[]) {
+    await this.entity.update(userId, products)
   }
 }

@@ -16,7 +16,7 @@ passport.use(
     },
     async function (username, password, cb) {
       try {
-        const user = await UserRepository.getUser({username})
+        const user = await UserRepository.getOne({username})
 
         if (!user) {
           return cb(null, false, { message: 'Incorrect username.' });
@@ -44,7 +44,7 @@ passport.use(
     },
     async function (jwtPayload, cb) {
       try {
-        const user = await UserRepository.getUser({id: jwtPayload.userId})
+        const user = await UserRepository.getOne({id: jwtPayload.userId})
 
         return cb(null, user)
       } catch (err) {

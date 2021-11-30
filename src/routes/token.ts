@@ -8,7 +8,7 @@ const router = Router();
 
 router.post('/', async (req: Request, res: Response, next: NextFunction) => {
   const { refreshToken } = req.body;
-  const user = await UserRepository.getUser({ id: req['userId'] });
+  const user = await UserRepository.getOne({ id: req['userId'] });
 
   if (refreshToken in refreshTokens && refreshTokens[refreshToken] === user.username) {
     const token = jwt.sign({ userId: user.id }, serverConfig.JWT_SECRET, {

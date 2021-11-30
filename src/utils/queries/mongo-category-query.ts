@@ -4,14 +4,14 @@ import { Category } from '../../entity/category';
 import { categoryMongo } from '../../dto/category-mongo.dto';
 
 export default async function (reqQuery, id): Promise<categoryMongo> {
-  const category = await CategoryRepository.getCategoryById(id);
+  const category = await CategoryRepository.getById(id);
 
   let mappedCategory = {
     ...category['_doc'],
   }
 
   if (reqQuery['includeProducts'] === 'true') {
-    const products = await ProductRepository.getProducts(
+    const products = await ProductRepository.getAll(
       { categories: category as Category[] & Category },
       'displayName totalRating price', true
     );

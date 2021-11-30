@@ -1,13 +1,13 @@
 export interface IProductRepository<T, K, U> {
-  getProducts(query: U): Promise<T[]>;
+  getAll(query: U): Promise<T[]>;
 
-  getProductById(id: K): Promise<T> | T;
+  getById(id: K): Promise<U> | U;
 
-  getProduct(query: U): Promise<T> | T
+  getOne(query: U): Promise<T> | T
 
-  createProduct(dto: U): Promise<void>;
+  create(dto: U): Promise<void>;
 
-  updateProduct(entity: U, dto: U): Promise<void>;
+  update(entity: U, dto: U): Promise<void>;
 
-  deleteProduct(entity: U): Promise<void>;
+  delete(entity: U): Promise<void>;
 }

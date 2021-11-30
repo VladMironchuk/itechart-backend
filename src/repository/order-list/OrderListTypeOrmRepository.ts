@@ -1,11 +1,21 @@
+import { Repository } from 'typeorm';
+import { OrderList } from '../../entity/orderList';
+import { ConnectionController } from '../../connection/connection';
+import { orderList } from '../../dto/order-list-mongo';
+import { QueryDeepPartialEntity } from 'typeorm/query-builder/QueryPartialEntity';
+
 export class OrderListTypeOrmRepository {
-  async getList() {}
+  private repository: Repository<OrderList>;
 
-  async updateList() {}
+  constructor() {
+    this.repository = ConnectionController.getConnection().getRepository(OrderList)
+  }
 
-  async deleteList() {}
+  async getAll(userId: string) {
+    return await this.repository.findOne({userId})
+  }
 
-  async createList(userId: string) {
-
+  async update(userId: string, products: orderList) {
+    await this.repository.update({userId}, {...products as QueryDeepPartialEntity<OrderList>})
   }
 }

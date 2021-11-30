@@ -4,5 +4,4 @@ export type categoryPg = {
   id?: string;
   displayName?: string;
   products?: Product[];
-  createdDate?: Date;
 };

@@ -7,7 +7,7 @@ const router = Router();
 router.post('/', async (req: Request, res: Response, next: NextFunction) => {
   try {
     const { userOrder } = req.body;
-    const orderList = (await OrderListRepository.getList(req['userId'])) as OrderList;
+    const orderList = (await OrderListRepository.getAll(req['userId'])) as OrderList;
 
     let products = orderList.products;
     const orderProducts = products.map((item) => item.product);
@@ -20,7 +20,7 @@ router.post('/', async (req: Request, res: Response, next: NextFunction) => {
       }
     });
 
-    await OrderListRepository.updateList(req['userId'], products);
+    await OrderListRepository.update(req['userId'], products);
     res.send({ message: 'Order list was updated' });
   } catch (e) {
     next(e);
@@ -29,7 +29,7 @@ router.post('/', async (req: Request, res: Response, next: NextFunction) => {
 
 router.post('/clear', async (req: Request, res: Response, next: NextFunction) => {
   try {
-    await OrderListRepository.updateList(req['userId'], []);
+    await OrderListRepository.update(req['userId'], []);
     res.send('Order list was cleared');
   } catch (e) {
     next(e);

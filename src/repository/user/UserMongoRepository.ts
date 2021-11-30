@@ -3,7 +3,7 @@ import { userInfoDto } from '../../dto/user-info.dto';
 import User from '../../models/user';
 
 export class UserMongoRepository implements IUserRepository {
-  async createUser(username: string, password: string) {
+  async create(username: string, password: string) {
     const user = new User({
       username,
       password,
@@ -12,7 +12,7 @@ export class UserMongoRepository implements IUserRepository {
     await user.save();
   }
 
-  async updateUser(entity: userInfoDto, dto: userInfoDto) {
+  async update(entity: userInfoDto, dto: userInfoDto) {
     if (entity.id) {
       entity._id = entity.id;
       delete entity.id;
@@ -20,7 +20,7 @@ export class UserMongoRepository implements IUserRepository {
     await User.updateOne({ ...entity, _id: entity?.id }, { ...dto });
   }
 
-  async getUser(entity: userInfoDto) {
+  async getOne(entity: userInfoDto) {
     if (entity.id) {
       entity._id = entity.id;
       delete entity.id;

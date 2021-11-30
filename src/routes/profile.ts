@@ -7,7 +7,7 @@ const router = Router();
 
 router.put('/', async (req: Request, res: Response, next: NextFunction) => {
   try {
-    await UserRepository.updateUser({ id: req['userId'] }, { ...req.body });
+    await UserRepository.update({ id: req['userId'] }, { ...req.body });
     res.send('User was updated');
   } catch (e) {
     next(e);
@@ -18,7 +18,7 @@ router.post('/password', async (req, res, next) => {
   try {
     const { oldPassword, newPassword } = req.body;
 
-    const user = await UserRepository.getUser({ id: req['userId'] });
+    const user = await UserRepository.getOne({ id: req['userId'] });
 
     const isMatch = await bcrypt.compare(oldPassword, user.password);
     if (!isMatch) {
@@ -26,7 +26,7 @@ router.post('/password', async (req, res, next) => {
     }
 
     const hashedNewPassword = await bcrypt.hash(newPassword, 10);
-    await UserRepository.updateUser({ id: req['userId'] }, { password: hashedNewPassword });
+    await UserRepository.update({ id: req['userId'] }, { password: hashedNewPassword });
 
     res.send({ message: 'password has changed' });
   } catch (e) {

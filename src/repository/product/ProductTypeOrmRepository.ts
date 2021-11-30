@@ -12,11 +12,11 @@ export class ProductTypeOrmRepository implements IProductRepository<Product, str
     this.repository = ConnectionController.getConnection().getRepository(Product);
   }
 
-  async getProducts(dto: productPg) {
+  async getAll(dto: productPg) {
     return await this.repository.find({ ...dto, relations: ['categories'] });
   }
 
-  async getProductsByQuery(query: pgProductQuery) {
+  async getByQuery(query: pgProductQuery) {
     let qb = this.repository.createQueryBuilder('product')
       .leftJoinAndSelect('product.categories', 'category');
 
@@ -45,29 +45,29 @@ export class ProductTypeOrmRepository implements IProductRepository<Product, str
     return await qb.getMany();
   }
 
-  async getProductById(id: string) {
+  async getById(id: string) {
     return await this.repository.findOne({ id }, { relations: ['categories'] });
   }
 
-  async getProduct(dto: productPg) {
+  async getOne(dto: productPg) {
     return await this.repository.findOne({ ...dto }, { relations: ['categories'] });
   }
 
-  async updateProductCategories(query: productPg, dto: productPg) {
+  async updateCategories(query: productPg, dto: productPg) {
     const product = await this.repository.findOne({ ...query }, { relations: ['categories'] });
     product.categories.push(...dto.categories);
     await ConnectionController.getConnection().manager.save(product);
   }
 
-  async updateProduct(query: productPg, dto: productPg) {
+  async update(query: productPg, dto: productPg) {
     await this.repository.update({ ...query }, { ...dto });
   }
 
-  async deleteProduct(query: productPg) {
+  async delete(query: productPg) {
     await this.repository.delete({ ...query });
   }
 
-  async createProduct(query: productPg) {
+  async create(query: productPg) {
     const { displayName, price, totalRating, categories = [] } = query;
     const newProduct = new Product();
     newProduct.displayName = displayName;

@@ -1,4 +1,4 @@
-export type orderListMongo = {
+export type orderList = {
   products?: {
     product?: string
     quantity?: number

@@ -3,7 +3,7 @@ import { UserTypeOrmRepository } from './UserTypeOrmRepository';
 import { userInfoDto } from '../../dto/user-info.dto';
 
 export class UserRepository {
-  private static entity?: UserMongoRepository | UserTypeOrmRepository
+  private static entity?: UserMongoRepository | UserTypeOrmRepository;
 
   static init() {
     switch (process.env.DB) {
@@ -16,16 +16,15 @@ export class UserRepository {
     }
   }
 
-  static async createUser(username: string, password: string) {
-    await this.entity.createUser(username, password)
+  static async create(username: string, password: string) {
+    await this.entity.create(username, password);
   }
 
-  static async updateUser(entity: userInfoDto,dto: userInfoDto) {
-    await this.entity.updateUser(entity, dto)
+  static async update(entity: userInfoDto, dto: userInfoDto) {
+    await this.entity.update(entity, dto);
   }
 
-  static async getUser(dto: userInfoDto){
-    return await this.entity.getUser(dto)
+  static async getOne(dto: userInfoDto) {
+    return await this.entity.getOne(dto);
   }
-
 }

@@ -11,33 +11,33 @@ export class CategoryTypeOrmRepository implements ICategoryRepository<Category, 
     this.repository = ConnectionController.getConnection().getRepository(Category);
   }
 
-  async getCategories() {
+  async getAll() {
     return await this.repository.find({ relations: ['products'] });
   }
 
-  async getCategoryById(id: string) {
+  async getById(id: string) {
     return await this.repository.findOne({ id }, { relations: ['products'] });
   }
 
-  async getCategory(dto: categoryPg) {
+  async getOne(dto: categoryPg, keys?: string) {
     return await this.repository.findOne({ ...dto }, { relations: ['products'] });
   }
 
-  async updateCategory(query: categoryPg, dto: categoryPg) {
+  async update(query: categoryPg, dto: categoryPg) {
     await this.repository.update({ ...query }, { ...dto });
   }
 
-  async updateCategoryProducts(query: categoryPg, dto: categoryPg) {
+  async updateProducts(query: categoryPg, dto: categoryPg) {
     const category = await this.repository.findOne({ ...query }, { relations: ['products'] });
     category.products.push(...dto.products);
     await ConnectionController.getConnection().manager.save(category);
   }
 
-  async deleteCategory(query: categoryPg) {
+  async delete(query: categoryPg) {
     await this.repository.delete({ ...query });
   }
 
-  async createCategory(query: categoryPg) {
+  async create(query: categoryPg) {
     const { displayName, products = [] } = query;
     const newCategory = new Category();
     newCategory.displayName = displayName;

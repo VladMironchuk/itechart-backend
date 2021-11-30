@@ -3,6 +3,7 @@ import { Product } from '../entity/product';
 import { ConnectionOptions } from 'typeorm';
 import { User } from '../entity/user';
 import { UserRatings } from '../entity/userRatings';
+import { OrderList } from '../entity/orderList';
 
 export const ormConfig: ConnectionOptions = {
   type: 'postgres',
@@ -11,7 +12,7 @@ export const ormConfig: ConnectionOptions = {
   username: 'postgres',
   password: 'test',
   database: 'store',
-  entities: [Category, Product, User, UserRatings],
+  entities: [Category, Product, User, UserRatings, OrderList],
   synchronize: true,
   logging: false,
 };
