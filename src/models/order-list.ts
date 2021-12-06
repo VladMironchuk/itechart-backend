@@ -1,15 +1,18 @@
-import { getModelForClass, prop, Ref } from '@typegoose/typegoose';
-import { User } from './user';
+import { getModelForClass, modelOptions, prop, Ref, Severity } from '@typegoose/typegoose';
+import { Product } from './product';
+import { Types } from 'mongoose';
 
+@modelOptions({
+  options: {
+    allowMixed: Severity.ALLOW
+  },
+})
 export class OrderList {
-  @prop({ required: true, ref: () => User })
-  public userId: Ref<User>;
-
-  @prop({ type: () => Object })
+  @prop()
   public products: {
-    product: string;
-    quantity: number;
-  }[];
+    product: Ref<Product, Types.ObjectId>,
+    quantity: number
+  }[]
 }
 
 export default getModelForClass(OrderList, {
