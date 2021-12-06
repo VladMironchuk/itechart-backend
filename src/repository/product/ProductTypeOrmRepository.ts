@@ -42,6 +42,8 @@ export class ProductTypeOrmRepository implements IProductRepository<Product, str
       qb.orderBy(`product.${query.sortBy[0]}`, `${query.sortBy[1]}`);
     }
 
+
+
     return await qb.getMany();
   }
 

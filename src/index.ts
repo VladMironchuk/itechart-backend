@@ -1,16 +1,21 @@
 import 'reflect-metadata';
 import express, { Application } from 'express';
 import { ConnectionController } from './connection/connection';
+
 import productRouter from './routes/product';
 import categoryRouter from './routes/category';
 import registerRouter from './routes/register';
 import authRouter from './routes/authenticate';
 import profileRouter from './routes/profile';
 import tokenRouter from './routes/token';
+import orderListRouter from './routes/order-list';
+
 import { errorLogger, logger, reqLogger } from './logger/logger';
 import { serverConfig } from './config/server-config';
+
 import errorHandler from './middlewares/error-handler';
 import authHandler from './middlewares/user-auth';
+
 import swaggerUI from 'swagger-ui-express';
 import YAML from 'yamljs';
 import * as path from 'path';
@@ -31,8 +36,10 @@ app.use('/products', productRouter);
 app.use('/categories', categoryRouter);
 app.use('/register', registerRouter);
 app.use('/authenticate', authRouter);
-app.use('/profile', authHandler, profileRouter);
-app.use('/token', authHandler, tokenRouter);
+app.use(authHandler);
+app.use('/profile', profileRouter);
+app.use('/token', tokenRouter);
+app.use('/order-list', orderListRouter);
 app.use(errorHandler);
 app.use(errorLogger);
 
