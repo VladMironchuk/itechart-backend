@@ -17,7 +17,8 @@ export class UserMongoRepository implements IUserRepository {
       entity._id = entity.id;
       delete entity.id;
     }
-    await User.updateOne({ ...entity, _id: entity?.id }, { ...dto });
+    console.log(dto);
+    await User.updateOne({ ...entity }, { ...dto });
   }
 
   async getOne(entity: userInfoDto) {

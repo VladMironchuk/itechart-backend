@@ -1,5 +1,5 @@
-import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
-import { Product } from './product';
+import { Column, Entity, JoinColumn, OneToOne, PrimaryGeneratedColumn } from 'typeorm';
+import { OrderList } from './order-list';
 
 @Entity()
 export class User {
@@ -18,6 +18,7 @@ export class User {
   @Column()
   lastName?: string;
 
-  @OneToMany(() => Product, (product) => product.displayName)
-  products?: Product[]
+  @OneToOne((type) => OrderList, (orderList) => orderList.id)
+  @JoinColumn()
+  orderList: OrderList;
 }

@@ -17,7 +17,6 @@ export class UserTypeOrmRepository implements IUserRepository {
     user.password = password;
     user.firstName = '';
     user.lastName = '';
-    user.products = [];
     await this.repository.save(user);
   }
 

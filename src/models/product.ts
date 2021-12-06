@@ -1,6 +1,11 @@
-import { prop, getModelForClass, Ref } from '@typegoose/typegoose';
+import { prop, getModelForClass, Ref, modelOptions, Severity } from '@typegoose/typegoose';
 import { Category } from './category';
 
+@modelOptions({
+  options: {
+    allowMixed: Severity.ALLOW
+  },
+})
 export class Product {
   @prop({ required: true, type: () => String })
   public displayName: string;

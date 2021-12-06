@@ -1,6 +1,5 @@
-import { Entity, Column, PrimaryGeneratedColumn, JoinTable, ManyToMany, ManyToOne } from 'typeorm';
+import { Entity, Column, PrimaryGeneratedColumn, JoinTable, ManyToMany } from 'typeorm';
 import { Category } from './category';
-import { User } from './user';
 
 @Entity()
 export class Product {
@@ -22,7 +21,4 @@ export class Product {
   @ManyToMany(() => Category, (category) => category.displayName)
   @JoinTable()
   categories?: Category[];
-
-  @ManyToOne(() => User, user => user.username)
-  user: User
 }

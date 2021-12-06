@@ -1,4 +1,5 @@
-import { prop, getModelForClass } from '@typegoose/typegoose';
+import { prop, getModelForClass, Ref } from '@typegoose/typegoose';
+import { OrderList } from './order-list';
 
 export class User {
   @prop({ required: true, type: () => String })
@@ -12,6 +13,9 @@ export class User {
 
   @prop({ type: () => String })
   public lastName: string;
+
+  @prop({ref: () => OrderList})
+  public orderList: Ref<OrderList>
 }
 
 export default getModelForClass(User, {
