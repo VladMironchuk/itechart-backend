@@ -1,5 +1,6 @@
 import { OrderListMongoRepository } from './OrderListMongoRepository';
 import { OrderListTypeOrmRepository } from './OrderListTypeOrmRepository';
+import { orderList } from '../../dto/order-list-mongo';
 
 export class OrderListRepository {
 
@@ -16,11 +17,23 @@ export class OrderListRepository {
     }
   }
 
+  static async create(userId: string) {
+    return await this.entity.create(userId)
+  }
+
   static async getAll(userId: string) {
     return await this.entity.getAll(userId)
   }
 
-  static async update(userId: string, products: any[]) {
+  static async update(userId: string, products: orderList) {
     await this.entity.update(userId, products)
+  }
+
+  static async add(userId: string, products: orderList) {
+    await this.entity.add(userId, products)
+  }
+
+  static async clear(userId: string) {
+    await this.entity.clear(userId)
   }
 }
