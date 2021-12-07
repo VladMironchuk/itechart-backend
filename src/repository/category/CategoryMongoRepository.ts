@@ -1,7 +1,7 @@
 import MongoCategory from '../../models/category';
 import { categoryMongo } from '../../dto/category-mongo.dto';
 
-const DEFAULT_MONGO_KEYS = 'id displayName createdAt'
+const DEFAULT_MONGO_KEYS = 'id displayName createdAt products'
 
 export class CategoryMongoRepository {
   getAll(entity: categoryMongo, keys: string = DEFAULT_MONGO_KEYS) {
@@ -17,7 +17,7 @@ export class CategoryMongoRepository {
   }
 
   async update(query: categoryMongo, dto: categoryMongo) {
-    await MongoCategory.updateOne({ ...query }, { ...dto });
+    await MongoCategory.updateOne({ ...query, _id: query.id }, { ...dto });
   }
 
   async updateProducts() {}
@@ -28,6 +28,6 @@ export class CategoryMongoRepository {
   }
 
   async delete(query: categoryMongo) {
-    await MongoCategory.deleteOne({ ...query });
+    await MongoCategory.deleteOne({ ...query, _id: query.id });
   }
 }
