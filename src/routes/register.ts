@@ -7,7 +7,7 @@ const router = Router();
 
 router.post('/', async (req: Request, res: Response, next) => {
   try {
-    const { username, password } = req.body;
+    const { username, password, role } = req.body;
 
     const candidate = await UserRepository.getOne({ username });
 
@@ -16,7 +16,7 @@ router.post('/', async (req: Request, res: Response, next) => {
     }
 
     const hashedPassword = await bcrypt.hash(password, 10)
-    await UserRepository.create(username, hashedPassword);
+    await UserRepository.create(username, hashedPassword, role);
 
     res.status(201).send({ message: 'User was created' });
   } catch (e) {

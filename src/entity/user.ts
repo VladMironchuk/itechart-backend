@@ -1,5 +1,6 @@
 import { Column, Entity, JoinColumn, OneToOne, PrimaryGeneratedColumn } from 'typeorm';
 import { OrderList } from './order-list';
+import { UserRoles } from '../dto/user-roles';
 
 @Entity()
 export class User {
@@ -11,6 +12,9 @@ export class User {
 
   @Column()
   password?: string;
+
+  @Column()
+  role: UserRoles
 
   @Column()
   firstName?: string;
