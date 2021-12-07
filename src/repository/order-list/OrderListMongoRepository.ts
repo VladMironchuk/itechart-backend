@@ -9,7 +9,7 @@ const ORDER_LIST_MONGO_KEYS = 'id orderList';
 
 export class OrderListMongoRepository {
   async getAll(userId: string): Promise<Ref<OrderList>> {
-    const user = await UserMongo.findOne({ userId }, ORDER_LIST_MONGO_KEYS).populate('orderList');
+    const user = await UserMongo.findOne({ _id: userId }, ORDER_LIST_MONGO_KEYS).populate('orderList');
     return user.orderList;
   }
 
@@ -42,13 +42,12 @@ export class OrderListMongoRepository {
         quantity: +item.quantity,
       }))
     );
-    await OrderListMongo.updateMany(user.orderList as OrderList);
-    await user.save();
+    await OrderListMongo.updateOne(user.orderList as OrderList);
   }
 
   async clear(userId: string) {
     const user = await UserMongo.findOne({ userId }, ORDER_LIST_MONGO_KEYS).populate('orderList');
     user.orderList['products'] = [];
-    await OrderListMongo.updateMany(user.orderList as OrderList);
+    await OrderListMongo.updateOne(user.orderList as OrderList);
   }
 }

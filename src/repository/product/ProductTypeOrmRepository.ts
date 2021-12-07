@@ -4,6 +4,8 @@ import { IProductRepository } from './IProductRepository';
 import { productPg } from '../../dto/product-pg.dto';
 import { ConnectionController } from '../../connection/connection';
 import { pgProductQuery } from '../../utils/queries/pg-product-query';
+import { CategoryRepository } from '../category/CategoryRepository';
+import { Category } from '../../entity/category';
 
 export class ProductTypeOrmRepository implements IProductRepository<Product, string, productPg> {
   private repository: Repository<Product>;
@@ -42,8 +44,6 @@ export class ProductTypeOrmRepository implements IProductRepository<Product, str
       qb.orderBy(`product.${query.sortBy[0]}`, `${query.sortBy[1]}`);
     }
 
-
-
     return await qb.getMany();
   }
 
@@ -70,13 +70,21 @@ export class ProductTypeOrmRepository implements IProductRepository<Product, str
   }
 
   async create(query: productPg) {
-    const { displayName, price, totalRating, categories = [] } = query;
+    const { displayName, price, totalRating, categories = [] as string[] } = query;
+    const mappedCategories = await Promise.all(categories.map(item => CategoryRepository.getById(item))) as Category[]
+
     const newProduct = new Product();
     newProduct.displayName = displayName;
     newProduct.price = price;
     newProduct.totalRating = totalRating;
-    newProduct.categories = categories;
+    newProduct.categories = mappedCategories
     newProduct.createdAt = new Date();
+
+    mappedCategories.forEach(item => {
+      item.products.push(newProduct)
+    })
+
     await this.repository.save(newProduct);
+    await this.repository.manager.save(mappedCategories)
   }
 }

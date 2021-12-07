@@ -5,7 +5,7 @@ export type productMongo = {
   displayName?: string;
   totalRating?: number;
   price?: number;
-  categories?: MongoCategory;
+  categories?: MongoCategory[];
   createdAt?: Date;
   ratings?: {
     userId: string;

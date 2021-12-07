@@ -10,13 +10,13 @@ const loggerFiles = {
     handleRejections: true,
     json: true,
     maxFiles: 5,
-    maxsize: 5242880,
+    maxsize: 5242880000,
   },
   reqFile: {
     filename: path.resolve(__dirname, '../../', 'logs', 'requests.log'),
     json: true,
     maxFiles: 5,
-    maxsize: 5242880,
+    maxsize: 5242880000,
   },
   infoFile: {
     level: 'info',
@@ -25,7 +25,7 @@ const loggerFiles = {
     handleRejections: true,
     json: true,
     maxFiles: 5,
-    maxsize: 5242880,
+    maxsize: 5242880000,
   },
   debugFile: {
     level: 'debug',
@@ -34,7 +34,7 @@ const loggerFiles = {
     handleRejections: true,
     json: true,
     maxFiles: 5,
-    maxsize: 5242880,
+    maxsize: 5242880000,
   },
   console: {
     handleExceptions: true,
