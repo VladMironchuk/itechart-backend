@@ -1,6 +1,7 @@
 import { UserMongoRepository } from './UserMongoRepository';
 import { UserTypeOrmRepository } from './UserTypeOrmRepository';
 import { userInfoDto } from '../../dto/user-info.dto';
+import { UserRoles } from '../../dto/user-roles';
 
 export class UserRepository {
   private static entity?: UserMongoRepository | UserTypeOrmRepository;
@@ -16,8 +17,8 @@ export class UserRepository {
     }
   }
 
-  static async create(username: string, password: string) {
-    await this.entity.create(username, password);
+  static async create(username: string, password: string, role: UserRoles) {
+    await this.entity.create(username, password, role);
   }
 
   static async update(entity: userInfoDto, dto: userInfoDto) {

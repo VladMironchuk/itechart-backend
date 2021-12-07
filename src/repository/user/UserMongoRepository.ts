@@ -1,12 +1,14 @@
 import { IUserRepository } from './IUserRepository';
 import { userInfoDto } from '../../dto/user-info.dto';
 import User from '../../models/user';
+import { UserRoles } from '../../dto/user-roles';
 
 export class UserMongoRepository implements IUserRepository {
-  async create(username: string, password: string) {
+  async create(username: string, password: string, role: UserRoles) {
     const user = new User({
       username,
       password,
+      role
     });
 
     await user.save();
@@ -17,7 +19,6 @@ export class UserMongoRepository implements IUserRepository {
       entity._id = entity.id;
       delete entity.id;
     }
-    console.log(dto);
     await User.updateOne({ ...entity }, { ...dto });
   }
 
