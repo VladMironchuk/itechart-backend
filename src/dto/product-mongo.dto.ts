@@ -10,6 +10,7 @@ export type productMongo = {
   ratings?: {
     userId: string;
     rating: number;
+    createdAt: Date;
     comment?: string;
   }[];
 };

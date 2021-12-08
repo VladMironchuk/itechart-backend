@@ -8,15 +8,16 @@ export const updateProductRatingMongo = async (
   comment: string
 ): Promise<void> => {
   const users = product.ratings.map((rating) => rating.userId);
-
   if (users.includes(userId)) {
     product.ratings[users.indexOf(userId)].rating = rating;
-    product.ratings[users.indexOf(userId)].comment = comment;
+    product.ratings[users.indexOf(userId)].comment = comment ?? product.ratings[users.indexOf(userId)].comment;
+    product.ratings[users.indexOf(userId)].createdAt = new Date();
   } else {
     product.ratings.push({
       userId,
       rating,
       comment,
+      createdAt: new Date()
     });
   }
 

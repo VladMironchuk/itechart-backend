@@ -52,7 +52,11 @@ export class ProductMongoRepository implements IProductRepository<Product, strin
   }
 
   async update(query: productMongo, dto: productMongo) {
-    const product = await MongoProduct.findOne({ ...query, _id: query.id });
+    if (query.id) {
+      query['_id'] = query.id;
+      delete query.id;
+    }
+    const product = await MongoProduct.findOne({ ...query});
     await product.updateOne({ ...(dto as typeof MongoProduct) });
   }
 

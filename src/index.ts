@@ -9,15 +9,15 @@ import authRouter from './routes/authenticate';
 import profileRouter from './routes/profile';
 import tokenRouter from './routes/token';
 import orderListRouter from './routes/order-list';
-import adminProduct from './routes/admin/product'
-import adminCategory from './routes/admin/category'
+import adminProduct from './routes/admin/product';
+import adminCategory from './routes/admin/category';
 
 import { errorLogger, logger, reqLogger } from './logger/logger';
 import { serverConfig } from './config/server-config';
 
 import errorHandler from './middlewares/error-handler';
 import authHandler from './middlewares/user-auth';
-import adminHandler from './middlewares/user-admin'
+import adminHandler from './middlewares/user-admin';
 
 import swaggerUI from 'swagger-ui-express';
 import YAML from 'yamljs';
@@ -46,10 +46,8 @@ app.use('/profile', profileRouter);
 app.use('/token', tokenRouter);
 app.use('/order-list', orderListRouter);
 
-app.use(adminHandler)
-
-app.use('/admin/products', adminProduct)
-app.use('/admin/categories', adminCategory)
+app.use('/admin/products', adminHandler, adminProduct);
+app.use('/admin/categories', adminHandler, adminCategory);
 
 app.use(errorHandler);
 app.use(errorLogger);

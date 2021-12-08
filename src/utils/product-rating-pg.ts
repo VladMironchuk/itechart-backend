@@ -9,17 +9,18 @@ export const updateProductRatingPg = async (
   comment: string
 ): Promise<void> => {
   const userRatingRepo = new UserRatingsTypeOrmRepository();
-  const users = await userRatingRepo.getUserRatings();
+  const usersRatings = await userRatingRepo.getUserRating(userId);
 
-  const usersId = users.map((user) => user.userId);
+  const productsId = usersRatings.map((userRating) => userRating.product['id']);
+  let totalRating: number;
 
-  if (usersId.includes(userId)) {
-    await userRatingRepo.updateUserRating(userId, rating, comment ?? users[usersId.indexOf(userId)].comment);
+  if (productsId.includes(product.id)) {
+    const curProduct = usersRatings[productsId.indexOf(product.id)];
+    await userRatingRepo.updateUserRating(userId, product.id, rating, comment ?? curProduct.comment);
+    totalRating = +((curProduct.rating * usersRatings.length - (curProduct.rating - rating)) / usersRatings.length).toPrecision(2);
   } else {
-    await userRatingRepo.addUserRating(userId, rating, comment);
+    await userRatingRepo.addUserRating(userId, product.id, rating, comment);
+    totalRating = +((product.totalRating * usersRatings.length + rating) / (usersRatings.length + 1)).toPrecision(2);
   }
-
-  const totalRating = +((product.totalRating * users.length + rating) / (users.length + 1)).toPrecision(2);
-
   await ProductRepository.update({ displayName: product.displayName }, { totalRating });
 };

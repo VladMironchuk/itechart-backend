@@ -12,5 +12,5 @@ export class OrderList {
   userId: string
 
   @OneToMany(type => OrderListProduct, orderListProduct => orderListProduct.id)
-  products: OrderListProduct[]
+  products: OrderListProduct[]  
 }

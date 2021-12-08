@@ -24,6 +24,7 @@ export class Product {
     userId: string;
     rating: number;
     comment?: string;
+    createdAt: Date;
   }[];
 }
 
