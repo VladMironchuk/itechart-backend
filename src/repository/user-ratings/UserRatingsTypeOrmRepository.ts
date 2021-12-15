@@ -1,8 +1,6 @@
 import { Repository } from 'typeorm';
 import { UserRatings } from '../../entity/userRatings';
 import { ConnectionController } from '../../connection/connection';
-import { ProductRepository } from '../product/ProductRepository';
-import { Product } from '../../entity/product';
 
 export class UserRatingsTypeOrmRepository {
   private repository: Repository<UserRatings>;
@@ -12,7 +10,7 @@ export class UserRatingsTypeOrmRepository {
   }
 
   async getUserRatings() {
-    return await this.repository.find();
+    return await this.repository.find({relations: ['product']});
   }
 
   async addUserRating(userId: string, productId: string, rating: number, comment?: string) {
@@ -25,12 +23,12 @@ export class UserRatingsTypeOrmRepository {
     await this.repository.manager.save(userRating);
   }
 
-  async getUserRating(userId: string) {
+  async getUserRating(productId: string) {
     try {
       return await this.repository
         .createQueryBuilder('ur')
         .leftJoinAndSelect('ur.product', 'product')
-        .where('ur.userId = :userId', { userId: userId })
+        .where('ur.product.id = :productId', { productId })
         .getMany();
     } catch (e) {
       console.log(e);

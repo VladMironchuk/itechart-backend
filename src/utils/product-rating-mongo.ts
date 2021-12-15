@@ -8,7 +8,12 @@ export const updateProductRatingMongo = async (
   comment: string
 ): Promise<void> => {
   const users = product.ratings.map((rating) => rating.userId);
+  let totalRating: number
   if (users.includes(userId)) {
+    totalRating = +(
+      (product.totalRating * product.ratings.length - (product.ratings[users.indexOf(userId)].rating - rating)) /
+      product.ratings.length
+    ).toPrecision(2);
     product.ratings[users.indexOf(userId)].rating = rating;
     product.ratings[users.indexOf(userId)].comment = comment ?? product.ratings[users.indexOf(userId)].comment;
     product.ratings[users.indexOf(userId)].createdAt = new Date();
@@ -19,12 +24,11 @@ export const updateProductRatingMongo = async (
       comment,
       createdAt: new Date()
     });
+    totalRating = +(
+      (product.totalRating * (product.ratings.length - 1) + rating) /
+      product.ratings.length
+    ).toPrecision(2);
   }
-
-  const totalRating = +(
-    (product.totalRating * (product.ratings.length - 1) + rating) /
-    product.ratings.length
-  ).toPrecision(2);
 
   await ProductRepository.update(
     { displayName: product.displayName },

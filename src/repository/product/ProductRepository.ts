@@ -8,20 +8,21 @@ import { Product } from '../../entity/product';
 import { Product as ProductMongo } from '../../models/product';
 import { updateProductRatingMongo } from '../../utils/product-rating-mongo';
 import { updateProductRatingPg } from '../../utils/product-rating-pg';
+import { LastRatingsRepository } from '../last-ratings/LastRatingsRepository';
 
 export class ProductRepository {
   private static entity?: ProductTypeOrmRepository | ProductMongoRepository;
-  private static dbType: string
+  private static dbType: string;
 
   static init() {
     switch (process.env.DB) {
       case 'pg':
         this.entity = new ProductTypeOrmRepository();
-        this.dbType = 'pg'
+        this.dbType = 'pg';
         break;
       case 'mongo':
         this.entity = new ProductMongoRepository();
-        this.dbType = 'mongo'
+        this.dbType = 'mongo';
         break;
     }
   }
@@ -70,14 +71,15 @@ export class ProductRepository {
     return this.entity.delete(entity);
   }
 
-  static async addRating(id: string, userId: string,rating: number, comment?: string) {
-    const product = await this.getById(id)
+  static async addRating(id: string, userId: string, rating: number, comment?: string) {
+    const product = await this.getById(id);
     switch (this.dbType) {
       case 'mongo':
-        await updateProductRatingMongo(product as productMongo, userId, +rating, comment);
+        await updateProductRatingMongo(product as productMongo, userId, rating, comment);
         break;
       case 'pg':
-        await updateProductRatingPg(product as productPg, userId, +rating, comment);
+        await updateProductRatingPg(product as productPg, userId, rating, comment);
     }
+    await LastRatingsRepository.add(product.id, userId, rating, comment);
   }
 }

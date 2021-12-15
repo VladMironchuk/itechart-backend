@@ -8,19 +8,27 @@ export const updateProductRatingPg = async (
   rating: number,
   comment: string
 ): Promise<void> => {
-  const userRatingRepo = new UserRatingsTypeOrmRepository();
-  const usersRatings = await userRatingRepo.getUserRating(userId);
+  try {
+    const userRatingRepo = new UserRatingsTypeOrmRepository();
+    const usersRatings = await userRatingRepo.getUserRating(product.id);
 
-  const productsId = usersRatings.map((userRating) => userRating.product['id']);
-  let totalRating: number;
+    const userIds = usersRatings.map((userRating) => userRating.userId);
 
-  if (productsId.includes(product.id)) {
-    const curProduct = usersRatings[productsId.indexOf(product.id)];
-    await userRatingRepo.updateUserRating(userId, product.id, rating, comment ?? curProduct.comment);
-    totalRating = +((curProduct.rating * usersRatings.length - (curProduct.rating - rating)) / usersRatings.length).toPrecision(2);
-  } else {
-    await userRatingRepo.addUserRating(userId, product.id, rating, comment);
-    totalRating = +((product.totalRating * usersRatings.length + rating) / (usersRatings.length + 1)).toPrecision(2);
+    let totalRating: number;
+
+    if (userIds.includes(userId)) {
+      const curProduct = usersRatings[userIds.indexOf(userId)];
+      totalRating = +(
+        (product.totalRating * usersRatings.length - (curProduct.rating - rating)) /
+        usersRatings.length
+      ).toPrecision(2);
+      await userRatingRepo.updateUserRating(userId, product.id, rating, comment ?? curProduct.comment);
+    } else {
+      await userRatingRepo.addUserRating(userId, product.id, rating, comment);
+      totalRating = +((product.totalRating * usersRatings.length + rating) / (usersRatings.length + 1)).toPrecision(2);
+    }
+    await ProductRepository.update({ displayName: product.displayName }, { totalRating });
+  } catch (e) {
+    console.log(e);
   }
-  await ProductRepository.update({ displayName: product.displayName }, { totalRating });
 };

@@ -20,7 +20,9 @@ export class ProductTypeOrmRepository implements IProductRepository<Product, str
 
   async getByQuery(query: pgProductQuery) {
     let qb = this.repository.createQueryBuilder('product')
-      .leftJoinAndSelect('product.categories', 'category');
+      .leftJoinAndSelect('product.categories', 'category')
+      .leftJoinAndSelect('product.ratings', 'rating')
+
 
     qb = qb
       .where('product.price >= :gt')

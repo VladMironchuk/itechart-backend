@@ -1,4 +1,4 @@
-import { Column, Entity, JoinColumn, OneToOne, PrimaryGeneratedColumn } from 'typeorm';
+import { Column, Entity, JoinColumn, ManyToOne, PrimaryGeneratedColumn } from 'typeorm';
 import { Product } from './product';
 
 @Entity()
@@ -9,7 +9,7 @@ export class UserRatings {
   @Column()
   userId?: string;
 
-  @OneToOne(type => Product, product => product.id)
+  @ManyToOne(type => Product, product => product.id)
   @JoinColumn()
   product: string;
 
