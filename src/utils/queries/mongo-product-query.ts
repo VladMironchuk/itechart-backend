@@ -4,7 +4,7 @@ import { mapPriceQuery } from '../validation/priceValidation';
 type sortCriteria = 'asc' | 'desc' | 'ascending' | 'descending' | 1 | -1;
 
 const PRODUCT_FIELDS = ['createdAt', 'displayName', 'price', 'totalRating'];
-const SORT_CRITERIA: sortCriteria[] = ['asc', 'desc', 'ascending', 'descending', 1, -1,];
+const SORT_CRITERIA: sortCriteria[] = ['asc', 'desc', 'ascending', 'descending', 1, -1];
 
 export type mappedQueryMongo = {
   query: {
@@ -27,7 +27,7 @@ export type mappedQueryMongo = {
 
 const mapRatingQuery = (ratingQuery = '') => {
   if (isNaN(+ratingQuery)) {
-    throw new InvalidDataError("rating must be a number");
+    throw new InvalidDataError('rating must be a number');
   }
 
   return {
@@ -38,18 +38,18 @@ const mapRatingQuery = (ratingQuery = '') => {
 const mapSortQuery = (sortQuery: string) => {
   if (!sortQuery) return;
 
-  if(!sortQuery.includes(':')){
-    throw new InvalidDataError("invalid format(must be filter:asc|desc)");
+  if (!sortQuery.includes(':')) {
+    throw new InvalidDataError('invalid format(must be filter:asc|desc)');
   }
 
   const filter = sortQuery.split(':')[0];
-  if(!PRODUCT_FIELDS.includes(filter)) {
-    throw new InvalidDataError("wrong filter");
+  if (!PRODUCT_FIELDS.includes(filter)) {
+    throw new InvalidDataError('wrong filter');
   }
 
-  const value = sortQuery.split(':')[1] as sortCriteria || 'asc';
-  if(!SORT_CRITERIA.includes(value)) {
-    throw new InvalidDataError("wrong comparator");
+  const value = (sortQuery.split(':')[1] as sortCriteria) || 'asc';
+  if (!SORT_CRITERIA.includes(value)) {
+    throw new InvalidDataError('wrong comparator');
   }
 
   return {

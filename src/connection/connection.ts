@@ -6,6 +6,7 @@ import { CategoryRepository } from '../repository/category/CategoryRepository';
 import { UserRepository } from '../repository/user/UserRepository';
 import { logger } from '../logger/logger';
 import { OrderListRepository } from '../repository/order-list/OrderListRepository';
+import { LastRatingsRepository } from '../repository/last-ratings/LastRatingsRepository';
 const exec = mongoose.Query.prototype.exec;
 
 mongoose.Query.prototype.exec = async function () {
@@ -31,13 +32,13 @@ export class ConnectionController {
         break;
       case 'mongo':
         await mongoose.connect(process.env.DB_CONN_STRING);
-
         break;
     }
     ProductRepository.init();
     CategoryRepository.init();
     UserRepository.init();
     OrderListRepository.init();
+    LastRatingsRepository.init()
   }
 
   static getConnection() {
