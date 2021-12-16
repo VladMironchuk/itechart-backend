@@ -6,7 +6,9 @@ const router = Router();
 
 export const sendRatings = async () => {
   const lastRatings = await LastRatingsRepository.get();
-  wsServer.emit('ratings', JSON.stringify(lastRatings))
+  wsServer.clients.forEach(client => {
+    client.send(JSON.stringify(lastRatings))
+  })
 }
 
 router.get('/', async (req: Request, res: Response, next: NextFunction) => {
