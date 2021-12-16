@@ -15,6 +15,7 @@ import lastRatings from './routes/last-ratings'
 
 import { errorLogger, logger, reqLogger } from './logger/logger';
 import { serverConfig } from './config/server-config';
+import {task} from './utils/cron/last-ratings-job';
 
 import errorHandler from './middlewares/error-handler';
 import accessHandler from './middlewares/rights-handler'
@@ -27,7 +28,7 @@ import cors from 'cors';
 require('./utils/passport/passport');
 
 const port = process.env.PORT ?? serverConfig.PORT;
-const app: Application = express();
+export const app: Application = express();
 
 const swaggerDocument = YAML.load(path.join(__dirname, '../doc/api.yaml'));
 
@@ -58,6 +59,7 @@ app.use(errorLogger);
 async function start(): Promise<void> {
   try {
     await ConnectionController.createConnection();
+    task.start()
     app.listen(port, (): void => {
       logger.info(`Server is running on http://localhost:${port}`);
     });

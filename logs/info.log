@@ -674,3 +674,50 @@ src/routes/last-ratings.ts(16,37): error TS1109: Expression expected.
 2021-12-14 21:10:12 info: Server is running on http://localhost:3000
 2021-12-14 21:12:08 info: Server is running on http://localhost:3000
 2021-12-14 21:17:06 info: Server is running on http://localhost:3000
+2021-12-16 16:14:49 info: Server is running on http://localhost:3000
+2021-12-16 16:20:18 info: Server is running on http://localhost:3000
+2021-12-16 16:27:05 info: Server is running on http://localhost:3000
+2021-12-16 16:28:28 info: Server is running on http://localhost:3000 undefined
+2021-12-16 16:29:22 error: MongooseError: The `uri` parameter to `openUri()` must be a string, got "undefined". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string.
+    at NativeConnection.Object.<anonymous>.Connection.openUri (E:\info\js_selflearn\itechart\itechart-backend\node_modules\mongoose\lib\connection.js:684:11)
+    at E:\info\js_selflearn\itechart\itechart-backend\node_modules\mongoose\lib\index.js:330:10
+    at E:\info\js_selflearn\itechart\itechart-backend\node_modules\mongoose\lib\helpers\promiseOrCallback.js:32:5
+    at new Promise (<anonymous>)
+    at promiseOrCallback (E:\info\js_selflearn\itechart\itechart-backend\node_modules\mongoose\lib\helpers\promiseOrCallback.js:31:10)
+    at Mongoose.Object.<anonymous>.Mongoose._promiseOrCallback (E:\info\js_selflearn\itechart\itechart-backend\node_modules\mongoose\lib\index.js:1151:10)
+    at Mongoose.Object.<anonymous>.Mongoose.connect (E:\info\js_selflearn\itechart\itechart-backend\node_modules\mongoose\lib\index.js:329:20)
+    at Function.<anonymous> (E:\info\js_selflearn\itechart\itechart-backend\src\connection\connection.ts:34:24)
+    at Generator.next (<anonymous>)
+    at E:\info\js_selflearn\itechart\itechart-backend\src\connection\connection.ts:8:71
+2021-12-16 16:29:58 info: Server is running on http://localhost:3000 mongo
+2021-12-16 16:31:20 info: Server is running on http://localhost:3000 mongo
+2021-12-16 16:33:01 info: Server is running on http://localhost:3000 mongo
+2021-12-16 16:34:38 info: Server is running on http://localhost:3000 mongo
+2021-12-16 16:35:28 info: Server is running on http://localhost:3000 mongo
+2021-12-16 16:37:13 info: Server is running on http://localhost:3000 mongo
+2021-12-16 16:37:56 info: Server is running on http://localhost:3000 mongo
+2021-12-16 16:38:27 info: Server is running on http://localhost:3000 mongo
+2021-12-16 16:39:54 info: Server is running on http://localhost:3000 mongo
+2021-12-16 16:40:24 info: Server is running on http://localhost:3000 mongo
+2021-12-16 16:43:18 info: Server is running on http://localhost:3000
+2021-12-16 16:45:30 info: Server is running on http://localhost:3000
+2021-12-16 16:46:58 info: Server is running on http://localhost:3000
+2021-12-16 16:50:59 info: Server is running on http://localhost:3000
+2021-12-16 16:54:28 info: Server is running on http://localhost:3000
+2021-12-16 16:56:36 info: Server is running on http://localhost:3000
+2021-12-16 16:58:48 info: Server is running on http://localhost:3000
+2021-12-16 16:59:45 info: Server is running on http://localhost:3000
+2021-12-16 17:00:07 info: Server is running on http://localhost:3000
+2021-12-16 17:00:21 info: Server is running on http://localhost:3000
+2021-12-16 17:26:51 info: Server is running on http://localhost:3000
+2021-12-16 17:27:42 info: Server is running on http://localhost:3000
+2021-12-16 17:30:36 info: Server is running on http://localhost:3000
+2021-12-16 17:31:11 info: Server is running on http://localhost:3000
+2021-12-16 17:32:08 info: Server is running on http://localhost:3000
+2021-12-16 17:33:22 info: Server is running on http://localhost:3000
+2021-12-16 17:36:16 info: Server is running on http://localhost:3000
+2021-12-16 17:37:01 info: Server is running on http://localhost:3000
+2021-12-16 17:39:25 info: Server is running on http://localhost:3000
+2021-12-16 17:40:24 info: Server is running on http://localhost:3000
+2021-12-16 17:40:50 error: User exists
+2021-12-16 17:41:51 info: Server is running on http://localhost:3000
