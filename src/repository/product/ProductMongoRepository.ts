@@ -1,5 +1,5 @@
 import MongoProduct from '../../models/product';
-import { productMongo } from '../../dto/product-mongo.dto';
+import { productMongo } from '../../dto/product/product-mongo.dto';
 import { mappedQueryMongo } from '../../utils/queries/mongo-product-query';
 import { Product } from '../../models/product';
 import { IProductRepository } from './IProductRepository';
