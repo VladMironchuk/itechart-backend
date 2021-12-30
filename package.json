@@ -6,9 +6,9 @@
   "scripts": {
     "lint": "eslint --debug src/",
     "lint:write": "eslint --debug src/ --fix",
-    "build": "tsc",
+    "build": "tsc; cp -r doc dist",
     "start:mongo": "cross-env NODE_ENV=prod DB=mongo DB_CONN_STRING=mongodb+srv://vladmiron:travazabor206@cluster0.6mfby.mongodb.net/store JWT_SECRET=vladminsk2021 node ./dist/src/index.js",
-    "start:pg": "cross-env NODE_ENV=prod DB=pg DB_USERNAME=postgres DB_PASSWORD=test JWT_SECRET=vladminsk2021 node ./dist/src/index.js",
+    "start": "cross-env NODE_ENV=prod DB=pg DB_USERNAME=postgres DB_PASSWORD=test JWT_SECRET=vladminsk2021 node ./dist/src/index.js",
     "dev:pg": "cross-env NODE_ENV=dev DB=pg DB_USERNAME=postgres DB_PASSWORD=test JWT_SECRET=vladminsk2021 tsnd --respawn src/index.ts",
     "dev:mongo": "cross-env NODE_ENV=dev DB=mongo DB_CONN_STRING=mongodb+srv://vladmiron:travazabor206@cluster0.6mfby.mongodb.net/store JWT_SECRET=vladminsk2021 tsnd --respawn src/index.ts",
     "test:mongo": "cross-env NODE_ENV=dev DB=mongo DB_CONN_STRING=mongodb+srv://vladmiron:travazabor206@cluster0.6mfby.mongodb.net/store JWT_SECRET=vladminsk2021 jest",
