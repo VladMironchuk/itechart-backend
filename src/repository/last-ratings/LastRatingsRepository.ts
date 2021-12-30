@@ -3,7 +3,7 @@ import { LastRatingsTypeOrmRepository } from './LastRatingsTypeOrmRepository';
 
 export class LastRatingsRepository {
 
-  private static entity?: LastRatingsMongoRepository | LastRatingsTypeOrmRepository
+  private static entity: LastRatingsMongoRepository | LastRatingsTypeOrmRepository
 
   static init() {
     switch (process.env.DB) {

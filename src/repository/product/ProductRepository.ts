@@ -1,7 +1,7 @@
 import { ProductTypeOrmRepository } from './ProductTypeOrmRepository';
 import { ProductMongoRepository } from './ProductMongoRepository';
-import { productPg } from '../../dto/product-pg.dto';
-import { productMongo } from '../../dto/product-mongo.dto';
+import { productPg } from '../../dto/product/product-pg.dto';
+import { productMongo } from '../../dto/product/product-mongo.dto';
 import { mappedQueryMongo } from '../../utils/queries/mongo-product-query';
 import { pgProductQuery } from '../../utils/queries/pg-product-query';
 import { Product } from '../../entity/product';

@@ -4,7 +4,7 @@ import { orderList } from '../../dto/order-list-mongo';
 
 export class OrderListRepository {
 
-  private static entity?: OrderListMongoRepository | OrderListTypeOrmRepository
+  private static entity: OrderListMongoRepository | OrderListTypeOrmRepository
 
   static init() {
     switch (process.env.DB) {

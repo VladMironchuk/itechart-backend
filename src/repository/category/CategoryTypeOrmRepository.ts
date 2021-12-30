@@ -1,7 +1,7 @@
 import ICategoryRepository from './ICategoryRepository';
 import { Category } from '../../entity/category';
 import { Repository } from 'typeorm';
-import { categoryPg } from '../../dto/category-pg.dto';
+import { categoryPg } from '../../dto/category/category-pg.dto';
 import { ConnectionController } from '../../connection/connection';
 
 export class CategoryTypeOrmRepository implements ICategoryRepository<Category, string, categoryPg> {

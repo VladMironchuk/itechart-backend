@@ -1,7 +1,7 @@
 import { Repository } from 'typeorm';
 import { Product } from '../../entity/product';
 import { IProductRepository } from './IProductRepository';
-import { productPg } from '../../dto/product-pg.dto';
+import { productPg } from '../../dto/product/product-pg.dto';
 import { ConnectionController } from '../../connection/connection';
 import { pgProductQuery } from '../../utils/queries/pg-product-query';
 import { CategoryRepository } from '../category/CategoryRepository';

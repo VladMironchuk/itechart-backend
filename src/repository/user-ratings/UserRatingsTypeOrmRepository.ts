@@ -10,7 +10,7 @@ export class UserRatingsTypeOrmRepository {
   }
 
   async getUserRatings() {
-    return await this.repository.find({relations: ['product']});
+    return await this.repository.find({ relations: ['product'] });
   }
 
   async addUserRating(userId: string, productId: string, rating: number, comment?: string) {
@@ -24,15 +24,11 @@ export class UserRatingsTypeOrmRepository {
   }
 
   async getUserRating(productId: string) {
-    try {
-      return await this.repository
-        .createQueryBuilder('ur')
-        .leftJoinAndSelect('ur.product', 'product')
-        .where('ur.product.id = :productId', { productId })
-        .getMany();
-    } catch (e) {
-      console.log(e);
-    }
+    return await this.repository
+      .createQueryBuilder('ur')
+      .leftJoinAndSelect('ur.product', 'product')
+      .where('ur.product.id = :productId', { productId })
+      .getMany();
   }
 
   async updateUserRating(userId: string, productId: string, rating: number, comment?: string) {
@@ -43,8 +39,8 @@ export class UserRatingsTypeOrmRepository {
       .andWhere('ur.product = :productId', { productId })
       .getOne();
 
-    product.rating = rating
+    product.rating = rating;
     product.comment = comment;
-    await this.repository.save(product)
+    await this.repository.save(product);
   }
 }

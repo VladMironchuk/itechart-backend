@@ -1,7 +1,7 @@
 import { IUserRepository } from './IUserRepository';
 import { userInfoDto } from '../../dto/user-info.dto';
-import User from '../../models/user';
 import { UserRoles } from '../../dto/user-roles';
+import User from '../../models/user';
 
 export class UserMongoRepository implements IUserRepository {
   async create(username: string, password: string, role: UserRoles) {

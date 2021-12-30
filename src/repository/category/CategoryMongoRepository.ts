@@ -1,5 +1,5 @@
 import MongoCategory from '../../models/category';
-import { categoryMongo } from '../../dto/category-mongo.dto';
+import { categoryMongo } from '../../dto/category/category-mongo.dto';
 
 const DEFAULT_MONGO_KEYS = 'id displayName createdAt products'
 

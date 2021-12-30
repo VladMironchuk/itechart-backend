@@ -4,8 +4,9 @@ import { ConnectionController } from '../../connection/connection';
 import { orderList } from '../../dto/order-list-mongo';
 import { User } from '../../entity/user';
 import { OrderListProduct } from '../../entity/order-list-product';
+import { IOrderListRepository } from './IOrderListRepository';
 
-export class OrderListTypeOrmRepository {
+export class OrderListTypeOrmRepository implements IOrderListRepository<OrderListProduct[], orderList>{
   private repository: Repository<User>;
 
   constructor() {
@@ -13,18 +14,17 @@ export class OrderListTypeOrmRepository {
   }
 
   async getAll(userId: string) {
-    try {
-      const user = await this.repository.findOne({ id: userId }, { relations: ['orderList'] });
-      return await this.repository.manager
-        .getRepository(OrderListProduct)
-        .createQueryBuilder('order_list_product')
-        .leftJoinAndSelect('order_list_product.orderList', 'order_list')
-        .leftJoinAndSelect('order_list_product.product', 'product')
-        .where('order_list_product.orderList.id = :order_id', { order_id: user.orderList.id })
-        .getMany();
-    } catch (e) {
-      console.log(e);
+    const user = await this.repository.findOne({ id: userId }, { relations: ['orderList'] });
+    if(!user.orderList) {
+      return null
     }
+    return await this.repository.manager
+      .getRepository(OrderListProduct)
+      .createQueryBuilder('order_list_product')
+      .leftJoinAndSelect('order_list_product.orderList', 'order_list')
+      .leftJoinAndSelect('order_list_product.product', 'product')
+      .where('order_list_product.orderList.id = :order_id', { order_id: user.orderList.id })
+      .getMany();
   }
 
   async add(userId: string, products: orderList) {
@@ -53,7 +53,8 @@ export class OrderListTypeOrmRepository {
     const orderList = await this.getAll(userId);
     const productsIds = products.map((product) => product.product);
     productsIds.forEach((product) => {
-      orderList.find((item) => item.product['id'] === product).quantity = +products[productsIds.indexOf(product)].quantity;
+      orderList.find((item) => item.product['id'] === product).quantity =
+        +products[productsIds.indexOf(product)].quantity;
     });
     await this.repository.manager.save(orderList);
   }

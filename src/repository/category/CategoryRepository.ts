@@ -1,11 +1,11 @@
 import { CategoryTypeOrmRepository } from './CategoryTypeOrmRepository';
 import { CategoryMongoRepository } from './CategoryMongoRepository';
-import { categoryMongo } from '../../dto/category-mongo.dto';
-import { categoryPg } from '../../dto/category-pg.dto';
+import { categoryMongo } from '../../dto/category/category-mongo.dto';
+import { categoryPg } from '../../dto/category/category-pg.dto';
 
 export class CategoryRepository {
 
-  private static entity?: CategoryTypeOrmRepository | CategoryMongoRepository;
+  private static entity: CategoryTypeOrmRepository | CategoryMongoRepository;
 
   static init() {
     switch (process.env.DB) {

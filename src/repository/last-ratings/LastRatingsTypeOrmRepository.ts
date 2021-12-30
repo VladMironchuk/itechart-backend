@@ -28,6 +28,7 @@ export class LastRatingsTypeOrmRepository implements ILastRatingsRepository{
     userRating.createdAt = new Date();
 
     const allRatings = await this.get()
+
     if(allRatings.length === 10) {
       await this.repository.delete({id: allRatings.at(-1).id})
     }

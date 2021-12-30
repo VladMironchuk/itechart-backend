@@ -4,11 +4,12 @@ import OrderListMongo from '../../models/order-list';
 import { OrderList } from '../../models/order-list';
 import { Ref } from '@typegoose/typegoose';
 import { Types } from 'mongoose';
+import { IOrderListRepository } from './IOrderListRepository';
 
 const ORDER_LIST_MONGO_KEYS = 'id orderList';
 
-export class OrderListMongoRepository {
-  async getAll(userId: string): Promise<Ref<OrderList>> {
+export class OrderListMongoRepository implements IOrderListRepository<Ref<OrderList>, orderList>{
+  async getAll(userId: string) {
     const user = await UserMongo.findOne({ _id: userId }, ORDER_LIST_MONGO_KEYS).populate('orderList');
     return user.orderList;
   }
