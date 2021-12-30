@@ -1,4 +1,4 @@
-export type categoryMongo = {
+export type category = {
   id?: string;
   displayName?: string;
 };
