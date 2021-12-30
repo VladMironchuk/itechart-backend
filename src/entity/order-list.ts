@@ -1,7 +1,6 @@
 import { Entity, OneToMany, OneToOne, PrimaryGeneratedColumn } from 'typeorm';
 import { User } from './user';
 import { OrderListProduct } from './order-list-product';
-import { JoinColumn } from 'typeorm/browser';
 
 @Entity()
 export class OrderList {

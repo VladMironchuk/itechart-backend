@@ -16,7 +16,6 @@ router.get('/', async (req: Request, res: Response, next: NextFunction) => {
     await sendRatings()
     res.status(200).send()
   } catch (e) {
-    console.log(e);
     next(e);
   }
 });

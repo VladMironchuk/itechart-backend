@@ -28,7 +28,18 @@ export class ConnectionController {
   static async createConnection() {
     switch (process.env.DB) {
       case 'pg':
-        ConnectionController.connection = await createConnection(ormConfig);
+        let retries = 5
+        while(retries) {
+          try {
+            this.connection = await createConnection(ormConfig);
+            break;
+          } catch (e) {
+            console.log(e);
+            retries -= 1
+            console.log(`retries left: ${retries}`);
+            await new Promise(res => setTimeout(res, 5000))
+          }
+        }
         break;
       case 'mongo':
         await mongoose.connect(process.env.DB_CONN_STRING);

@@ -1,5 +1,5 @@
 import { mapPriceQuery } from '../validation/priceValidation';
-import { productPg } from '../../dto/product-pg.dto';
+import { productPg } from '../../dto/product/product-pg.dto';
 import { InvalidDataError } from '../errors/invalidDataError';
 
 type pgSortCriteria = 'ASC' | 'DESC';

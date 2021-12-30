@@ -721,3 +721,42 @@ src/routes/last-ratings.ts(16,37): error TS1109: Expression expected.
 2021-12-16 17:40:24 info: Server is running on http://localhost:3000
 2021-12-16 17:40:50 error: User exists
 2021-12-16 17:41:51 info: Server is running on http://localhost:3000
+2021-12-18 19:28:18 info: Server is running on http://localhost:3000
+2021-12-20 11:25:03 info: Server is running on http://localhost:3000
+2021-12-21 19:27:01 info: Server is running on http://localhost:3000
+2021-12-22 11:58:43 error: TypeError: Cannot read property 'getRepository' of undefined
+    at new ProductTypeOrmRepository (E:\info\js_selflearn\itechart\itechart-backend\src\repository\product\ProductTypeOrmRepository.ts:14:59)
+    at Function.init (E:\info\js_selflearn\itechart\itechart-backend\src\repository\product\ProductRepository.ts:20:23)
+    at Function.<anonymous> (E:\info\js_selflearn\itechart\itechart-backend\src\connection\connection.ts:48:23)
+    at Generator.next (<anonymous>)
+    at fulfilled (E:\info\js_selflearn\itechart\itechart-backend\src\connection\connection.ts:5:58)
+2021-12-22 11:59:56 info: Server is running on http://localhost:3000
+2021-12-26 12:49:42 info: Server is running on http://localhost:3000
+2021-12-26 12:52:05 error: TypeError: Cannot read property 'id' of null
+    at OrderListTypeOrmRepository.<anonymous> (E:\info\js_selflearn\itechart\itechart-backend\src\repository\order-list\OrderListTypeOrmRepository.ts:22:88)
+    at Generator.next (<anonymous>)
+    at fulfilled (E:\info\js_selflearn\itechart\itechart-backend\src\repository\order-list\OrderListTypeOrmRepository.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+2021-12-26 12:55:32 info: Server is running on http://localhost:3000
+2021-12-26 12:55:40 error: TypeError: Cannot read property 'id' of null
+    at OrderListTypeOrmRepository.<anonymous> (E:\info\js_selflearn\itechart\itechart-backend\src\repository\order-list\OrderListTypeOrmRepository.ts:22:88)
+    at Generator.next (<anonymous>)
+    at fulfilled (E:\info\js_selflearn\itechart\itechart-backend\src\repository\order-list\OrderListTypeOrmRepository.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+2021-12-26 12:57:07 info: Server is running on http://localhost:3000
+2021-12-26 12:58:17 info: Server is running on http://localhost:3000
+2021-12-26 12:58:29 error: TypeError: Cannot read property 'id' of null
+    at OrderListTypeOrmRepository.<anonymous> (E:\info\js_selflearn\itechart\itechart-backend\src\repository\order-list\OrderListTypeOrmRepository.ts:22:88)
+    at Generator.next (<anonymous>)
+    at fulfilled (E:\info\js_selflearn\itechart\itechart-backend\src\repository\order-list\OrderListTypeOrmRepository.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+2021-12-26 12:58:51 info: Server is running on http://localhost:3000
+2021-12-26 12:59:00 error: TypeError: Cannot read property 'id' of null
+    at OrderListTypeOrmRepository.<anonymous> (E:\info\js_selflearn\itechart\itechart-backend\src\repository\order-list\OrderListTypeOrmRepository.ts:22:87)
+    at Generator.next (<anonymous>)
+    at fulfilled (E:\info\js_selflearn\itechart\itechart-backend\src\repository\order-list\OrderListTypeOrmRepository.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+2021-12-26 13:03:09 info: Server is running on http://localhost:3000
+2021-12-30 15:26:56 info: Server is running on http://localhost:3000
+2021-12-30 15:28:23 info: Server is running on http://localhost:3000
+2021-12-30 15:29:07 info: Server is running on http://localhost:3000

@@ -1,7 +1,7 @@
 import { ProductRepository } from '../../repository/product/ProductRepository';
 import { CategoryRepository } from '../../repository/category/CategoryRepository';
 import { Category } from '../../entity/category';
-import { categoryMongo } from '../../dto/category-mongo.dto';
+import { categoryMongo } from '../../dto/category/category-mongo.dto';
 
 export default async function (reqQuery, id): Promise<categoryMongo> {
   const category = await CategoryRepository.getById(id);

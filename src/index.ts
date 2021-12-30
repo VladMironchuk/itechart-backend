@@ -11,15 +11,15 @@ import tokenRouter from './routes/token';
 import orderListRouter from './routes/order-list';
 import adminProduct from './routes/admin/product';
 import adminCategory from './routes/admin/category';
-import lastRatings from './routes/last-ratings'
+import lastRatings from './routes/last-ratings';
 
 import { errorLogger, logger, reqLogger } from './logger/logger';
 import { serverConfig } from './config/server-config';
-import {task} from './utils/cron/last-ratings-job';
+import { task } from './utils/cron/last-ratings-job';
 
 import errorHandler from './middlewares/error-handler';
-import accessHandler from './middlewares/rights-handler'
-import authHandler from './middlewares/user-auth'
+import accessHandler from './middlewares/rights-handler';
+import authHandler from './middlewares/user-auth';
 
 import swaggerUI from 'swagger-ui-express';
 import YAML from 'yamljs';
@@ -51,21 +51,19 @@ app.use('/order-list', orderListRouter);
 app.use('/admin/products', accessHandler(['admin']), adminProduct);
 app.use('/admin/categories', accessHandler(['admin']), adminCategory);
 
-app.use('/last-ratings', lastRatings)
+app.use('/last-ratings', lastRatings);
 
 app.use(errorHandler);
 app.use(errorLogger);
 
-async function start(): Promise<void> {
+(async (): Promise<void> => {
   try {
     await ConnectionController.createConnection();
-    task.start()
+    task.start();
     app.listen(port, (): void => {
       logger.info(`Server is running on http://localhost:${port}`);
     });
   } catch (e: unknown) {
     logger.error(e);
   }
-}
-
-start();
+})();

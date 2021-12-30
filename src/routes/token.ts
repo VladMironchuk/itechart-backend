@@ -6,7 +6,7 @@ import * as jwt from 'jsonwebtoken';
 
 const router = Router();
 
-router.post('/', async (req: Request, res: Response, next: NextFunction) => {
+router.post('/', async (req: Request, res: Response, _: NextFunction) => {
   const { refreshToken } = req.body;
   const user = await UserRepository.getOne({ id: req['userId'] });
 
