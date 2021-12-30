@@ -9,7 +9,7 @@ import { LastRatings } from '../entity/last-ratings';
 
 export const ormConfig: ConnectionOptions = {
   type: 'postgres',
-  host: 'host.docker.internal',
+  host: 'localhost',
   port: 5432,
   username: process.env.DB_USERNAME,
   password: process.env.DB_PASSWORD,

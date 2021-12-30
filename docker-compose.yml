@@ -8,6 +8,8 @@ services:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=test
       - POSTGRES_DB=store
+      - DB_PASSWORD=test
+      - JWT_SECRET=vladminsk2021
     volumes:
       - /e/info/postgresql/data
     ports:

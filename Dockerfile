@@ -1,14 +1,14 @@
 FROM node
 
-ENV NODE_ENV=prod
-ENV DB=mongo
-ENV DB_CONN_STRING=mongodb+srv://vladmiron:travazabor206@cluster0.6mfby.mongodb.net/store
+#ENV NODE_ENV=prod
+#ENV DB=mongo
+#ENV DB_CONN_STRING=mongodb+srv://vladmiron:travazabor206@cluster0.6mfby.mongodb.net/store
 
 WORKDIR /app
 
 COPY package*.json ./
 COPY tsconfig.json ./
-
+COPY ormconfig.docker.json ./ormconfig.json
 
 COPY src /app/src
 
