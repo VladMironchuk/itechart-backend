@@ -4936,3 +4936,4 @@ src/routes/last-ratings.ts(16,37): error TS1109: Expression expected.
 2021-12-30 15:26:56 info: Server is running on http://localhost:3000
 2021-12-30 15:28:23 info: Server is running on http://localhost:3000
 2021-12-30 15:29:07 info: Server is running on http://localhost:3000
+2021-12-31 10:53:05 info: Server is running on http://localhost:3000

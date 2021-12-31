@@ -24,12 +24,3 @@ services:
       - DB=pg
     depends_on:
       - db
-
-#  mongo:
-#    build: .
-#    ports:
-#      - '7777:3000'
-#    environment:
-#      - NODE_ENV=prod
-#      - DB=mongo
-#      - DB_CONN_STRING=mongodb+srv://vladmiron:travazabor206@cluster0.6mfby.mongodb.net/store
