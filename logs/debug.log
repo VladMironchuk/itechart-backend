@@ -4937,3 +4937,40 @@ src/routes/last-ratings.ts(16,37): error TS1109: Expression expected.
 2021-12-30 15:28:23 info: Server is running on http://localhost:3000
 2021-12-30 15:29:07 info: Server is running on http://localhost:3000
 2021-12-31 10:53:05 info: Server is running on http://localhost:3000
+2021-12-31 11:06:33 error: TypeError: Cannot read property 'getRepository' of undefined
+    at new ProductTypeOrmRepository (E:\info\js_selflearn\itechart\itechart-backend\src\repository\product\ProductTypeOrmRepository.ts:14:59)
+    at Function.init (E:\info\js_selflearn\itechart\itechart-backend\src\repository\product\ProductRepository.ts:20:23)
+    at Function.<anonymous> (E:\info\js_selflearn\itechart\itechart-backend\src\connection\connection.ts:48:23)
+    at Generator.next (<anonymous>)
+    at fulfilled (E:\info\js_selflearn\itechart\itechart-backend\src\connection\connection.ts:5:58)
+2021-12-31 11:32:53 error: TypeError: Cannot read property 'getRepository' of undefined
+    at new ProductTypeOrmRepository (E:\info\js_selflearn\itechart\itechart-backend\src\repository\product\ProductTypeOrmRepository.ts:14:59)
+    at Function.init (E:\info\js_selflearn\itechart\itechart-backend\src\repository\product\ProductRepository.ts:20:23)
+    at Function.<anonymous> (E:\info\js_selflearn\itechart\itechart-backend\src\connection\connection.ts:48:23)
+    at Generator.next (<anonymous>)
+    at fulfilled (E:\info\js_selflearn\itechart\itechart-backend\src\connection\connection.ts:5:58)
+2021-12-31 11:46:46 error: TypeError: Cannot read property 'getRepository' of undefined
+    at new ProductTypeOrmRepository (E:\info\js_selflearn\itechart\itechart-backend\src\repository\product\ProductTypeOrmRepository.ts:14:59)
+    at Function.init (E:\info\js_selflearn\itechart\itechart-backend\src\repository\product\ProductRepository.ts:20:23)
+    at Function.<anonymous> (E:\info\js_selflearn\itechart\itechart-backend\src\connection\connection.ts:48:23)
+    at Generator.next (<anonymous>)
+    at fulfilled (E:\info\js_selflearn\itechart\itechart-backend\src\connection\connection.ts:5:58)
+2022-01-02 11:42:51 error: TypeError: Cannot read property 'getRepository' of undefined
+    at new ProductTypeOrmRepository (E:\info\js_selflearn\itechart\itechart-backend\src\repository\product\ProductTypeOrmRepository.ts:14:59)
+    at Function.init (E:\info\js_selflearn\itechart\itechart-backend\src\repository\product\ProductRepository.ts:20:23)
+    at Function.<anonymous> (E:\info\js_selflearn\itechart\itechart-backend\src\connection\connection.ts:48:23)
+    at Generator.next (<anonymous>)
+    at fulfilled (E:\info\js_selflearn\itechart\itechart-backend\src\connection\connection.ts:5:58)
+2022-01-02 11:44:19 error: TypeError: Cannot read property 'getRepository' of undefined
+    at new ProductTypeOrmRepository (E:\info\js_selflearn\itechart\itechart-backend\src\repository\product\ProductTypeOrmRepository.ts:14:59)
+    at Function.init (E:\info\js_selflearn\itechart\itechart-backend\src\repository\product\ProductRepository.ts:20:23)
+    at Function.<anonymous> (E:\info\js_selflearn\itechart\itechart-backend\src\connection\connection.ts:48:23)
+    at Generator.next (<anonymous>)
+    at fulfilled (E:\info\js_selflearn\itechart\itechart-backend\src\connection\connection.ts:5:58)
+2022-01-02 12:13:43 error: TypeError: Cannot read property 'getRepository' of undefined
+    at new ProductTypeOrmRepository (E:\info\js_selflearn\itechart\itechart-backend\src\repository\product\ProductTypeOrmRepository.ts:14:59)
+    at Function.init (E:\info\js_selflearn\itechart\itechart-backend\src\repository\product\ProductRepository.ts:20:23)
+    at Function.<anonymous> (E:\info\js_selflearn\itechart\itechart-backend\src\connection\connection.ts:48:23)
+    at Generator.next (<anonymous>)
+    at fulfilled (E:\info\js_selflearn\itechart\itechart-backend\src\connection\connection.ts:5:58)
+2022-01-02 13:01:55 info: Server is running on http://localhost:3000

@@ -9,11 +9,11 @@ import { LastRatings } from '../entity/last-ratings';
 
 export const ormConfig: ConnectionOptions = {
   type: 'postgres',
-  host: 'ec2-34-230-133-163.compute-1.amazonaws.com',
+  host: 'docker.host.internal',
   port: 5432,
-  username: process.env.DB_USERNAME,
+  username: process.env.POSTGRES_USER,
   password: process.env.DB_PASSWORD,
-  database: 'dpjdsi12dd0ur',
+  database: process.env.POSTGRES_DB,
   entities: [Category, Product, User, UserRatings, OrderList, OrderListProduct, LastRatings],
   synchronize: true,
   logging: false,

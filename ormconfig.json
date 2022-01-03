@@ -2,9 +2,9 @@
   "type": "postgres",
   "host": "localhost",
   "port": 5432,
-  "username": "test",
+  "username": "postgres",
   "password": "test",
-  "database": "test",
+  "database": "store",
   "synchronize": true,
   "logging": false,
   "entities": [
