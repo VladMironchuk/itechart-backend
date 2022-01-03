@@ -1,7 +1,9 @@
 export default interface ICategoryRepository<K, U> {
-  getById(id: K);
+  getAll(query: U, keys: K): unknown;
 
-  getOne(query: U);
+  getById(id: K): unknown;
+
+  getOne(query: U): unknown;
 
   create(dto: U): Promise<void>;
 

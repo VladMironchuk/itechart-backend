@@ -5,8 +5,8 @@ import ICategoryRepository from './ICategoryRepository';
 const DEFAULT_MONGO_KEYS = 'id displayName createdAt products'
 
 export class CategoryMongoRepository implements ICategoryRepository<string, categoryMongo>{
-  getAll(entity: categoryMongo, keys: string = DEFAULT_MONGO_KEYS) {
-    return MongoCategory.find({...entity}, keys);
+  getAll(query: categoryMongo, keys: string = DEFAULT_MONGO_KEYS) {
+    return MongoCategory.find({...query}, keys);
   }
 
   getById(id: string, keys: string = DEFAULT_MONGO_KEYS) {
