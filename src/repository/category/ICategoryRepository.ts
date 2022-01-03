@@ -1,9 +1,7 @@
-export default interface ICategoryRepository<T, K, U> {
-  getAll(): Promise<T[]> | T[];
+export default interface ICategoryRepository<K, U> {
+  getById(id: K);
 
-  getById(id: K): Promise<T> | T;
-
-  getOne(query: U): Promise<T> | T;
+  getOne(query: U);
 
   create(dto: U): Promise<void>;
 

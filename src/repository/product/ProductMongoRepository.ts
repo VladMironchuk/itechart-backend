@@ -13,7 +13,7 @@ export class ProductMongoRepository implements IProductRepository<Product, strin
     populate: boolean = true,
     skip: number = 0,
     limit: number = 0
-  ): Promise<Product[]> {
+  ) {
     return populate
       ? MongoProduct.find({ ...query }, keys)
           .populate('categories', 'id displayName')
@@ -30,7 +30,7 @@ export class ProductMongoRepository implements IProductRepository<Product, strin
     populate: boolean = true,
     skip: number = 0,
     limit: number = 0
-  ): Promise<Product[]> {
+  ) {
     return populate
       ? MongoProduct.find({ ...query.query }, keys)
           .sort({ ...query.sortBy })

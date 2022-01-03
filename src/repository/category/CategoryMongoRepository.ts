@@ -1,9 +1,10 @@
 import MongoCategory from '../../models/category';
 import { categoryMongo } from '../../dto/category/category-mongo.dto';
+import ICategoryRepository from './ICategoryRepository';
 
 const DEFAULT_MONGO_KEYS = 'id displayName createdAt products'
 
-export class CategoryMongoRepository {
+export class CategoryMongoRepository implements ICategoryRepository<string, categoryMongo>{
   getAll(entity: categoryMongo, keys: string = DEFAULT_MONGO_KEYS) {
     return MongoCategory.find({...entity}, keys);
   }

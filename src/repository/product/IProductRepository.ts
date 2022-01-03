@@ -1,7 +1,7 @@
 export interface IProductRepository<T, K, U> {
   getAll(query: U): Promise<T[]>;
 
-  getById(id: K): Promise<U> | U;
+  getById(id: K): Promise<U>;
 
   getOne(query: U): Promise<T> | T
 
