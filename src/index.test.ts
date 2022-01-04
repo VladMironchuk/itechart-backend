@@ -11,6 +11,7 @@ describe('post endpoints', () => {
       username: 'vlad',
       password: '1111',
     });
+
     expect(res.statusCode).toEqual(200);
     expect(res.body).toHaveProperty('token');
   }, 12000);
@@ -20,6 +21,7 @@ describe('post endpoints', () => {
       username: 'user',
       password: 'password',
     });
+
     expect(res.statusCode).toEqual(400);
     expect(res.body).toHaveProperty('message');
     expect(res.body.message).toEqual('Incorrect username.');
@@ -29,12 +31,14 @@ describe('post endpoints', () => {
 describe('get endpoints', () => {
   it('should return product list', async () => {
     const res = await request(app).get('/products');
+
     expect(res.statusCode).toEqual(200);
     expect(res.body.length).toBeGreaterThan(0);
   }, 12000);
 
   it('should return category list', async () => {
     const res = await request(app).get('/categories');
+
     expect(res.statusCode).toEqual(200);
     expect(res.body.length).toBeGreaterThan(0);
   }, 12000);

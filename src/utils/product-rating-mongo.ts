@@ -6,7 +6,7 @@ export const updateProductRatingMongo = async (
   userId: string,
   rating: number,
   comment: string
-): Promise<void> => {
+) => {
   const users = product.ratings.map((rating) => rating.userId);
 
   let totalRating: number

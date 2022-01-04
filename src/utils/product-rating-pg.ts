@@ -7,7 +7,7 @@ export const updateProductRatingPg = async (
   userId: string,
   rating: number,
   comment: string
-): Promise<void> => {
+) => {
   const userRatingRepo = new UserRatingsTypeOrmRepository();
   const usersRatings = await userRatingRepo.getUserRating(product.id);
 

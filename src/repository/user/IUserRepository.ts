@@ -6,5 +6,5 @@ export interface IUserRepository {
 
   update(entity: userInfoDto, dto: userInfoDto): Promise<void>
 
-  getOne(entity: userInfoDto): Promise<any>
+  getOne(entity: userInfoDto): Promise<unknown>
 }

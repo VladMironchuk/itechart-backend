@@ -1,5 +1,5 @@
 import 'reflect-metadata';
-import express, { Application } from 'express';
+import express from 'express';
 require('./utils/passport/passport');
 
 import * as path from 'path';
@@ -28,7 +28,7 @@ import YAML from 'yamljs';
 import cors from 'cors';
 
 const port = process.env.PORT ?? serverConfig.PORT;
-export const app: Application = express();
+export const app = express();
 
 const swaggerDocument = YAML.load(path.join(__dirname, '../doc/api.yaml'));
 
@@ -56,7 +56,7 @@ app.use('/last-ratings', lastRatings);
 app.use(errorHandler);
 app.use(errorLogger);
 
-(async (): Promise<void> => {
+(async () => {
   try {
     await ConnectionController.createConnection();
     task.start();

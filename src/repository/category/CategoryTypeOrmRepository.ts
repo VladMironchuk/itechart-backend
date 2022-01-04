@@ -4,7 +4,7 @@ import { Repository } from 'typeorm';
 import { categoryPg } from '../../dto/category/category-pg.dto';
 import { ConnectionController } from '../../connection/connection';
 
-export class CategoryTypeOrmRepository implements ICategoryRepository<Category, string, categoryPg> {
+export class CategoryTypeOrmRepository implements ICategoryRepository<string, categoryPg> {
   private repository: Repository<Category>;
 
   constructor() {

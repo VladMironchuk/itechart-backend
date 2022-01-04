@@ -1,20 +1,7 @@
 import { mapPriceQuery } from '../validation/priceValidation';
 import { productPg } from '../../dto/product/product-pg.dto';
 import { InvalidDataError } from '../errors/invalidDataError';
-
-type pgSortCriteria = 'ASC' | 'DESC';
-
-export type pgProductQuery = {
-  query: {
-    displayName?: string;
-    price?: {
-      $gte: number;
-      $lte?: number;
-    };
-    totalRating?: number;
-  };
-  sortBy?: [keyof productPg | '', pgSortCriteria | ''];
-};
+import { pgProductQuery, pgSortCriteria } from '../../dto/query-pg';
 
 const validateTotalRating = (totalRating: string): number => {
   if(!totalRating) {

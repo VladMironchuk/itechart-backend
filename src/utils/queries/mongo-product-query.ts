@@ -1,29 +1,9 @@
 import { InvalidDataError } from '../errors/invalidDataError';
 import { mapPriceQuery } from '../validation/priceValidation';
-
-type sortCriteria = 'asc' | 'desc' | 'ascending' | 'descending' | 1 | -1;
+import { mappedQueryMongo, sortCriteria } from '../../dto/query-mongo';
 
 const PRODUCT_FIELDS = ['createdAt', 'displayName', 'price', 'totalRating'];
 const SORT_CRITERIA: sortCriteria[] = ['asc', 'desc', 'ascending', 'descending', 1, -1];
-
-export type mappedQueryMongo = {
-  query: {
-    displayName?: string | RegExp;
-    price?: {
-      $gte?: number;
-      $lte?: number;
-    };
-    totalRating?: {
-      $gte?: number;
-    };
-  };
-  sortBy?: {
-    createdAt?: sortCriteria;
-    displayName?: sortCriteria;
-    price?: sortCriteria;
-    totalRating?: sortCriteria;
-  };
-};
 
 const mapRatingQuery = (ratingQuery = '') => {
   if (isNaN(+ratingQuery)) {
